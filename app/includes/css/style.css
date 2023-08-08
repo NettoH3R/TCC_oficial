@@ -1,12 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 
-body{
+/* Works on Firefox */
+body {
     font-family: 'Rubik', sans-serif;
+    background-color: gainsboro;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #244bbf white;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    background: white;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #244bbf;
+    border: 3px solid white;
 }
 
 .main {
-    background-color: beige;
+    background-color: white;
     padding-top: 5%;
     padding-bottom: 5%;
 }
@@ -22,11 +44,12 @@ body{
     color: #fff;
     border: none;
     cursor: pointer;
-    width: 5rem;
+    width: 7rem;
     height: 3rem;
     border-radius: 1rem;
     margin-top: 25%;
     margin-right: 2%;
+    font-family: 'Rubik', sans-serif;
 }
 
 .btn-2 {
@@ -34,11 +57,12 @@ body{
     color: #fff;
     border: none;
     cursor: pointer;
-    width: 5rem;
+    width: 7rem;
     height: 3rem;
     border-radius: 1rem;
     margin-top: 25%;
     margin-left: 2%;
+    font-family: 'Rubik', sans-serif;
 }
 
 .btn-1:hover {
@@ -50,27 +74,39 @@ body{
 }
 
 .tamanhoCarrosel {
-    width: 70%;
+    width: 90%;
     height: 600px;
-    margin-left: 14%;
-    margin-right: 14%;
+    margin-left: 5%;
+    margin-right: 5%;
     overflow: hidden;
     margin-bottom: 5%;
-
 }
+
+.scrool {
+    overflow-x: hidden;
+    margin-bottom: 30px;
+}
+
+.scrool:hover {
+    overflow-x: auto;
+}
+
 
 .quadradinhos {
     display: flex;
     flex-direction: row;
-    margin-bottom: 5%;
+    margin-bottom: 10px;
+    width: 1320px;
 }
 
+
+
 .quadradinho {
-    width: 15%;
-    height: 200px;
+    width: 198px;
+    height: 198px;
     background-color: #60A1F5;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 66px;
+    margin-right: 66px;
 }
 
 .album {

@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="includes/css/style.css">
 
     <style>
+
+
         .tamanhologo {
             max-width: 100%;
             height: 100%;
@@ -19,10 +21,7 @@
 
         .nav-link {
             color: white;
-        }
-
-        .nav-brand {
-            color: white
+            font-weight: bolder;
         }
 
     </style>
@@ -54,7 +53,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg" style="background-color: #244bbf; margin-top: 10px;">
                 <div class="container-fluid">
-                    <a class="navbar-brand" style="color: white;" href="#">UnderSounds</a>
+                    <a class="navbar-brand" style="font-weight: bolder; color: white;" href="#">UnderSounds</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
