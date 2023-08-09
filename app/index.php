@@ -13,33 +13,68 @@ include("includes/header.php");
 <div class="container">
     <main class="main">
         <div class="tamanhoCarrosel">
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <div class="corpo">
+                <div class="alinhamento-carousel">
+                    <div class="carouseu-container">
+                        <input type="radio" name="slider" id="item-1" display="none" checked display>
+                        <input type="radio" name="slider" id="item-2" display="none">
+                        <input type="radio" name="slider" id="item-3" display="none">
+                        <div class="cards">
+                            <label class="card" for="item-1" id="song-1">
+                                <img class="imgCarousel" src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song">
+                            </label>
+                            <label class="card" for="item-2" id="song-2">
+                                <img class="imgCarousel" src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song">
+                            </label>
+                            <label class="card" for="item-3" id="song-3">
+                                <img class="imgCarousel" src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+                            </label>
+                        </div>
+                        <div class="player">
+                            <div class="upper-part">
+                                <div class="play-icon">
+                                    <svg width="20" height="20" fill="#2992dc" stroke="#2992dc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-play" viewBox="0 0 24 24">
+                                        <defs />
+                                        <path d="M5 3l14 9-14 9V3z"/>
+                                    </svg>
+                                </div>
+                                <div class="info-area" id="test">
+                                    <label class="song-info" id="song-info-1">
+                                        <div class="title">Bunker</div>
+                                        <div class="sub-line">
+                                            <div class="subtitle">Balthazar</div>
+                                            <div class="time">4.05</div>
+                                        </div>
+                                    </label>
+                                    <label class="song-info" id="song-info-2">
+                                        <div class="title">Words Remain</div>
+                                        <div class="sub-line">
+                                            <div class="subtitle">Moderator</div>
+                                            <div class="time">4.05</div>
+                                        </div>
+                                    </label>
+                                    <label class="song-info" id="song-info-3">
+                                        <div class="title">Falling Out</div>
+                                        <div class="sub-line">
+                                            <div class="subtitle">Otzeki</div>
+                                            <div class="time">4.05</div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="progress-bar">
+                                <span class="progress"></span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="arquivos/imagensArtistas/img1.jpg" height="600px" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="arquivos/imagensArtistas/img2.jpg" height="600px" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="arquivos/imagensArtistas/img3.jpg" height="600px" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
+
+
+        <!-- MÚSICAS -->
+
+
         <div class="scrool">
             <div class="quadradinhos">
                 <div class="quadradinho">
