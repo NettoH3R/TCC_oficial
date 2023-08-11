@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/cropperjs@next"></script>
     <script src="includes/js/functions.js"></script>
+    
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="includes/css/style.css">
 
     <style>
-
-
         .tamanhologo {
             max-width: 100%;
             height: 100%;
@@ -25,16 +26,16 @@
             font-weight: bolder;
         }
 
-        .carousel-caption{
+        .carousel-caption {
             color: black;
         }
-
     </style>
 
 </head>
 
 <body>
     <main>
+        <!-- Cabeçario -->
         <header>
             <div class="container">
                 <div class="row">
@@ -54,7 +55,7 @@
             </div>
         </header>
 
-
+        <!-- Menu -->
         <div class="container">
             <nav class="navbar navbar-expand-lg" style="background-color: #244bbf; margin-top: 10px;">
                 <div class="container-fluid">
