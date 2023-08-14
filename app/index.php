@@ -16,9 +16,9 @@ include("includes/header.php");
             <div class="corpo">
                 <div class="alinhamento-carousel">
                     <div class="carouseu-container">
-                        <input type="radio" name="slider" id="item-1" display="none" checked display>
-                        <input type="radio" name="slider" id="item-2" display="none">
-                        <input type="radio" name="slider" id="item-3" display="none">
+                        <input type="radio" name="slider" id="item-1" style="display: none;" checked display>
+                        <input type="radio" name="slider" id="item-2" style="display: none;">
+                        <input type="radio" name="slider" id="item-3" style="display: none;">
                         <div class="cards">
                             <label class="card" for="item-1" id="song-1">
                                 <img class="imgCarousel" src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song">
