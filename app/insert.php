@@ -15,8 +15,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                 <input type="file" name="arquivo"> <br> <br>
                 <label for="">Adicione uma Imagem: </label>
                 <input type="file" id="imgcapa"> <br> <br>
+                <label for="">Gênero</label>
+                <select name="" id="">
+                    <option value="">Gênero 1</option>
+                    <option value="">Gênero 2</option>
+                    <option value="">Gênero 3</option>
+                </select> <br>
+                <label for="">Privacidade da Música:</label> <br>
+                <input type="radio" name="rdoPrivac">Privada <br>
+                <input type="radio" name="rdoPrivac">Pública <br>
                 <button type="submit">Enviar</button>
-
             </form>
         </main>
     </div>

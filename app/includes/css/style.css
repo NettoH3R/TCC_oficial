@@ -144,9 +144,6 @@ header {
     }
 }
 
-input[type=radio] {
-    display: none;
-}
 
 .card {
     position: absolute;
