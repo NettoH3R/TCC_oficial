@@ -16,18 +16,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                 <form action="insert.php" method="post">
                     <div class="row">
                         <div class="col-md-4">
-                            <div class="inserirFoto">
-                                <label for="file-input" class="custom-file-input">
-                                    <img class="iconeCamera" src="./arquivos/imagensInsert/iconeCamera.png" alt="Selecione uma foto para o álbum">
-                                </label>
-                                <input type="file" id="file-input" class="real-file-input" accept="image/jpeg, image/png">
+                            <div class="imagem-container">
+                                <div class="inserirFoto">
+                                    <label for="file-input" class="custom-file-input">
+                                        <img class="iconeCamera" src="./arquivos/imagensInsert/iconeCamera.png" alt="Selecione uma foto para o álbum">
+                                    </label>
+                                    <input type="file" id="file-input" class="real-file-input" accept="image/jpeg, image/png">
+                                </div>
                             </div>
                         </div>
 
                         <div class="col-md-4">
-                            <input type="text" placeholder="Nome da Faixa"> <br> <br>
+                            <input type="text" placeholder="Nome da Faixa" class="nomeDaFaixa"> <br> <br>
 
-                            <select name="" id="">
+                            <select name="" id="" class="selectGeneros">
                                 <option value="" disabled selected>Gêneros</option>
                                 <option value="">Gênero 1</option>
                                 <option value="">Gênero 2</option>
@@ -36,26 +38,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                         </div>
 
                         <div class="col-md-4">
-                            <div class="inserirArquivo">
-                                <label for="file-input2" class="custom-file-input2">
-                                    <img class="iconeUparArqui" src="./arquivos/imagensInsert/iconeUparArqui.png" alt="Selecione o arquivo da música/projeto musical.">
-                                </label>
-                                <input type="file" id="file-input2" class="real-file-input2" accept="audio/mpeg, audio/wav, audio/mp3">
+                            <div class="imagem-container">
+                                <div class="inserirArquivo">
+                                    <label for="file-input2" class="custom-file-input2">
+                                        <img class="iconeUparArqui" src="./arquivos/imagensInsert/iconeUparArqui.png" alt="Selecione o arquivo da música/projeto musical.">
+                                    </label>
+                                    <input type="file" id="file-input2" class="real-file-input2" accept="audio/mpeg, audio/wav, audio/mp3">
+                                </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="">Privacidade da Música:</label> <br>
-                                <input type="radio" name="rdoPrivac">Privada <br>
-                                <input type="radio" name="rdoPrivac">Pública <br>
-                            </div>
-                            <div class="col-md-6">
-                                <textarea name="" id="" cols="60" rows="9"  placeholder="Descrição" style="resize: none;"></textarea><br>
-                            </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Privacidade da Música:</label> <br>
+                            <input type="radio" name="rdoPrivac">Privada <br>
+                            <input type="radio" name="rdoPrivac">Pública <br>
                         </div>
+                        <div class="col-md-6">
+                            <textarea name="" id="" cols="60" rows="9" placeholder="Descrição" style="resize: none;"></textarea><br>
+                        </div>
+                    </div>
 
-                        <button type="submit">Enviar</button>
+                    <button type="submit">Enviar</button>
                 </form>
             </div>
         </main>

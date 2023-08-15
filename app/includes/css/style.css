@@ -329,6 +329,11 @@ select option[disabled] {
     padding: 30%;
 }
 
+.iconeCamera:hover {
+    outline: 1px inset #244bbf;
+    box-shadow: 0 0 13px rgb(36, 75, 191, 1);
+}
+
 .custom-file-input {
     display: inline-block;
     background-color: #f2f2f2;
@@ -359,6 +364,7 @@ select option[disabled] {
     width: 160px;
     height: 160px;
     background-color: white;
+    align-items: center;
 }
 
 .iconeUparArqui {
@@ -367,4 +373,54 @@ select option[disabled] {
     min-width: 100%;
     min-height: 100%;
     padding: 30%;
+}
+
+.iconeUparArqui:hover {
+    outline: 1px inset #244bbf;
+    box-shadow: 0 0 13px rgb(36, 75, 191, 1);
+}
+
+.imagem-container {
+    display: flex;
+    justify-content: center;
+    /* Alinhamento horizontal */
+    align-items: center;
+    /* Alinhamento vertical */
+    height: 100%;
+    /* Preenchimento total da altura da coluna */
+}
+
+.nomeDaFaixa {
+    padding: 10px;
+    border: #FFFFFF;
+    width: 100%;
+    height: 20%;
+    margin-top: 15%;
+}
+
+.nomeDaFaixa:focus {
+    outline: 1px inset #244bbf;
+    box-shadow: 0 0 13px rgb(36, 75, 191, 1);
+}
+.nomeDaFaixa:hover {
+    outline: 1px inset #244bbf;
+    box-shadow: 0 0 13px rgb(36, 75, 191, 1);
+}
+
+.selectGeneros {
+    padding: 10px;
+    border: #FFFFFF;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 15%;
+}
+
+.selectGeneros:focus {
+    outline: 1px inset #244bbf;
+    box-shadow: 0 0 13px rgb(36, 75, 191, 1);
+}
+
+.selectGeneros:hover {
+    outline: 1px inset #244bbf;
+    box-shadow: 0 0 13px rgb(36, 75, 191, 1);
 }
