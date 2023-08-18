@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
             <div class="insert">
 
 
-                <form action="insert.php" method="post">
+                <form action="insert.php" method="POST" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="imagem-container">
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                                     <label for="file-input2" class="custom-file-input2">
                                         <img class="iconeUparArqui" src="./arquivos/imagensInsert/iconeUparArqui.png" alt="Selecione o arquivo da música/projeto musical.">
                                     </label>
-                                    <input type="file" id="file-input2" class="real-file-input2" accept="audio/mpeg, audio/wav, audio/mp3">
+                                    <input type="file" id="file-input2" class="real-file-input2" name="music" accept="audio/mpeg, audio/wav, audio/mp3">
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                             <textarea name="" id="" cols="60" rows="9" placeholder="Descrição" style="resize: none;"></textarea><br>
                         </div>
                     </div>
-
                     <button type="submit">Enviar</button>
                 </form>
             </div>
@@ -70,5 +69,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
 <?php
 endif;
 include('includes/footer.php');
+
+
+var_dump($_FILES['music']);
+
 
 ?>
