@@ -402,6 +402,7 @@ select option[disabled] {
     outline: 1px inset #244bbf;
     box-shadow: 0 0 13px rgb(36, 75, 191, 1);
 }
+
 .nomeDaFaixa:hover {
     outline: 1px inset #244bbf;
     box-shadow: 0 0 13px rgb(36, 75, 191, 1);
@@ -421,6 +422,22 @@ select option[disabled] {
 }
 
 .selectGeneros:hover {
+    outline: 1px inset #244bbf;
+    box-shadow: 0 0 13px rgb(36, 75, 191, 1);
+}
+
+.descricao {
+    width: 100%;
+    height: 250px;
+    border: #FFFFFF;
+}
+
+.descricao:focus {
+    outline: 1px inset #244bbf;
+    box-shadow: 0 0 13px rgb(36, 75, 191, 1);
+}
+
+.descricao:hover {
     outline: 1px inset #244bbf;
     box-shadow: 0 0 13px rgb(36, 75, 191, 1);
 }

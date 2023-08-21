@@ -50,13 +50,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                     </div>
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4" style="margin-top: 20px;">
                             <label for="">Privacidade da Música:</label> <br>
                             <input type="radio" name="rdoPrivac">Privada <br>
                             <input type="radio" name="rdoPrivac">Pública <br>
                         </div>
-                        <div class="col-md-6">
-                            <textarea name="" id="" cols="60" rows="9" placeholder="Descrição" style="resize: none;"></textarea><br>
+                        <div class="col-md-8">
+                            <textarea name="" id="" class="descricao" placeholder="Descrição" style="resize: none;"></textarea><br>
                         </div>
                     </div>
                     <button type="submit">Enviar</button>
