@@ -80,16 +80,16 @@ include("includes/header.php");
         <div class="scrool">
             <div class="quadradinhos">
                 <div class="quadradinho">
-                    <img src="img/logo/album.jpg" class="album" alt="Possível álbum a ser colocado">
+                    <img src="./arquivos/imagensAlbuns/teste1.png" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="img/logo/album.jpg" class="album" alt="Possível álbum a ser colocado">
+                    <img src="./arquivos/imagensAlbuns/teste2.png" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="img/logo/album.jpg" class="album" alt="Possível álbum a ser colocado">
+                    <img src="./arquivos/imagensAlbuns/teste3.png" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="img/logo/album.jpg" class="album" alt="Possível álbum a ser colocado">
+                    <img src="./arquivos/imagensAlbuns/teste4.png" class="album" alt="Possível álbum a ser colocado">
                 </div>
             </div>
         </div>
@@ -97,16 +97,16 @@ include("includes/header.php");
         <div class="scrool">
             <div class="quadradinhos">
                 <div class="quadradinho">
-                    <img src="img/logo/album.jpg" class="album" alt="Possível álbum a ser colocado">
+                    <img src="./arquivos/imagensAlbuns/teste5.png" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="img/logo/album.jpg" class="album" alt="Possível álbum a ser colocado">
+                    <img src="./arquivos/imagensAlbuns/teste6.png" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="img/logo/album.jpg" class="album" alt="Possível álbum a ser colocado">
+                    <img src="./arquivos/imagensAlbuns/teste1.png" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="img/logo/album.jpg" class="album" alt="Possível álbum a ser colocado">
+                    <img src="./arquivos/imagensAlbuns/teste4.png" class="album" alt="Possível álbum a ser colocado">
                 </div>
             </div>
         </div>

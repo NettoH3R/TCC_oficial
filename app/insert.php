@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                         <div class="col-md-4 ">
                             <input type="text" placeholder="Nome da Faixa" class="nomeDaFaixa"> <br> <br>
 
-                            <select name="" id="" class="selectGeneros">
-                                <option value="" disabled selected>Gêneros</option>
+                            <select name="" id="mySelect" onchange="changeColor()" class="selectGeneros">
+                                <option value="" disabled selected hidden>Gêneros</option>
                                 <option value="">Gênero 1</option>
                                 <option value="">Gênero 2</option>
                                 <option value="">Gênero 3</option>
@@ -47,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                                         <img class="iconeUparArqui" src="./arquivos/imagensInsert/iconeUparArqui.png" alt="Selecione o arquivo da música/projeto musical.">
                                     </label>
                                     <div class="addMusica">
-                                            <p>Adicione o arquivo de música</p>
-                                        </div>
+                                        <p>Adicione o arquivo de música</p>
+                                    </div>
                                     <input type="file" id="file-input2" class="real-file-input2" name="music" accept="audio/mpeg, audio/wav, audio/mp3">
                                 </div>
                             </div>
@@ -69,13 +69,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                             <textarea name="" id="" class="descricao" placeholder="Descrição" style="resize: none;"></textarea><br>
                         </div>
                     </div>
-                    <div>
-                        <button class="configButton" type="submit">Enviar</button>
+                    <div class="row ">
+                        <div class="col-md-12 text-center">
+                            <button class="configButton " type="submit">Enviar</button>
+                        </div>
                     </div>
                 </form>
             </div>
         </main>
     </div>
+    <script>
+        function changeColor() {
+            const selectElement = document.getElementById("mySelect");
+            const selectedOption = selectElement.options[selectElement.selectedIndex];
+
+            if (selectedOption) {
+                selectElement.classList.add("selected");
+            } else {
+                selectElement.classList.remove("selected");
+            }
+        }
+    </script>
 
 
 <?php

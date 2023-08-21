@@ -43,10 +43,10 @@ header {
     font-family: 'Rubik', 'sans-serif';
 }
 
-.footerConfig{
+.footerConfig {
     font-size: 12pt;
     padding-top: 6px;
-    padding-bottom:6px;
+    padding-bottom: 6px;
     text-align: center;
 }
 
@@ -334,7 +334,7 @@ select option[disabled] {
     max-height: 240px;
     min-width: 240px;
     min-height: 240px;
-    
+
 }
 
 .inserirFoto:hover {
@@ -342,7 +342,7 @@ select option[disabled] {
     box-shadow: 0 0 13px rgb(36, 75, 191, 1);
 }
 
-.inserirFoto:hover .addFoto{
+.inserirFoto:hover .addFoto {
     margin-top: -120px !important;
     transition-duration: 1s;
 }
@@ -357,7 +357,7 @@ select option[disabled] {
 
 .real-file-input {
     display: none;
-    
+
     /* Esconde o input de arquivo real */
 }
 
@@ -398,7 +398,7 @@ select option[disabled] {
     box-shadow: 0 0 13px rgb(36, 75, 191, 1);
 }
 
-.inserirArquivo:hover .addMusica{
+.inserirArquivo:hover .addMusica {
     margin-top: -80px !important;
     transition-duration: 1s;
 }
@@ -437,6 +437,12 @@ select option[disabled] {
     width: 100%;
     height: 20%;
     margin-bottom: 15%;
+    color: #999;
+}
+
+.selectGeneros.selected {
+    color: #000000;
+    /* Defina a cor desejada */
 }
 
 .selectGeneros:focus {
@@ -476,9 +482,10 @@ select option[disabled] {
 
 
 
-.configButton{
+.configButton {
+    margin-top: 16px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #244bbf;
     color: white;
     border: none;
     border-radius: 5px;
@@ -487,11 +494,20 @@ select option[disabled] {
     font-family: 'Rubik', sans-serif;
 }
 
+.configButton:hover {
+    background-color: #FFFFFF;
+    outline: 1px inset #244bbf;
+    box-shadow: 0 0 13px rgb(36, 75, 191, 1);
+    color: #244bbf;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif
+}
+
 /* Faixas pretas insert */
 
-.addFoto{
+.addFoto {
     background-color: black;
-    opacity: 80%;
+    opacity: 70%;
     align-items: baseline;
     text-align: center;
     width: 240px;
@@ -501,9 +517,9 @@ select option[disabled] {
     font-size: 20pt;
 }
 
-.addMusica{
+.addMusica {
     background-color: black;
-    opacity: 80%;
+    opacity: 70%;
     align-items: baseline;
     text-align: center;
     width: 160px;
@@ -512,4 +528,3 @@ select option[disabled] {
     padding-top: 1rem;
     font-size: 12pt;
 }
-
