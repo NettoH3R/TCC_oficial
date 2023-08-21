@@ -326,6 +326,7 @@ select option[disabled] {
     width: 240px;
     height: 240px;
     background-color: white;
+    overflow: hidden;
 }
 
 .iconeCamera {
@@ -336,21 +337,27 @@ select option[disabled] {
     padding: 30%;
 }
 
-.iconeCamera:hover {
+.inserirFoto:hover {
     outline: 1px inset #244bbf;
     box-shadow: 0 0 13px rgb(36, 75, 191, 1);
+}
+
+.inserirFoto:hover .addFoto{
+    margin-top: -120px !important;
+    transition-duration: 1s;
 }
 
 .custom-file-input {
     display: inline-block;
     background-color: #f2f2f2;
-    border: 1px solid #ccc;
     cursor: pointer;
+
 
 }
 
 .real-file-input {
     display: none;
+    
     /* Esconde o input de arquivo real */
 }
 
@@ -367,11 +374,15 @@ select option[disabled] {
     /* Esconde o input de arquivo real */
 }
 
+/* Inserir Arquivo */
+
+
 .inserirArquivo {
     width: 160px;
     height: 160px;
     background-color: white;
     align-items: center;
+    overflow: hidden;
 }
 
 .iconeUparArqui {
@@ -382,9 +393,14 @@ select option[disabled] {
     padding: 30%;
 }
 
-.iconeUparArqui:hover {
+.inserirArquivo:hover {
     outline: 1px inset #244bbf;
     box-shadow: 0 0 13px rgb(36, 75, 191, 1);
+}
+
+.inserirArquivo:hover .addMusica{
+    margin-top: -80px !important;
+    transition-duration: 1s;
 }
 
 .imagem-container {
@@ -469,5 +485,31 @@ select option[disabled] {
     cursor: pointer;
     font-size: 16px;
     font-family: 'Rubik', sans-serif;
+}
+
+/* Faixas pretas insert */
+
+.addFoto{
+    background-color: black;
+    opacity: 80%;
+    align-items: baseline;
+    text-align: center;
+    width: 240px;
+    height: 240px;
+    color: white;
+    padding-top: 1rem;
+    font-size: 20pt;
+}
+
+.addMusica{
+    background-color: black;
+    opacity: 80%;
+    align-items: baseline;
+    text-align: center;
+    width: 160px;
+    height: 160px;
+    color: white;
+    padding-top: 1rem;
+    font-size: 12pt;
 }
 

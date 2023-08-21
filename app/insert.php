@@ -19,14 +19,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                             <div class="imagem-container">
                                 <div class="inserirFoto">
                                     <label for="file-input" class="custom-file-input">
+                                        <img src="" alt="">
                                         <img class="iconeCamera" src="./arquivos/imagensInsert/iconeCamera.png" alt="Selecione uma foto para o álbum">
+                                        <div class="addFoto">
+                                            <p>Adicione Uma Foto</p>
+                                        </div>
                                     </label>
                                     <input type="file" id="file-input" class="real-file-input" accept="image/jpeg, image/png">
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <div class="col-md-4 ">
                             <input type="text" placeholder="Nome da Faixa" class="nomeDaFaixa"> <br> <br>
 
                             <select name="" id="" class="selectGeneros">
@@ -43,6 +47,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                                     <label for="file-input2" class="custom-file-input2">
                                         <img class="iconeUparArqui" src="./arquivos/imagensInsert/iconeUparArqui.png" alt="Selecione o arquivo da música/projeto musical.">
                                     </label>
+                                    <div class="addMusica">
+                                            <p>Adicione o arquivo de música</p>
+                                        </div>
                                     <input type="file" id="file-input2" class="real-file-input2" name="music" accept="audio/mpeg, audio/wav, audio/mp3">
                                 </div>
                             </div>
@@ -63,8 +70,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                             <textarea name="" id="" class="descricao" placeholder="Descrição" style="resize: none;"></textarea><br>
                         </div>
                     </div>
-                    <div class="configButton">
-                        <button type="submit">Enviar</button>
+                    <div>
+                        <button class="configButton" type="submit">Enviar</button>
                     </div>
                 </form>
             </div>
