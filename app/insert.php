@@ -49,17 +49,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-4" style="margin-top: 20px;">
-                            <label for="">Privacidade da Música:</label> <br>
-                            <input type="radio" name="rdoPrivac">Privada <br>
-                            <input type="radio" name="rdoPrivac">Pública <br>
+                    <div class="row rowEspacinho">
+                        <div class="col-md-4">
+                            <div class="tituloSelecione">
+                                <label for="">Privacidade da Música:</label>
+                            </div>
+                            <div class="inputRadio">
+                                <input type="radio" name="rdoPrivac">Privada
+                                <input type="radio" name="rdoPrivac">Pública
+                            </div>
                         </div>
                         <div class="col-md-8">
                             <textarea name="" id="" class="descricao" placeholder="Descrição" style="resize: none;"></textarea><br>
                         </div>
                     </div>
-                    <button type="submit">Enviar</button>
+                    <div class="configButton">
+                        <button type="submit">Enviar</button>
+                    </div>
                 </form>
             </div>
         </main>

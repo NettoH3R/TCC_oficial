@@ -38,9 +38,16 @@ header {
 }
 
 .footer {
-    background-color: #60A1F5;
+    background-color: #244bbf;
     color: #FFFFFF;
-    font-size: 16pt;
+    font-family: 'Rubik', 'sans-serif';
+}
+
+.footerConfig{
+    font-size: 12pt;
+    padding-top: 6px;
+    padding-bottom:6px;
+    text-align: center;
 }
 
 .btn-1 {
@@ -441,3 +448,28 @@ select option[disabled] {
     outline: 1px inset #244bbf;
     box-shadow: 0 0 13px rgb(36, 75, 191, 1);
 }
+
+.rowEspacinho {
+    margin-top: 4%;
+}
+
+.tituloSelecione {
+    font-size: 20pt;
+    text-align: center;
+}
+
+.inputRadio{
+
+}
+
+.configButton{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+

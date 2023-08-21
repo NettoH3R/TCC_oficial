@@ -5,6 +5,8 @@
 
 // $db = new MySQLConnection();
 
+$title = "Início";
+
 
 include("includes/header.php");
 
