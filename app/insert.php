@@ -18,14 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                         <div class="col-md-4">
                             <div class="imagem-container">
                                 <div class="inserirFoto">
-                                    <label for="file-input" class="custom-file-input">
-                                        <img src="" alt="">
-                                        <img class="iconeCamera" src="./arquivos/imagensInsert/iconeCamera.png" alt="Selecione uma foto para o álbum">
+                                    <label for="upfile" class="custom-file-input">
+                                        <img class="iconeCamera" id="file_upload" src="./arquivos/imagensInsert/cameraIcon.png" alt="Selecione uma foto para o álbum">
                                         <div class="addFoto">
                                             <p>Adicione Uma Foto</p>
                                         </div>
                                     </label>
-                                    <input type="file" id="file-input" class="real-file-input" accept="image/jpeg, image/png">
+                                    <input type="file" id="upfile" class="real-file-input" accept="image/jpeg, image/png" onchange="readURL(this);">
                                 </div>
                             </div>
                         </div>
