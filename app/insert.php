@@ -179,7 +179,7 @@ if (isset($_FILES['music']) && isset($_FILES['img'])) {
 
             //caminho música
 
-            $pasta = 'arquivos/mscArtistas/';
+            $pasta = 'artistas/mscArtistas/';
 
             $extencao = $musica['name'];
             $extencao = strtolower(pathinfo($extencao, PATHINFO_EXTENSION));
@@ -187,7 +187,7 @@ if (isset($_FILES['music']) && isset($_FILES['img'])) {
 
             //caminho capa
 
-            $pasta = 'arquivos/imagensArtistas/';
+            $pasta = 'artistas/imagensArtistas/';
 
             $extencao = $capa['name'];
             $extencao = strtolower(pathinfo($extencao, PATHINFO_EXTENSION));
@@ -197,7 +197,7 @@ if (isset($_FILES['music']) && isset($_FILES['img'])) {
             var_dump($pathCapa);
 
             //Consulta os arquivos do banco de dados 
-            $comando = $bd->prepare('SELECT * FROM musica');
+            $comando = $db->prepare('SELECT * FROM musica');
             $comando->execute();
             $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
 
@@ -217,7 +217,7 @@ if (isset($_FILES['music']) && isset($_FILES['img'])) {
             if ($deu_certo) {
                 if ($deu_certo) {
                     //Salva no banco de dados
-                    $comando = $bd->prepare('INSERT INTO musica(nome, genero, caminho, capa, privacidade, descricao)
+                    $comando = $db->prepare('INSERT INTO musica(nome, genero, caminho, capa, privacidade, descricao)
                     VALUES (:nome, :genero, :caminho, :capa, :privacidade, :descricao)');
 
                     $comando->execute([':nome' => $nome, 'genero' => $_POST['genero'] , 'caminho' => $pathMusica, 
