@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                         </div>
 
                         <div class="col-md-4 ">
-                            <input type="text" placeholder="Nome da Faixa" class="nomeDaFaixa"> <br> <br>
+                            <input name="nome" type="text" placeholder="Nome da Faixa" class="nomeDaFaixa" required> <br> <br>
 
                             <select name="genero" id="mySelect" onchange="changeColor()" class="selectGeneros" required>
                                 <option value="" disabled selected hidden>Gêneros</option>
@@ -104,7 +104,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
 
                 <div id="warningMessage">Preencha todos os campos obrigatórios: Foto, Nome, Gênero, Arquivo e Privacidade.</div>
 
-                <div id="successMessage">Formulário enviado com sucesso!</div>
 
                 <script>
                     document.addEventListener("DOMContentLoaded", function() {
@@ -137,16 +136,109 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
 
 
 <?php
-endif;
-include('includes/footer.php');
 
+    include('includes/footer.php');
+
+endif;
 
 var_dump($_FILES['music']);
 echo "<br>" . "<br>";
 var_dump($_FILES['img']);
 echo "<br>" . "<br>";
 var_dump($_POST);
+echo "<br>" . "<br>";
 
+//Conexão banco de dados
+
+require './vendor/autoload.php';
+
+use Application\DBConnection\MySQLConnection;
+
+$db = new MySQLConnection();
+
+if (isset($_FILES['music']) && isset($_FILES['img'])) {
+
+    $musica = $_FILES['music'];
+
+    $capa = $_FILES['img'];
+
+    $allowedTypes = array('audio/mpeg', 'audio/mp3');
+    $fileType = mime_content_type($musica['tmp_name']);
+
+    if (in_array($fileType, $allowedTypes)) {
+
+        $filePath = $capa['tmp_name']; // Substitua pelo caminho do seu arquivo
+
+        // Use @ antes da função para suprimir os erros caso a função não possa determinar o tipo do arquivo
+        $imageInfo = @getimagesize($filePath);
+
+
+        if ($imageInfo !== false) {
+
+            $nome = $_POST['nome'];
+
+            //caminho música
+
+            $pasta = 'arquivos/mscArtistas/';
+
+            $extencao = $musica['name'];
+            $extencao = strtolower(pathinfo($extencao, PATHINFO_EXTENSION));
+            $pathMusica = $pasta . $nome . "." . $extencao;
+
+            //caminho capa
+
+            $pasta = 'arquivos/imagensArtistas/';
+
+            $extencao = $capa['name'];
+            $extencao = strtolower(pathinfo($extencao, PATHINFO_EXTENSION));
+            $pathCapa = $pasta . $nome . "." . $extencao;
+
+            var_dump($pathMusica);
+            var_dump($pathCapa);
+
+            //Consulta os arquivos do banco de dados 
+            $comando = $bd->prepare('SELECT * FROM musica');
+            $comando->execute();
+            $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+
+            //verifica se não tem nenhum arquivo com o mesmo nome
+            foreach ($medias as $m) {
+                if ($m['arquivo'] == $path) {
+                    echo 'Já existe um arquivo com esse nome!!!' .
+                        "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+                }
+            }
+
+            $deu_certo = move_uploaded_file($musica['tmp_name'], $pathMusica);
+
+            move_uploaded_file($capa['tmp_name'], $pathCapa);
+
+            if ($deu_certo) {
+                if ($deu_certo) {
+                    //Salva no banco de dados
+                    $comando = $bd->prepare('INSERT INTO musica(nome, genero, caminho, capa, privacidade, descricao)
+                    VALUES (:nome, :genero, :caminho, :capa, :privacidade, :descricao)');
+
+                    $comando->execute([':nome' => $nome, 'genero' => $_POST['genero'] , 'caminho' => $pathMusica, 
+                    'capa' => $pathCapa, 'privacidade' => $_POST['rdoPrivac'], 'descricao' => $_POST['descricao']]);
+
+                    header('Location:/index.php');
+                } else {
+                    echo "<p>Falha ao Enviar o arquivo</p>".
+                    "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+                }
+            }
+        } else {
+            // A função getimagesize() não conseguiu determinar que o arquivo é uma imagem
+            echo "<p>O tipo do arquivo da imagem para capa não é aceito por favor insira um arquivo \".jpge\" ou \".png\"</p>" .
+                "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+        }
+    } else {
+        echo "<p>O tipo do arquivo de música não é aceito por favor insira um arquivo \".MP3\"</p>" .
+            "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+    }
+}
 
 
 ?>
