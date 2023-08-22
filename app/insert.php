@@ -18,13 +18,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                         <div class="col-md-4">
                             <div class="imagem-container">
                                 <div class="inserirFoto">
-                                    <label for="upfile" class="custom-file-input">
+                                    <label for="upfile1" class="custom-file-input">
                                         <img class="iconeCamera" id="file_upload" src="./arquivos/imagensInsert/cameraIcon.png" alt="Selecione uma foto para o álbum">
                                         <div class="addFoto">
                                             <p>Adicione Uma Foto</p>
                                         </div>
                                     </label>
-                                    <input type="file" id="upfile" class="real-file-input" accept="image/jpeg, image/png" onchange="readURL(this);">
+                                    <input type="file" id="upfile1" class="real-file-input" accept="image/jpeg, image/png" onchange="readURL(this);">
                                 </div>
                             </div>
                         </div>
@@ -43,13 +43,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
                         <div class="col-md-4">
                             <div class="imagem-container">
                                 <div class="inserirArquivo">
-                                    <label for="file-input2" class="custom-file-input2">
-                                        <img class="iconeUparArqui" src="./arquivos/imagensInsert/iconeUparArqui.png" alt="Selecione o arquivo da música/projeto musical.">
+                                    <label for="audioInput" class="custom-file-input2">
+
+                                        <i class="bi bi-play"></i>
+                                        
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi btn-play-insert bi-play-fill" viewBox="0 0 16 16">
+                                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                                        </svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi btn-pause-insert bi-pause" viewBox="0 0 16 16">
+                                            <path d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                                        </svg>
+
+
+                                        <audio id="msc_upload">
+                                            <!-- O atributo 'src' será atualizado pela função readMSC -->
+                                        </audio>
+
+                                        <img id="upMusic" class="iconeUparArqui" src="./arquivos/imagensInsert/iconeUparArqui.png" alt="Selecione o arquivo da música/projeto musical.">
+                                        <div class="addMusica">
+                                            <p>Adicione o arquivo de música</p>
+                                        </div>
                                     </label>
-                                    <div class="addMusica">
-                                        <p>Adicione o arquivo de música</p>
-                                    </div>
-                                    <input type="file" id="file-input2" class="real-file-input2" name="music" accept="audio/mpeg, audio/wav, audio/mp3">
+
+                                    <input type="file" id="audioInput" class="real-file-input2" name="music" accept="audio/mpeg, audio/wav, audio/mp3" onchange="readMSC(this);">
                                 </div>
                             </div>
                         </div>
@@ -78,18 +95,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') :
             </div>
         </main>
     </div>
-    <script>
-        function changeColor() {
-            const selectElement = document.getElementById("mySelect");
-            const selectedOption = selectElement.options[selectElement.selectedIndex];
-
-            if (selectedOption) {
-                selectElement.classList.add("selected");
-            } else {
-                selectElement.classList.remove("selected");
-            }
-        }
-    </script>
 
 
 <?php
