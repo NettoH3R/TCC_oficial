@@ -20,24 +20,44 @@ function readURL(input) {
     }
 }
 
+// Player Insert
+
+
 function readMSC(input) {
     var audioElement = $('#msc_upload');
-    var buttonplayer = $('#upMusic');
+    var imgUp = $('#upMusic');
+    var btn_play = $('#btn-play');
+    var btn_pause = $('#btn-pause');
+
+    // Play e Pause
+
+
+
 
     if (input.files && input.files[0]) {
         var reader = new FileReader();
 
         reader.onload = function (e) {
             audioElement.attr('src', e.target.result);
-            audioElement.attr('controls', true);
-            buttonplayer.removeAttr('class')
-        };
+            imgUp.attr('class', 'iconeUparArquiNone');
+            btn_play.attr('class', 'btn-play-insert');
+
+            btn_play.addEventListener('click', playMusica);
+
+
+            function playMusica() {
+                ;
+                btn_play.attr('class', 'btn-pause-insert');
+                btn_pause.attr('class', 'btn-play-insert');
+            }
+        }
+
 
         reader.readAsDataURL(input.files[0]);
+
     } else {
         audioElement.removeAttr('src');
-        audioElement.removeAttr('controls');
-        buttonplayer.attr('class', 'iconeUparArqui')
+        imgUp.attr('class', 'iconeUparArqui');
     }
 }
 

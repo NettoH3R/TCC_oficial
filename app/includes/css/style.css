@@ -385,10 +385,15 @@ select option[disabled] {
 }
 
 .iconeUparArqui {
+    display: block;
     max-width: 100%;
     max-height: 100%;
     min-width: 100%;
     min-height: 100%;
+}
+
+.iconeUparArquiNone{
+    display: none;
 }
 
 .inserirArquivo:hover {
@@ -528,13 +533,13 @@ select option[disabled] {
 }
 
 .btn-play-insert{
+    cursor: pointer;
     width: 150px;
     height: 150px;
+    margin: 5px;
     transition: 0.4s;
 }
 
 .btn-pause-insert{
-    width: 150px;
-    height: 150px;
-    transition: 0.4s;
+    display: none;
 }
