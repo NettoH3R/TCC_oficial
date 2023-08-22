@@ -538,8 +538,24 @@ select option[disabled] {
     height: 150px;
     margin: 5px;
     transition: 0.4s;
+    overflow: hidden;
 }
 
 .btn-pause-insert{
     display: none;
+}
+
+
+/* mensagem AVISO CAMPO */
+#warningMessage {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ff8f2d;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    width: 400px;
+    height: 70px;
 }
