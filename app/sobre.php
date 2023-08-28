@@ -7,22 +7,31 @@
 
      <main class="main">
 
-         <div class="row">
+         <div class="sobreFundo">
 
-             <div class="col-md-3 sobreRetangulo" style="background-color: #00e1ff;">
-                 <p>a</p>
-             </div>
+             <div class="row">
 
-             <div class="col-md-3 sobreRetangulo" style="background-color: #00e1ff;">
-                 <p>a</p>
-             </div>
+                 <div class="col-md-4">
+                     <div class="sobreRetangulo">
+                         <p>a</p>
+                     </div>
+                 </div>
 
-             <div class="col-md-3 sobreRetangulo" style="background-color: #00e1ff;">
-                 <p>a</p>
+                 <div class="col-md-4">
+                     <div class="sobreRetangulo">
+                         <p>a</p>
+                     </div>
+                 </div>
+
+                 <div class="col-md-4">
+                     <div class="sobreRetangulo">
+                         <p>a</p>
+                     </div>
+                 </div>
+
              </div>
 
          </div>
-
      </main>
 
  </div>

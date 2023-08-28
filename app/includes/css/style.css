@@ -617,12 +617,15 @@ select option[disabled] {
 }
 
 .sobreRetangulo{
-    width: 300px;
-    height: 100px;
-    margin: 1%;
+    width: 360px;
+    height: 600px;
+    background-color: #ff8f2d;
+}
+
+.sobreFundo{
+    background-color: #60A1F5;
 }
 
 .sobreFotoPerfil{
     background-color: #646b68;
-
 }
