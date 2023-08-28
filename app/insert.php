@@ -145,13 +145,6 @@
 
     endif;
 
-    var_dump($_FILES['music']);
-    echo "<br>" . "<br>";
-    var_dump($_FILES['img']);
-    echo "<br>" . "<br>";
-    var_dump($_POST);
-    echo "<br>" . "<br>";
-
     //Conexão banco de dados
 
     require './vendor/autoload.php';

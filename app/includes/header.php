@@ -28,6 +28,9 @@
             color: black;
         }
 
+        .nav-link:hover {
+            color: #888888;
+        }
 
     </style>
 
@@ -78,7 +81,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="insert.php">Sobre</a>
+                                <a class="nav-link" href="sobre.php">Sobre</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="insert.php">Inserir</a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
