@@ -44,13 +44,13 @@
                 <div class="row">
                     <div class="col-md-5 text-center">
                     </div>
-                    <div class="col-md-2 text-center">
-                        <img src="arquivos/imagensDoSite/logo_1nova.png" class="tamanhologo" alt="Logo do nosso site">
+                    <div class="col-md-2 col-sm-12 text-center">
+                        <img src="arquivos/imagensDoSite/logo_1finalizada.png" class="tamanhologo" alt="Logo do nosso site">
                     </div>
                     <div class="col-md-2">
 
                     </div>
-                    <div class="col-md-3 text-center">
+                    <div class="col-md-3 col-sm-12 text-center">
                         <button type="button" class="btn-1">Entrar</button>
                         <button type="button" class="btn-2">Cadastrar</button>
                     </div>
@@ -62,7 +62,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg" style="background-color: #244bbf; margin-top: 10px;">
                 <div class="container-fluid">
-                    <a class="navbar-brand" style="font-weight: bolder; color: white;" href="#">UnderSounds</a>
+                    <a class="navbar-brand" style="font-weight: bolder; color: white; cursor:default" href="index.php"><img src="arquivos/imagensDoSite/logo_minimalista.png" width="90px" height="50px" alt="Logo do nosso site de uma maneira mais simples"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
