@@ -1,3 +1,6 @@
+CREATE DATABASE application;
+USE application;
+
 CREATE TABLE musicas(
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
