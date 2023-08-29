@@ -550,13 +550,13 @@ select option[disabled] {
     font-size: 16pt;
     font-family: 'Rubik', sans-serif;
     display: flex;
-    align-items:center;
+    align-items: center;
     margin-bottom: 10px;
     margin-left: 10%;
     margin-top: 10px;
 }
 
-.letrasRadio label{
+.letrasRadio label {
     cursor: pointer;
     padding-left: 10px;
 }
@@ -567,7 +567,7 @@ select option[disabled] {
     height: 26px;
     border: 3px solid white;
     background-color: white;
-    cursor: pointer; 
+    cursor: pointer;
     border-radius: 50%;
     position: relative;
     display: flex;
@@ -575,7 +575,7 @@ select option[disabled] {
     justify-content: center;
 }
 
-.configRadio::before{
+.configRadio::before {
     content: '';
     position: absolute;
     height: 16px;
@@ -586,16 +586,16 @@ select option[disabled] {
     transition: all 500ms ease-in-out;
 }
 
-.configRadio:checked:before{
+.configRadio:checked:before {
     opacity: 1;
 }
 
-.configRadio:focus{
+.configRadio:focus {
     box-shadow: 0 0 8px #244bbf;
     outline: 1px inset #244bbf;
 }
 
-.configRadio:hover{
+.configRadio:hover {
     outline: 1px inset #244bbf;
     box-shadow: 0 0 13px rgb(36, 75, 191, 1);
 }
@@ -616,15 +616,15 @@ select option[disabled] {
     height: 70px;
 }
 
-.sobreRetangulo{
+.sobreRetangulo {
     width: 360px;
     height: 600px;
     background-color: #ff8f2d;
 }
 
-.sobre-quadradinho{
+.sobre-quadradinho {
     width: 90%;
-    height: 500px;
+    height: 560px;
     background-color: #244bbf;
     margin-left: 5%;
     margin-right: 5%;
@@ -632,10 +632,32 @@ select option[disabled] {
     padding-top: 40px;
 }
 
-.foto-sobre{
+.foto-sobre {
     width: 50%;
     height: 39%;
     background-color: #ff8f2d;
     margin-left: 25%;
-    margin-right:25%;
+    margin-right: 25%;
+}
+
+.fotoNossaSobre {
+    max-width: 100%;
+    max-height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.textoSobre {
+    color: white;
+    text-align: center;
+    font-size: 14pt;
+    margin: 10px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.textoSobreBold {
+    font-weight: bold;
+    font-size: 16pt;
+    color: #ff8f2d;
+    font-family: 'Rubik', sans-serif;
 }
