@@ -622,10 +622,20 @@ select option[disabled] {
     background-color: #ff8f2d;
 }
 
-.sobreFundo{
-    background-color: #60A1F5;
+.sobre-quadradinho{
+    width: 90%;
+    height: 500px;
+    background-color: #244bbf;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 80px;
+    padding-top: 40px;
 }
 
-.sobreFotoPerfil{
-    background-color: #646b68;
+.foto-sobre{
+    width: 50%;
+    height: 39%;
+    background-color: #ff8f2d;
+    margin-left: 25%;
+    margin-right:25%;
 }

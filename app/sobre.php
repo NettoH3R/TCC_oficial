@@ -1,42 +1,64 @@
- <?php
-    $title = 'Sobre';
-    include('includes/header.php');
-    ?>
+<?php
+$title = 'Sobre';
+include('includes/header.php');
+?>
 
- <div class="container">
+<div class="container">
+    <main class="main" style="padding-top: 0;">
 
-     <main class="main">
+        <div class="row" style="padding: 0; margin: 0;">
 
-         <div class="sobreFundo">
+            <div class="col-md-4">
+                <div class="sobre-quadradinho">
+                    <div class="foto-sobre">
 
-             <div class="row">
+                    </div>
+                </div>
+            </div>
 
-                 <div class="col-md-4">
-                     <div class="sobreRetangulo">
-                         <p>a</p>
-                     </div>
-                 </div>
+            <div class="col-md-4">
+                <div class="sobre-quadradinho">
+                    <div class="foto-sobre">
 
-                 <div class="col-md-4">
-                     <div class="sobreRetangulo">
-                         <p>a</p>
-                     </div>
-                 </div>
+                    </div>
+                </div>
+            </div>
 
-                 <div class="col-md-4">
-                     <div class="sobreRetangulo">
-                         <p>a</p>
-                     </div>
-                 </div>
+            <div class="col-md-4">
+                <div class="sobre-quadradinho">
+                    <div class="foto-sobre">
 
-             </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-         </div>
-     </main>
+        <div class="row" style="padding: 0; margin: 0;">
 
- </div>
+            <div class="col-md-2"></div>
+
+            <div class="col-md-4">
+                <div class="sobre-quadradinho">
+                    <div class="foto-sobre">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="sobre-quadradinho">
+                    <div class="foto-sobre">
+
+                    </div>
+                </div>
+            </div>
 
 
- <?php
-    include('includes/footer.php');
-    ?>
+            <div class="col-md-2"></div>
+        </div>
+    </main>
+</div>
+
+<?php
+include('includes/footer.php');
+?>
