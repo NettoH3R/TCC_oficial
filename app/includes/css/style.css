@@ -678,3 +678,18 @@ select option[disabled] {
     border-radius: 2rem;
     padding: 2%;
 }
+
+.sobreNos{
+    color: white;
+    text-align: justify;
+    font-size: 13pt;
+    font-family: 'Rubik', sans-serif;
+    margin: 10px;
+}
+
+.sobreDestaque{
+    font-weight: bold;
+    font-size: 13pt;
+    color: #ff8f2d;
+    font-family: 'Rubik', sans-serif;
+}
