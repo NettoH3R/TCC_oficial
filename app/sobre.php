@@ -1,12 +1,29 @@
 <?php
-$title = 'Sobre';
+$title = 'Sobre Nós';
 include('includes/header.php');
 ?>
 
 <div class="container">
     <main class="main" style="padding-top: 0;">
 
-        <h1 class="text-center" style="padding-top: 50px;margin-bottom: -20px;font-family: 'Rubik', sans-serif;font-weight: bold; color: #ff8f2d; text-shadow: -1.5px -1.5px 1.5px black, 1.5px -1.5px 1.5px black, -1.5px 1.5px 1.5px black, 1.5px 1.5px 1.5px black; justify-content: center; align-items: center;">Membros do UrderSounds</h1>
+        <h1 class="text-center" style="padding-top: 50px;font-size: 36pt;margin-bottom: -20px;font-family: 'Rubik', sans-serif;font-weight: bold; color: #ff8f2d; text-shadow: -1.5px -1.5px 1.5px black, 1.5px -1.5px 1.5px black, -1.5px 1.5px 1.5px black, 1.5px 1.5px 1.5px black; justify-content: center; align-items: center;">Sobre Nós</h1>
+        <div class="row" style="padding: 0; margin: 0;">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="sobreQuadrado">
+                    <div>
+                        <p>O projeto UnderSounds possui como principal propósito impulsionar a visibilidade e a valorização de artistas independentes e talentos locais, concentrados na vasta região do interior de São Paulo, especificamente em Palmital. Nossa iniciativa abraça a criação de uma plataforma web inovadora, empregando um conjunto diversificado de linguagens de programação, tais como PHP, SQL e JavaScript, juntamente com as bases fundamentais de marcação, HTML e CSS.</p>
+                        <p>O projeto UnderSounds consiste em fornecer aos artistas um meio eficaz para apresentar suas obras ao público, também na abertura de portas amplas e no despertar de oportunidades colaborativas e de performance. Ao fornecer uma plataforma digital abrangente, aspiramos não só aprofundar o engajamento do público com a riqueza artística local, mas também a incentivar artistas a explorarem seus trilhos criativos.</p>
+                        <p>Além disso, nosso projeto deseja divulgar o cenário musical e artístico, contribuindo para a formação de laços culturais mais fortes na comunidade. Por meio da criação de um ambiente digital, desejamos que o UnderSounds desempenhe um papel preponderante em estimular mais indivíduos a embarcar na trajetória musical e artística, enriquecendo assim a cultura da região.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+        </div>
+
+        <h2 class="text-center" style="padding-top: 50px;font-size: 30pt;margin-bottom: -20px;font-family: 'Rubik', sans-serif;font-weight: bold; color: #ff8f2d; text-shadow: -1.5px -1.5px 1.5px black, 1.5px -1.5px 1.5px black, -1.5px 1.5px 1.5px black, 1.5px 1.5px 1.5px black; justify-content: center; align-items: center;">Membros do UrderSounds</h2>
 
         <div class="row" style="padding: 0; margin: 0;">
 

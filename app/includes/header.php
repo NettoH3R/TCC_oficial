@@ -81,7 +81,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="sobre.php">Sobre</a>
+                                <a class="nav-link" href="sobre.php">Sobre Nós</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="insert.php">Inserir</a>

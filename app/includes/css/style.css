@@ -632,6 +632,11 @@ select option[disabled] {
     padding-top: 40px;
 }
 
+.sobre-quadradinho:hover {
+    outline: 2px inset #ff8f2d;
+    box-shadow: 0 0 13px #ff8f2d;
+}
+
 .foto-sobre {
     width: 50%;
     height: 37%;
@@ -660,4 +665,16 @@ select option[disabled] {
     font-size: 16pt;
     color: #ff8f2d;
     font-family: 'Rubik', sans-serif;
+}
+
+.sobreQuadrado {
+    background-color: #244bbf;
+    width: 100%;
+    height: 500px;
+    margin-top: 10%;
+    margin-bottom: 0.1%;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 2rem;
+    padding: 2%;
 }
