@@ -31,7 +31,6 @@
         .nav-link:hover {
             color: #888888;
         }
-
     </style>
 
 </head>
@@ -51,8 +50,8 @@
 
                     </div>
                     <div class="col-md-3 col-sm-12 text-center">
-                        <button type="button" class="btn-1">Entrar</button>
-                        <button type="button" class="btn-2">Cadastrar</button>
+                        <a href="entrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-1">Entrar</button></a>
+                        <a href="cadastrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-2">Cadastrar</button></a>
                     </div>
                 </div>
             </div>
