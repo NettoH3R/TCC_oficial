@@ -3,7 +3,7 @@ $title = 'Entrar';
 include('includes/header.php');
 ?>
 <div class="container">
-    <main class="main">
+    <main class="fundoCadastrar" style="background-image: url(arquivos/imagensDoSite/fundoMaluko.jpg);">
 
     </main>
 </div>
