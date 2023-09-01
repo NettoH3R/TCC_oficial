@@ -14,11 +14,6 @@
     <link rel="stylesheet" href="includes/css/style.css">
 
     <style>
-        .tamanhologo {
-            max-width: 100%;
-            height: 100%;
-        }
-
         .nav-link {
             color: white;
             font-weight: bolder;
@@ -31,36 +26,14 @@
         .nav-link:hover {
             color: #888888;
         }
-
-        
     </style>
 
 </head>
 
 <body>
-    <main>
-        <!-- Cabeçario -->
-        <header>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5 text-center">
-                    </div>
-                    <div class="col-md-2 col-sm-12 text-center">
-                        <img src="arquivos/imagensDoSite/logo_1finalizada.png" class="tamanhologo" alt="Logo do nosso site">
-                    </div>
-                    <div class="col-md-2">
-
-                    </div>
-                    <div class="col-md-3 col-sm-12 text-center">
-                        <a href="entrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-1">Entrar</button></a>
-                        <a href="cadastrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-2">Cadastrar</button></a>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <!-- Menu -->
-        <div class="container">
+    <div class="container">
+        <main>
+            <!-- Menu -->
             <nav class="navbar navbar-expand-lg" style="background-color: #244bbf; margin-top: 10px;">
                 <div class="container-fluid">
                     <a class="navbar-brand" style="font-weight: bolder; color: white; cursor:default" href="index.php"><img src="arquivos/imagensDoSite/logo_minimalista.png" width="90px" height="50px" alt="Logo do nosso site de uma maneira mais simples"></a>
@@ -95,4 +68,4 @@
                     </div>
                 </div>
             </nav>
-        </div>
+    </div>

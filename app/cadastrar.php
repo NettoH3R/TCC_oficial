@@ -1,6 +1,6 @@
 <?php
 $title = 'Cadastre-se';
-include('includes/header.php');
+include('includes/noHeader.php');
 ?>
 <div class="container">
     <main class="main fundoCadastrar">
@@ -9,6 +9,13 @@ include('includes/header.php');
     </main>
 </div>
 
-<?php
-include('includes/footer.php');
-?>
+<div class="container">
+    <footer class="footer">
+        <h4 class="footerConfig">&copy2023 | UnderSounds | Todos os direitos reservados.</h4>
+    </footer>
+</div>
+
+</main>
+</body>
+
+</html>
