@@ -194,7 +194,7 @@
                 var_dump($pathCapa);
 
                 //Consulta os arquivos do banco de dados 
-                $comando = $db->prepare('SELECT * FROM musica');
+                $comando = $db->prepare('SELECT * FROM musicas');
                 $comando->execute();
                 $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
 
@@ -214,12 +214,12 @@
                 if ($deu_certo) {
                     if ($deu_certo) {
                         //Salva no banco de dados
-                        $comando = $db->prepare('INSERT INTO musica(nome, genero, caminho, capa, privacidade, descricao)
+                        $comando = $db->prepare('INSERT INTO musicas(nome, genero, caminho, capa, privacidade, descricao)
                     VALUES (:nome, :genero, :caminho, :capa, :privacidade, :descricao)');
 
                         $comando->execute([
-                            ':nome' => $nome, 'genero' => $_POST['genero'], 'caminho' => $pathMusica,
-                            'capa' => $pathCapa, 'privacidade' => $_POST['rdoPrivac'], 'descricao' => $_POST['descricao']
+                            ':nome' => $nome, ':genero' => $_POST['genero'], ':caminho' => $pathMusica,
+                            ':capa' => $pathCapa, ':privacidade' => $_POST['rdoPrivac'], ':descricao' => $_POST['descricao']
                         ]);
 
                         header('Location:/index.php');

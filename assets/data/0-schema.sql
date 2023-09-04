@@ -1,4 +1,3 @@
-CREATE DATABASE application;
 USE application;
 
 CREATE TABLE musicas(
