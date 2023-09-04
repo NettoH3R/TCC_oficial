@@ -3,8 +3,8 @@ $title = 'Entrar';
 include('includes/noHeader.php');
 ?>
 <div class="container">
-    <main class="fundoCadastrar" style="background-image: url(arquivos/imagensDoSite/fundoMaluko.jpg);">
-
+    <main>
+        
     </main>
 </div>
 
@@ -14,7 +14,6 @@ include('includes/noHeader.php');
     </footer>
 </div>
 
-</main>
 </body>
 
 </html>
