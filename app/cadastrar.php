@@ -27,7 +27,7 @@ include('includes/noHeader.php');
 
                         <form action="" method="post">
                         <input name="nome" type="text" placeholder="Nome de Usuário" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required> 
-                        <input name="nome" type="text" placeholder="E-mail" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required> 
+                        <input name="nome" type="" placeholder="E-mail" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required> 
                         <input name="nome" type="password" placeholder="Senha" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required>
                         <input name="nome" type="password" placeholder="Confirme a Senha" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required>
                         <button type="submit" class="bnt-entrar-entrar">Cadastre-se</button>

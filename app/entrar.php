@@ -26,13 +26,13 @@ include('includes/noHeader.php');
                         <h2 style="padding-top: 10%; font-size: 24pt; text-align: center; color: white; font-weight: bold;">Bem-Vindo de Volta!</h2>
 
                         <form action="" method="post">
-                        <input name="nome" type="text" placeholder="Nome ou E-mail" class="nomeDaFaixa" style=" width:80% ;  margin-top: 10%; margin-left: 10%; margin-right: 10%;" required> 
+                        <input name="nome" type="email" placeholder="E-mail" class="nomeDaFaixa" style=" width:80% ;  margin-top: 10%; margin-left: 10%; margin-right: 10%;" required> 
                         <input name="nome" type="password" placeholder="Senha" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required>
                         <button type="submit" class="bnt-entrar-entrar">Entrar</button>
                         </form>
 
                         <p style="text-align: center; color: white; font-size: 14pt; margin-top: 8%;">Não tem uma conta UnderSounds?</p>
-                        <p style="text-align: center; color: white; font-size: 14pt; margin-top: -4%;"><a class="sublinhado"  href="cadastrar.php">CADASTRE-SE</a> AGORA </p>
+                        <p style="text-align: center; color: white; font-size: 14pt; margin-top: -4%;"><a class="sublinhado"     href="cadastrar.php">CADASTRE-SE</a> AGORA </p>
                     </div>
 
                 </div>
