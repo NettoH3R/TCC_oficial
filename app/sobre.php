@@ -80,7 +80,7 @@ include('includes/header.php');
 
                         <p><span class="textoSobreBold">Idade:</span> 17 anos</p>
 
-                        <p><span class="textoSobreBold">Função:</span> Desenvolvedor de Back-End</p>
+                        <p><span class="textoSobreBold">Função:</span> Desenvolvedor Back-End / Desenvolvedor Front-End / Diretor Geral</p>
 
                         <p><span class="textoSobreBold">Escola:</span> ETEC Mário Antônio Verza</p>
 

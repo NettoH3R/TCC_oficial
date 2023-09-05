@@ -31,6 +31,9 @@ header {
     border: 3px solid white;
 }
 
+
+
+
 .main {
     background-color: white;
     padding-top: 5%;
@@ -717,4 +720,16 @@ select option[disabled] {
     background-position: center; /* Centralizar a imagem */
     min-width: 100%;
     height: 500px; /* Defina a altura desejada */
+}
+
+.quadradoEntrar{
+    height: 65vh;
+    border-right:2px solid white;
+
+}
+
+.quadrado2Entrar{
+    height: 65vh;
+    border-left: 2px solid white;
+
 }

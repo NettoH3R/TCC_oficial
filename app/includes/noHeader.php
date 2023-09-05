@@ -26,6 +26,11 @@
         .nav-link:hover {
             color: #888888;
         }
+        .backImage{
+            background-image: url('arquivos/imagensDoSite/texturaofc.jpg');
+            background-repeat: repeat;
+            background-blend-mode: multiply;
+        }
     </style>
 
 </head>
