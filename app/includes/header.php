@@ -32,7 +32,11 @@
             color: #888888;
         }
 
-        
+        .insert {
+            background-image: url('arquivos/imagensDoSite/textPura.jpg');
+            background-repeat: repeat;
+            background-blend-mode: multiply;
+        }
     </style>
 
 </head>
