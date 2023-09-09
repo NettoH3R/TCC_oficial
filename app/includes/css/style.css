@@ -725,13 +725,13 @@ select option[disabled] {
 }
 
 .quadradoEntrar {
-    height: 65vh;
+    height: 70vh;
     border-right: 2px solid white;
 
 }
 
 .quadrado2Entrar {
-    height: 65vh;
+    height: 70vh;
     border-left: 2px solid white;
 
 }
@@ -786,5 +786,34 @@ select option[disabled] {
     margin-top: -100px !important;
     background-color: #244bbf ;
     z-index: 3;
-    
+    position: absolute; 
+    margin-left: 5%
 }
+
+.botaoSeguir{
+    background-color: #ff8f2d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 7rem;
+    height: 2.5rem;
+    font-family: 'Rubik', sans-serif;
+    
+    position: absolute;
+    margin-top: -58px !important;
+    z-index: 3;
+}
+
+.botaoSeguir:hover{
+    background-color: #ffb26f;
+}
+
+.nomeDoArtista{
+    position: absolute;
+    margin-top: -60px !important;
+    z-index: 3;
+    color: white;
+    font-size: 24pt;
+}
+
+
