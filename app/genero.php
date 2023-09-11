@@ -31,9 +31,6 @@ include('includes/header.php');
                 <div class="boladinho">
                     <img src="./arquivos/imagensAlbuns/teste4.png" class="album" alt="Possível álbum a ser colocado">
                 </div>
-                <div class="boladinho">
-                    <img src="./arquivos/imagensAlbuns/teste5.png" class="album" alt="Possível álbum a ser colocado">
-                </div>
             </div>
         </div>
 
@@ -91,6 +88,27 @@ include('includes/header.php');
                                 <span class="progress"></span>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faixas">
+
+            <p style="font-size: 24pt; font-weight: bold; color: black;">Faixas</p>
+            <div class="scrool">
+                <div class="quadradinhos">
+                    <div class="quadradinho">
+                        <img src="./arquivos/imagensAlbuns/teste1.png" class="album" alt="Possível álbum a ser colocado">
+                    </div>
+                    <div class="quadradinho">
+                        <img src="./arquivos/imagensAlbuns/teste2.png" class="album" alt="Possível álbum a ser colocado">
+                    </div>
+                    <div class="quadradinho">
+                        <img src="./arquivos/imagensAlbuns/teste3.png" class="album" alt="Possível álbum a ser colocado">
+                    </div>
+                    <div class="quadradinho">
+                        <img src="./arquivos/imagensAlbuns/teste4.png" class="album" alt="Possível álbum a ser colocado">
                     </div>
                 </div>
             </div>
