@@ -81,8 +81,8 @@
                                     Gêneros
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Rock</a></li>
-                                    <li><a class="dropdown-item" href="#">Sertanejo</a></li>
+                                    <li><a class="dropdown-item" href="genero.php">Rock</a></li>
+                                    <li><a class="dropdown-item" href="genero.php">Sertanejo</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
