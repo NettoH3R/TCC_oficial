@@ -222,7 +222,7 @@
                             ':capa' => $pathCapa, ':privacidade' => $_POST['rdoPrivac'], ':descricao' => $_POST['descricao']
                         ]);
 
-                        header('Location:/index.php');
+                        
                     } else {
                         echo "<p>Falha ao Enviar o arquivo</p>" .
                             "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
