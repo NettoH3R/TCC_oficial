@@ -7,5 +7,5 @@ CREATE TABLE musicas(
     caminho VARCHAR(100) NOT NULL,
     capa VARCHAR(100) NOT NULL,
     privacidade CHAR(7)NOT NULL,
-    decricao VARCHAR(300)
+    descricao VARCHAR(300)
 );
