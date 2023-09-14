@@ -146,8 +146,20 @@
 
     endif;
 
-    //Conexão banco de dados
 
+    //Conexão banco de dados
+    $musicaInvalida ="<p>O tipo do arquivo de música não é aceito por favor insira um arquivo \".MP3\"</p>" .
+    "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+
+    $fotoInvalida = "<p>O tipo do arquivo da imagem para capa não é aceito por favor insira um arquivo \".jpge\" ou \".png\"</p>" .
+    "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+
+    $falhaDeEnvio = "<p>Falha ao Enviar o arquivo</p>" .
+    "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+
+    $arquivoExistente = 'Já existe um arquivo com esse nome!!!' .
+    "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+    
     require './vendor/autoload.php';
 
     use Application\DBConnection\MySQLConnection;
@@ -191,9 +203,6 @@
                 $extencao = strtolower(pathinfo($extencao, PATHINFO_EXTENSION));
                 $pathCapa = $pasta . $nome . "." . $extencao;
 
-                var_dump($pathMusica);
-                var_dump($pathCapa);
-
                 //Consulta os arquivos do banco de dados 
                 $comando = $db->prepare('SELECT * FROM musicas');
                 $comando->execute();
@@ -203,8 +212,7 @@
                 //verifica se não tem nenhum arquivo com o mesmo nome
                 foreach ($medias as $m) {
                     if ($m['arquivo'] == $path) {
-                        echo 'Já existe um arquivo com esse nome!!!' .
-                            "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+                        die($arquivoExistente);
                     }
                 }
 
@@ -225,20 +233,18 @@
 
                         
                     } else {
-                        echo "<p>Falha ao Enviar o arquivo</p>" .
-                            "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+                        die($falhaDeEnvio);
                     }
                 }
             } else {
                 // A função getimagesize() não conseguiu determinar que o arquivo é uma imagem
-                echo "<p>O tipo do arquivo da imagem para capa não é aceito por favor insira um arquivo \".jpge\" ou \".png\"</p>" .
-                    "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+                die($fotoInvalida);
             }
         } else {
-            echo "<p>O tipo do arquivo de música não é aceito por favor insira um arquivo \".MP3\"</p>" .
-                "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+            die($musicaInvalida);
         }
     }
+
 
 
     ?>
