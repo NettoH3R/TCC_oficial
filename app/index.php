@@ -12,7 +12,6 @@ $comando->execute();
 $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
 
 $num = count($medias);
-$aleatorio = array_rand($medias, $num);
 
 include("includes/header.php");
 
@@ -29,13 +28,13 @@ include("includes/header.php");
                         <input type="radio" name="slider" id="item-3" style="display: none;">
                         <div class="cards">
                             <label class="card" for="item-1" id="song-1">
-                                <img class="imgCarousel" src="<?php $musica = $medias[$aleatorio[0]]; echo $musica['capa']; ?>" alt="song">
+                                <img class="imgCarousel" src="<?php $aleatorio = rand(0,$num - 1); $musica = $medias[$aleatorio];  echo $musica['capa']; ?>" alt="song">
                             </label>
                             <label class="card" for="item-2" id="song-2">
-                                <img class="imgCarousel" src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song">
+                                <img class="imgCarousel" src="<?php $aleatorio = rand(0,$num - 1); $musica2 = $medias[$aleatorio];  echo $musica2['capa']; ?>" alt="song">
                             </label>
                             <label class="card" for="item-3" id="song-3">
-                                <img class="imgCarousel" src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+                                <img class="imgCarousel" src="<?php $aleatorio = rand(0,$num - 1); $musica3 = $medias[$aleatorio];  echo $musica3['capa']; ?>" alt="song">
                             </label>
                         </div>
                         <div class="player">
@@ -48,21 +47,21 @@ include("includes/header.php");
                                 </div>
                                 <div class="info-area" id="test">
                                     <label class="song-info" id="song-info-1">
-                                        <div class="title">Bunker</div>
+                                        <div class="title"><?= $musica['nome'] ?></div>
                                         <div class="sub-line">
                                             <div class="subtitle">Balthazar</div>
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>
                                     <label class="song-info" id="song-info-2">
-                                        <div class="title">Words Remain</div>
+                                        <div class="title"><?= $musica2['nome'] ?></div>
                                         <div class="sub-line">
                                             <div class="subtitle">Moderator</div>
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>
                                     <label class="song-info" id="song-info-3">
-                                        <div class="title">Falling Out</div>
+                                        <div class="title"><?= $musica3['nome'] ?></div>
                                         <div class="sub-line">
                                             <div class="subtitle">Otzeki</div>
                                             <div class="time">4.05</div>
@@ -122,6 +121,8 @@ include("includes/header.php");
 
 <?php
 
-include('includes/footer.php')
+include('includes/footer.php');
+
+var_dump($aleatorio);
 
 ?>

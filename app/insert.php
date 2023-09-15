@@ -211,7 +211,7 @@
 
                 //verifica se não tem nenhum arquivo com o mesmo nome
                 foreach ($medias as $m) {
-                    if ($m['arquivo'] == $path) {
+                    if ($m['arquivo'] == $pathMusica) {
                         die($arquivoExistente);
                     }
                 }
@@ -230,6 +230,8 @@
                             ':nome' => $nome, ':genero' => $_POST['genero'], ':caminho' => $pathMusica,
                             ':capa' => $pathCapa, ':privacidade' => $_POST['rdoPrivac'], ':descricao' => $_POST['descricao']
                         ]);
+
+                        header('Location:index.php');
 
                         
                     } else {
