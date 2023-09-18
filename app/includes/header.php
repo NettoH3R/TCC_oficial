@@ -1,3 +1,9 @@
+<?php
+        // $comando = $db->prepare('SELECT * FROM usuarios');
+        // $comando->execute();
+        // $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
+        ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -58,8 +64,17 @@
                     <div class="col-md-3 col-sm-12 text-center">
                         <a href="entrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-1">Entrar</button></a>
                         <a href="cadastrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-2">Cadastrar</button></a>
+                        <!-- <div class="mini-perf">
+                            <div class="mini-perf-ft">
+                                <img src="" alt="">
+                            </div>
+                            <div class="mini-perf-nome">
+                                <p></p>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
+            </div>
             </div>
         </header>
 

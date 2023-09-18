@@ -1,5 +1,5 @@
 <?php
-include('includes/header.php');
+include('includes/noHeader.php');
 ?>
 
 <div class="container">

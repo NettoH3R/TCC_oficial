@@ -1,5 +1,9 @@
  <?php
+    require './vendor/autoload.php';
 
+    use Application\DBConnection\MySQLConnection;
+
+    $db = new MySQLConnection();
 
     $title = "Inserção de Música";
 
@@ -148,23 +152,20 @@
 
 
     //Conexão banco de dados
-    $musicaInvalida ="<p>O tipo do arquivo de música não é aceito por favor insira um arquivo \".MP3\"</p>" .
-    "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+    $musicaInvalida = "<p>O tipo do arquivo de música não é aceito por favor insira um arquivo \".MP3\"</p>" .
+        "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
 
     $fotoInvalida = "<p>O tipo do arquivo da imagem para capa não é aceito por favor insira um arquivo \".jpge\" ou \".png\"</p>" .
-    "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+        "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
 
     $falhaDeEnvio = "<p>Falha ao Enviar o arquivo</p>" .
-    "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
+        "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
 
     $arquivoExistente = 'Já existe um arquivo com esse nome!!!' .
-    "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
-    
-    require './vendor/autoload.php';
+        "<br>" . "<br>" . '<a href="insert.php" ><button type="button">Voltar</button></a>';
 
-    use Application\DBConnection\MySQLConnection;
 
-    $db = new MySQLConnection();
+
 
     if (isset($_FILES['music']) && isset($_FILES['img'])) {
 
@@ -232,8 +233,6 @@
                         ]);
 
                         header('Location:index.php');
-
-                        
                     } else {
                         die($falhaDeEnvio);
                     }
