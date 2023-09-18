@@ -122,7 +122,4 @@ include("includes/header.php");
 <?php
 
 include('includes/footer.php');
-
-var_dump($aleatorio);
-
 ?>

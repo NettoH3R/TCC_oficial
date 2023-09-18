@@ -232,7 +232,6 @@
                             ':capa' => $pathCapa, ':privacidade' => $_POST['rdoPrivac'], ':descricao' => $_POST['descricao']
                         ]);
 
-                        header('Location:index.php');
                     } else {
                         die($falhaDeEnvio);
                     }

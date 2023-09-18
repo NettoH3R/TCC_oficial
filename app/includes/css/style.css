@@ -862,5 +862,52 @@ select option[disabled] {
 }
 
 .mini-perf{
-    
+    width: 120px;
+    height: 150px;
+    margin-top: 0px;
+    border-radius: 5%;
+    position: absolute;
+    display: flex;
+    overflow: hidden;
+    margin-top: 25px;
+    transition: ease-out 0.7s;
+}
+
+.mini-perf-ft{
+    width: 70px;
+    height: 70px;
+    border: #000000 solid 3px;
+    border-radius: 100%;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.mini-perf-nome{
+    width: 250px;
+    font-size: 12pt;
+    text-align: center;
+    padding-top: 300px;
+    transition: 0.7s;
+}
+
+.mini-perf:hover .mini-perf-nome{
+    width: 250px;
+    font-size: 12pt;
+    text-align: center;
+    padding-top: 100px;
+    transition: 0.7s;
+}
+
+.mini-perf:hover{
+    background-color: #244bbf;
+    color: white;
+    transition: ease-in 0.7s;
+}
+
+.mini-perf:hover .mini-perf-ft{
+    background-color: white;
+    transition: ease-in 0.7s;
 }
