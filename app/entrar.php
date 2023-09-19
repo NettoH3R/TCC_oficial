@@ -13,12 +13,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $comando->execute([':email' => $_POST['email'], ':pass' => $_POST['pass']]);
     $user = $comando->fetchAll(PDO::FETCH_ASSOC);
 
-    session_start();
+    if ($user == null) {
+        header('location:entrar.php?erro=true');
+    } else {
 
-    $_SESSION['user'] = $user;
+        session_start();
 
-    header('location:index.php');
+        $_SESSION['user'] = $user;
 
+        header('location:index.php');
+    }
+}
+
+if(isset($_GET['erro'])){
+    $msg = "Usuario Inexistente!!!";
+}else{
+    $msg = "Bem-Vindo de Volta!";
 }
 
 include('includes/noHeader.php');
@@ -44,7 +54,7 @@ include('includes/noHeader.php');
                     <!-- SEGUNDA METADE -->
                     <div class="col-md-6 quadrado2Entrar col-sm-12">
 
-                        <h2 style="padding-top: 10%; font-size: 24pt; text-align: center; color: white; font-weight: bold;">Bem-Vindo de Volta!</h2>
+                        <h2 style="padding-top: 10%; font-size: 24pt; text-align: center; color: white; font-weight: bold;"><?=$msg?></h2>
 
                         <form action="" method="post">
                             <input name="email" type="email" placeholder="E-mail" class="nomeDaFaixa" style=" width:80% ;  margin-top: 10%; margin-left: 10%; margin-right: 10%;" required>

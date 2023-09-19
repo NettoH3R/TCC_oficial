@@ -7,12 +7,14 @@ $db = new MySQLConnection();
 
 $title = "Início";
 
-//pega as if de uma session já iniciada em entrar
 
-session_start();
+if (!isset($_SESSION['user'])) {
+    //pega as info de uma session já iniciada em entrar
+    session_start();
 
-$descompactar = $_SESSION['user'];
-$user = $descompactar[0];
+    $descompactar = $_SESSION['user'];
+    $user = $descompactar[0];
+}
 
 
 $comando = $db->prepare('SELECT * FROM musicas');
@@ -36,13 +38,19 @@ include("includes/header.php");
                         <input type="radio" name="slider" id="item-3" style="display: none;">
                         <div class="cards">
                             <label class="card" for="item-1" id="song-1">
-                                <img class="imgCarousel" src="<?php $aleatorio = rand(0,$num - 1); $musica = $medias[$aleatorio];  echo $musica['capa']; ?>" alt="song">
+                                <img class="imgCarousel" src="<?php $aleatorio = rand(0, $num - 1);
+                                                                $musica = $medias[$aleatorio];
+                                                                echo $musica['capa']; ?>" alt="song">
                             </label>
                             <label class="card" for="item-2" id="song-2">
-                                <img class="imgCarousel" src="<?php $aleatorio = rand(0,$num - 1); $musica2 = $medias[$aleatorio];  echo $musica2['capa']; ?>" alt="song">
+                                <img class="imgCarousel" src="<?php $aleatorio = rand(0, $num - 1);
+                                                                $musica2 = $medias[$aleatorio];
+                                                                echo $musica2['capa']; ?>" alt="song">
                             </label>
                             <label class="card" for="item-3" id="song-3">
-                                <img class="imgCarousel" src="<?php $aleatorio = rand(0,$num - 1); $musica3 = $medias[$aleatorio];  echo $musica3['capa']; ?>" alt="song">
+                                <img class="imgCarousel" src="<?php $aleatorio = rand(0, $num - 1);
+                                                                $musica3 = $medias[$aleatorio];
+                                                                echo $musica3['capa']; ?>" alt="song">
                             </label>
                         </div>
                         <div class="player">
@@ -50,7 +58,7 @@ include("includes/header.php");
                                 <div class="play-icon">
                                     <svg width="20" height="20" fill="#2992dc" stroke="#2992dc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-play" viewBox="0 0 24 24">
                                         <defs />
-                                        <path d="M5 3l14 9-14 9V3z"/>
+                                        <path d="M5 3l14 9-14 9V3z" />
                                     </svg>
                                 </div>
                                 <div class="info-area" id="test">

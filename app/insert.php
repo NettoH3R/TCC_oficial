@@ -7,7 +7,16 @@
 
     $title = "Inserção de Música";
 
+
+
+
     if ($_SERVER['REQUEST_METHOD'] == 'GET') :
+        if (!isset($_SESSION['user'])) {
+            //pega as info de uma session já iniciada em entrar
+            $descompactar = $_SESSION['user'];
+            $user = $descompactar[0];
+        }
+
         include('includes/header.php');
     ?>
 
@@ -232,6 +241,7 @@
                             ':capa' => $pathCapa, ':privacidade' => $_POST['rdoPrivac'], ':descricao' => $_POST['descricao']
                         ]);
 
+                        header('location:insert.php?funcionou=true');
                     } else {
                         die($falhaDeEnvio);
                     }

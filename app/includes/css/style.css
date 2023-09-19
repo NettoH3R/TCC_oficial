@@ -798,13 +798,14 @@ select option[disabled] {
 }
 
 .nomeDoArtista{
-    font-size: 35pt;
+    font-size: 32pt;
     color: white;
     text-align: center;
+    margin-left: 5px;
 }
 
 .btn-seguir{
-    width: 8rem;
+    width: 12rem;
     height: 2rem;
     font-size: 14pt;
     color: white;

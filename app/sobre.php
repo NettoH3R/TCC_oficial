@@ -1,5 +1,14 @@
 <?php
 $title = 'Sobre Nós';
+
+if (!isset($_SESSION['user'])) {
+    //pega as info de uma session já iniciada em entrar
+    session_start();
+
+    $descompactar = $_SESSION['user'];
+    $user = $descompactar[0];
+}
+
 include('includes/header.php');
 ?>
 

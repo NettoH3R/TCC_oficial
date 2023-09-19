@@ -1,4 +1,17 @@
 <?php
+
+if (!isset($_SESSION['user'])) {
+    //pega as info de uma session já iniciada em entrar
+    session_start();
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        session_destroy();
+        header('location:index.php');
+    }
+
+    $descompactar = $_SESSION['user'];
+    $user = $descompactar[0];
+}
+
 include('includes/noHeader.php');
 ?>
 
@@ -13,7 +26,7 @@ include('includes/noHeader.php');
 
                 <div class="col-md-2 col-sm-2" style="overflow: hidden;">
                     <div class="foto-artista">
-                        <img class="ft-artista" src="./arquivos/imagensAlbuns/teste4.png" alt="">
+                        <img class="ft-artista" src="<?= $user['user_capa'] ?>" alt="">
                     </div>
                 </div>
 
@@ -23,17 +36,12 @@ include('includes/noHeader.php');
                     <div class="row" style="margin-top: -60px">
                         <div class="col-md-3">
                             <div class="nomeDoArtista">
-                                <p>Renê</p>
+                                <p><?= $user['nome'] ?></p>
                             </div>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn-seguir" type="button" class="botaoSeguir">Seguir +</button>
                         </div>
 
-                        <div class="col-md-3">
-                            <div class="infosArtista" style="margin-left: 10px;">
-                                <p>2222 Seguidores</p>
-                            </div>
+
+                        <div class="col-md-5">
                         </div>
 
                         <div class="col-md-2">
@@ -78,7 +86,7 @@ include('includes/noHeader.php');
             </div>
         </div>
 
-<!-- ALBUNS -->
+        <!-- ALBUNS -->
 
         <div class="faixas">
 
@@ -98,6 +106,16 @@ include('includes/noHeader.php');
                         <img src="./arquivos/imagensAlbuns/teste4.png" class="album" alt="Possível álbum a ser colocado">
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="text-align: center;">
+                <form action="perfil.php" method="post">
+                    <button class="btn-seguir" type="submit" class="botaoSeguir">
+                        Sair da conta
+                    </button>
+                </form>
             </div>
         </div>
 </div>

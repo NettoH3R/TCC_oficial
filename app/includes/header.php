@@ -59,7 +59,9 @@
 
                         <?php
 
-                        if ($_SESSION == null) {
+                        if ($title == 'Inserção de Música') {
+                            echo " ";
+                        } elseif ($_SESSION == null) {
                             echo
                             '<a href="entrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-1">Entrar</button></a>
                         <a href="cadastrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-2">Cadastrar</button></a>';
