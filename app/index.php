@@ -7,6 +7,14 @@ $db = new MySQLConnection();
 
 $title = "Início";
 
+$comando = $db->prepare('SELECT * FROM usuarios');
+$comando->execute();
+$users = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+session_start();
+
+
+
 $comando = $db->prepare('SELECT * FROM musicas');
 $comando->execute();
 $medias = $comando->fetchAll(PDO::FETCH_ASSOC);

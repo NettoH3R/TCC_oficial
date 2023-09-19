@@ -1,8 +1,4 @@
-<?php
-        // $comando = $db->prepare('SELECT * FROM usuarios');
-        // $comando->execute();
-        // $users = $comando->fetchAll(PDO::FETCH_ASSOC);
-    ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

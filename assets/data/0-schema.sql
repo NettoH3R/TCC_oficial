@@ -21,7 +21,7 @@ CREATE TABLE usuarios(
 );
 
 
-INSERT INTO usuarios(nome, email, senha, user_capa, user_perfil, nivel_acess) VALUES 
-('UnderSoundsADM','undersounds5@gmail.com','Undersounds2023', , , 3),
-('UserArt','UserArt@gmail.com','Art12345', , , 2),
-('UserNorm','UserNorm@gmail.com','Norm12345', , , 1);
+INSERT INTO usuarios(nome, email, senha, nivel_acess) VALUES 
+('UnderSoundsADM','undersounds5@gmail.com','Undersounds2023', 3),
+('UserArt','UserArt@gmail.com','Art12345', 2),
+('UserNorm','UserNorm@gmail.com','Norm12345', 1);
