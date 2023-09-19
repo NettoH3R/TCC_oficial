@@ -66,7 +66,7 @@
                             </div>
                             <div class="mini-perf-nome">
                                 <p>
-                                    Nome do cara kkkkkkkkk
+                                    <?= $user['nome'] ?>
                                 </p>
                             </div>
                         </div>

@@ -13,7 +13,8 @@ $users = $comando->fetchAll(PDO::FETCH_ASSOC);
 
 session_start();
 
-
+$descompactar = $_SESSION['user'];
+$user = $descompactar[0];
 
 $comando = $db->prepare('SELECT * FROM musicas');
 $comando->execute();

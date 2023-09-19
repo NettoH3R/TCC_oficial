@@ -7,17 +7,18 @@ use Application\DBConnection\MySQLConnection;
 
 $db = new MySQLConnection();
 
-$comando = $db->prepare('SHOW TABLES');
-$comando->execute();
-$user = $comando->fetchAll(PDO::FETCH_ASSOC);
-var_dump($user);
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    
+    $comando = $db->prepare('SELECT * FROM usuarios WHERE email = :email AND senha = :pass');
+    $comando->execute([':email' => $_POST['email'], ':pass' => $_POST['pass']]);
+    $user = $comando->fetchAll(PDO::FETCH_ASSOC);
 
+    session_start();
 
-    // [':email' => $_POST['email'], ':pass' => $_POST['pass']]
+    $_SESSION['user'] = $user;
+
+    header('location:index.php');
+
 }
 
 include('includes/noHeader.php');
