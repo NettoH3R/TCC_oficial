@@ -10,7 +10,15 @@ CREATE TABLE musicas(
     descricao VARCHAR(300)
 );
 
-
+CREATE TABLE usuarios(
+    us_id INT AUTO_INCREMENT PRIMARY KEY;
+    nome VARCHAR(200) NOT NULL;
+    email VARCHAR(200) NOT NULL;
+    senha VARCHAR(40) NOT NULL;
+    user_capa VARCHAR(200);
+    user_perfil VARCHAR(200);
+    nivel_acess INT NOT NULL
+);
 
 
 INSERT INTO usuarios(nome, email, senha, nivel_acess) VALUES 
