@@ -17,7 +17,7 @@ CREATE TABLE usuarios(
     senha VARCHAR(40) NOT NULL;
     user_capa VARCHAR(200);
     user_perfil VARCHAR(200);
-    nivel_acess INT NOT NULL;
+    nivel_acess INT NOT NULL
 );
 
 
