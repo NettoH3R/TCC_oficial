@@ -7,13 +7,15 @@ use Application\DBConnection\MySQLConnection;
 
 $db = new MySQLConnection();
 
+$comando = $db->prepare('SHOW TABLES');
+$comando->execute();
+$user = $comando->fetchAll(PDO::FETCH_ASSOC);
+var_dump($user);
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     
-    $comando = $db->prepare('SELECT * FROM usuarios');
-    $comando->execute();
-    $user = $comando->fetchAll(PDO::FETCH_ASSOC);
-    var_dump($user);
+
 
     // [':email' => $_POST['email'], ':pass' => $_POST['pass']]
 }
