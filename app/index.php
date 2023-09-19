@@ -7,14 +7,13 @@ $db = new MySQLConnection();
 
 $title = "Início";
 
-$comando = $db->prepare('SELECT * FROM usuarios');
-$comando->execute();
-$users = $comando->fetchAll(PDO::FETCH_ASSOC);
+//pega as if de uma session já iniciada em entrar
 
 session_start();
 
 $descompactar = $_SESSION['user'];
 $user = $descompactar[0];
+
 
 $comando = $db->prepare('SELECT * FROM musicas');
 $comando->execute();

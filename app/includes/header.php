@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -58,18 +56,25 @@
 
                     </div>
                     <div class="col-md-3 col-sm-12 text-center">
-                        <!-- <a href="entrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-1">Entrar</button></a>
-                        <a href="cadastrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-2">Cadastrar</button></a> -->
-                        <div class="mini-perf">
+
+                        <?php
+
+                        if ($_SESSION == null) {
+                            echo
+                            '<a href="entrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-1">Entrar</button></a>
+                        <a href="cadastrar.php" style="text-decoration: none; color: white;"><button type="button" class="btn-2">Cadastrar</button></a>';
+                        } else {
+                            echo '<a href="perfil.php"><div class="mini-perf">
                             <div class="mini-perf-ft">
                                 <img class="album" src="arquivos/imagensDoSite/logo_1nova.png" alt="">
                             </div>
                             <div class="mini-perf-nome">
                                 <p>
-                                    <?= $user['nome'] ?>
+                                    ' . $user['nome'] . '
                                 </p>
                             </div>
-                        </div>
+                        </div></a>';
+                        } ?>
                     </div>
                 </div>
             </div>
