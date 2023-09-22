@@ -68,7 +68,7 @@
                         } else {
                             echo '<a href="perfil.php"><div class="mini-perf">
                             <div class="mini-perf-ft">
-                                <img class="album" src="arquivos/imagensDoSite/logo_1nova.png" alt="">
+                                <img class="album" src="'. $user['user_capa'] .'" alt="">
                             </div>
                             <div class="mini-perf-nome">
                                 <p>

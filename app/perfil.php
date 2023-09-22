@@ -34,15 +34,13 @@ include('includes/noHeader.php');
 
                 <div class="col-md-10 col-sm-10">
                     <div class="row" style="margin-top: -60px">
-                        <div class="col-md-3">
+                        <div class="col-md-8">
                             <div class="nomeDoArtista">
                                 <p><?= $user['nome'] ?></p>
                             </div>
                         </div>
 
 
-                        <div class="col-md-5">
-                        </div>
 
                         <div class="col-md-2">
                             <div class="infosArtista">
