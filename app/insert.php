@@ -99,11 +99,11 @@
                                  <label for="" style="color: white;">Privacidade da Música:</label>
                              </div>
                              <div class="letrasRadio">
-                                 <input type="radio" id="radio1" name="rdoPrivac" value="public" required class="configRadio" checked>
+                                 <input type="radio" id="radio1" name="rdoPrivac" value="privado" required class="configRadio" checked>
                                  <label for="radio1" style="color: white;">Privada</label>
                              </div>
                              <div class="letrasRadio">
-                                 <input type="radio" id="radio2" name="rdoPrivac" value="public" class="configRadio">
+                                 <input type="radio" id="radio2" name="rdoPrivac" value="publico" class="configRadio">
                                  <label for="radio2" style="color: white;">Pública</label>
                              </div>
                          </div>

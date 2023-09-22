@@ -41,8 +41,11 @@ include('includes/noHeader.php');
                         </div>
 
 
+                        <?php
 
-                        <div class="col-md-2">
+                        if ($user['nivel_acess'] == 2 || $user['nivel_acess'] == 3) {
+                            echo
+                            '<div class="col-md-2">
                             <div class="infosArtista">
                                 <p>29 Faixas</p>
                             </div>
@@ -52,7 +55,8 @@ include('includes/noHeader.php');
                             <div class="infosArtista">
                                 <p>4 Albúns</p>
                             </div>
-                        </div>
+                        </div>';
+                        } ?>
                     </div>
                 </div>
 
@@ -63,7 +67,11 @@ include('includes/noHeader.php');
 
         </div>
 
-        <div class="faixas">
+        <?php
+
+        if ($user['nivel_acess'] == 2 || $user['nivel_acess'] == 3) {
+            echo
+            '<div class="faixas">
 
             <p style="font-size: 24pt; font-weight: bold; color: black;">Faixas</p>
             <div class="scrool">
@@ -105,7 +113,9 @@ include('includes/noHeader.php');
                     </div>
                 </div>
             </div>
-        </div>
+        </div>';
+        } ?>
+
 
         <div class="row">
             <div class="col-md-12" style="text-align: center;">

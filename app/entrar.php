@@ -56,7 +56,7 @@ include('includes/noHeader.php');
 
                         <h2 style="padding-top: 10%; font-size: 24pt; text-align: center; color: white; font-weight: bold;"><?=$msg?></h2>
 
-                        <form action="" method="post">
+                        <form action="entrar.php" method="post">
                             <input name="email" type="email" placeholder="E-mail" class="nomeDaFaixa" style=" width:80% ;  margin-top: 10%; margin-left: 10%; margin-right: 10%;" required>
                             <input name="pass" type="password" placeholder="Senha" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required>
                             <button type="submit" class="bnt-entrar-entrar">Entrar</button>
