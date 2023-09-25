@@ -1,7 +1,9 @@
 <?php
-$comando = $db->prepare('SELECT * FROM generos');
+$comando = $db->prepare('SHOW TABLES');
 $comando->execute();
 $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+var_dump($generos);
 ?>
 
 <!DOCTYPE html>

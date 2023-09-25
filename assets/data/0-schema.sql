@@ -21,7 +21,7 @@ CREATE TABLE usuarios(
 );
 
 CREATE TABLE generos(
-    gn_id AUTO_INCREMENT INT PRIMARY KEY,
+    gn_id INT AUTO_INCREMENT PRIMARY KEY,
     gn_nome VARCHAR(30)
 );
 
