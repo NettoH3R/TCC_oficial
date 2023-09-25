@@ -1,9 +1,7 @@
 <?php
-$comando = $db->prepare('SHOW TABLES');
+$comando = $db->prepare('SELECT * FROM generos');
 $comando->execute();
 $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
-
-var_dump($generos);
 ?>
 
 <!DOCTYPE html>
@@ -112,7 +110,7 @@ var_dump($generos);
                                     <?php
 
                                     foreach ($generos as $g) {
-                                        echo '<li><a class="dropdown-item" href="genero.php?genero=' . $g . ' ">' . $g . '</a></li>';
+                                        echo '<li><a class="dropdown-item" href="genero.php?genero=' . $g['gn_nome'] . ' ">' . $g['gn_nome'] . '</a></li>';
                                     }
                                     ?>
                                 </ul>

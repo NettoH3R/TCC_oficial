@@ -1,3 +1,9 @@
+<?php
+$comando = $db->prepare('SELECT * FROM generos');
+$comando->execute();
+$generos = $comando->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -26,12 +32,14 @@
         .nav-link:hover {
             color: #888888;
         }
-        .backImage{
+
+        .backImage {
             background-image: url('arquivos/imagensDoSite/texturaofc.jpg');
             background-repeat: repeat;
             background-blend-mode: multiply;
         }
-        .logoEntrar{
+
+        .logoEntrar {
             width: 100%;
             height: 100%;
         }
@@ -59,8 +67,11 @@
                                     Gêneros
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="genero.php">Rock</a></li>
-                                    <li><a class="dropdown-item" href="genero.php">Sertanejo</a></li>
+                                    <?php
+                                    foreach ($generos as $g) {
+                                        echo '<li><a class="dropdown-item" href="genero.php?genero=\"' . $g['gn_nome'] . '\" ">' . $g['gn_nome'] . '</a></li>';
+                                    }
+                                    ?>
                                 </ul>
                             </li>
                             <li class="nav-item">

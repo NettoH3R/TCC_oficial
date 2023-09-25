@@ -7,7 +7,9 @@
 
     $title = "Inserção de Música";
 
-
+    $comando = $db->prepare('SELECT * FROM generos');
+    $comando->execute();
+    $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
 
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET') :
@@ -49,9 +51,11 @@
 
                              <select name="genero" id="mySelect" onchange="changeColor()" class="selectGeneros" required>
                                  <option value="" disabled selected hidden>Gêneros</option>
-                                 <option value="Rock">Rock</option>
-                                 <option value="Rap">Rap</option>
-                                 <option value="Sertanejo">Sertanejo</option>
+                                 <?php
+                                foreach($generos as $g){
+                                 echo '<option value="'. $g["gn_nome"] .'">'.$g["gn_nome"] .'</option>';
+                                }
+                                 ?>
                              </select> <br>
                          </div>
 

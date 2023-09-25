@@ -101,16 +101,24 @@ include("includes/header.php");
         <div class="scrool">
             <div class="quadradinhos">
                 <div class="quadradinho">
-                    <img src="./arquivos/imagensAlbuns/teste1.png" class="album" alt="Possível álbum a ser colocado">
+                    <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica4 = $medias[$aleatorio];
+                                echo $musica4['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="./arquivos/imagensAlbuns/teste2.png" class="album" alt="Possível álbum a ser colocado">
+                    <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica5 = $medias[$aleatorio];
+                                echo $musica5['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="./arquivos/imagensAlbuns/teste3.png" class="album" alt="Possível álbum a ser colocado">
+                    <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica6 = $medias[$aleatorio];
+                                echo $musica6['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="./arquivos/imagensAlbuns/teste4.png" class="album" alt="Possível álbum a ser colocado">
+                    <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica7 = $medias[$aleatorio];
+                                echo $musica7['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                 </div>
             </div>
         </div>
@@ -118,16 +126,24 @@ include("includes/header.php");
         <div class="scrool">
             <div class="quadradinhos">
                 <div class="quadradinho">
-                    <img src="./arquivos/imagensAlbuns/teste5.png" class="album" alt="Possível álbum a ser colocado">
+                    <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica8 = $medias[$aleatorio];
+                                echo $musica8['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="./arquivos/imagensAlbuns/teste6.png" class="album" alt="Possível álbum a ser colocado">
+                    <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica9 = $medias[$aleatorio];
+                                echo $musica9['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="./arquivos/imagensAlbuns/teste1.png" class="album" alt="Possível álbum a ser colocado">
+                    <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica10 = $medias[$aleatorio];
+                                echo $musica10['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                 </div>
                 <div class="quadradinho">
-                    <img src="./arquivos/imagensAlbuns/teste4.png" class="album" alt="Possível álbum a ser colocado">
+                    <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica11 = $medias[$aleatorio];
+                                echo $musica11['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                 </div>
             </div>
         </div>

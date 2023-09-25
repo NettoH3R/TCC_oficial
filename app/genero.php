@@ -6,6 +6,8 @@ use Application\DBConnection\MySQLConnection;
 
 $db = new MySQLConnection();
 
+
+
 if (!isset($_SESSION['user'])) {
     //pega as info de uma session já iniciada em entrar
     session_start();
@@ -14,6 +16,13 @@ if (!isset($_SESSION['user'])) {
     $user = $descompactar[0];
 }
 include('includes/header.php');
+
+$comando = $db->prepare('SELECT * FROM musicas WHERE genero = :genero');
+$comando->execute([":genero" => $_GET['genero']]);
+$medias = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+$num = count($medias);
+
 ?>
 
 <div class="container">
@@ -23,7 +32,7 @@ include('includes/header.php');
         <div class="banner-genero">
             <img src="arquivos/imagensDoSite/textPura.jpg" alt="Banner" class="img-banner">
             <div class="text-genero">
-                <p>Rock</p>
+                <p><?= $_GET['genero'] ?></p>
             </div>
         </div>
 
@@ -57,13 +66,19 @@ include('includes/header.php');
                         <input type="radio" name="slider" id="item-3" style="display: none;">
                         <div class="cards">
                             <label class="card" for="item-1" id="song-1">
-                                <img class="imgCarousel" src="https://images.unsplash.com/photo-1530651788726-1dbf58eeef1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80" alt="song">
+                                <img class="imgCarousel" src="<?php $aleatorio = rand(0, $num - 1);
+                                                                $musica = $medias[$aleatorio];
+                                                                echo $musica['capa']; ?>" alt="song">
                             </label>
                             <label class="card" for="item-2" id="song-2">
-                                <img class="imgCarousel" src="https://images.unsplash.com/photo-1559386484-97dfc0e15539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80" alt="song">
+                                <img class="imgCarousel" src="<?php $aleatorio = rand(0, $num - 1);
+                                                                $musica2 = $medias[$aleatorio];
+                                                                echo $musica2['capa']; ?>" alt="song">
                             </label>
                             <label class="card" for="item-3" id="song-3">
-                                <img class="imgCarousel" src="https://images.unsplash.com/photo-1533461502717-83546f485d24?ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="song">
+                                <img class="imgCarousel" src="<?php $aleatorio = rand(0, $num - 1);
+                                                                $musica3 = $medias[$aleatorio];
+                                                                echo $musica3['capa']; ?>" alt="song">
                             </label>
                         </div>
                         <div class="player">
@@ -76,16 +91,16 @@ include('includes/header.php');
                                 </div>
                                 <div class="info-area" id="test">
                                     <label class="song-info" id="song-info-1">
-                                        <div class="title">Bunker</div>
+                                        <div class="title"><?= $musica['nome'] ?></div>
                                         <div class="sub-line">
                                             <div class="subtitle">Balthazar</div>
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>
                                     <label class="song-info" id="song-info-2">
-                                        <div class="title">Words Remain</div>
+                                        <div class="title"><?= $musica2['nome'] ?></div>
                                         <div class="sub-line">
-                                            <div class="subtitle">Moderator</div>
+                                            <div class="subtitle"><?= $musica3['nome'] ?></div>
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>
@@ -113,16 +128,24 @@ include('includes/header.php');
             <div class="scrool">
                 <div class="quadradinhos">
                     <div class="quadradinho">
-                        <img src="./arquivos/imagensAlbuns/teste1.png" class="album" alt="Possível álbum a ser colocado">
+                        <img src="<?php $aleatorio = rand(0, $num - 1);
+                                    $musica3 = $medias[$aleatorio];
+                                    echo $musica3['capa']; ?>" alt="song">" class="album" alt="Possível álbum a ser colocado">
                     </div>
                     <div class="quadradinho">
-                        <img src="./arquivos/imagensAlbuns/teste2.png" class="album" alt="Possível álbum a ser colocado">
+                        <img src="<?php $aleatorio = rand(0, $num - 1);
+                                    $musica3 = $medias[$aleatorio];
+                                    echo $musica3['capa']; ?>" alt="song">" class="album" alt="Possível álbum a ser colocado">
                     </div>
                     <div class="quadradinho">
-                        <img src="./arquivos/imagensAlbuns/teste3.png" class="album" alt="Possível álbum a ser colocado">
+                        <img src="<?php $aleatorio = rand(0, $num - 1);
+                                    $musica3 = $medias[$aleatorio];
+                                    echo $musica3['capa']; ?>" alt="song">" class="album" alt="Possível álbum a ser colocado">
                     </div>
                     <div class="quadradinho">
-                        <img src="./arquivos/imagensAlbuns/teste4.png" class="album" alt="Possível álbum a ser colocado">
+                        <img src="<?php $aleatorio = rand(0, $num - 1);
+                                    $musica3 = $medias[$aleatorio];
+                                    echo $musica3['capa']; ?>" alt="song">" class="album" alt="Possível álbum a ser colocado">
                     </div>
                 </div>
             </div>

@@ -841,7 +841,7 @@ select option[disabled] {
     z-index: 2;
     font-size: 60pt;
     color: white;
-    margin-top: -100px;
+    margin-top: -110px;
     margin-left: 20px;
 }
 
