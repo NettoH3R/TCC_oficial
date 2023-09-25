@@ -74,7 +74,7 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
                         } else {
                             echo '<a href="perfil.php"><div class="mini-perf">
                             <div class="mini-perf-ft">
-                                <img class="album" src="'. $user['user_capa'] .'" alt="">
+                                <img class="album" src="' . $user['user_capa'] . '" alt="">
                             </div>
                             <div class="mini-perf-nome">
                                 <p>
@@ -109,8 +109,8 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
                                 <ul class="dropdown-menu">
                                     <?php
 
-                                    foreach($genero as $g){
-                                    echo '<li><a class="dropdown-item" href="genero.php?genero=' . $g .' ">'. $g .'</a></li>';
+                                    foreach ($generos as $g) {
+                                        echo '<li><a class="dropdown-item" href="genero.php?genero=' . $g . ' ">' . $g . '</a></li>';
                                     }
                                     ?>
                                 </ul>

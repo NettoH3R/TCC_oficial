@@ -22,8 +22,8 @@ CREATE TABLE usuarios(
 
 CREATE TABLE generos(
     gn_id AUTO_INCREMENT INT PRIMARY KEY,
-    gn_nome VARCHAR(30),
-)
+    gn_nome VARCHAR(30)
+);
 
 
 INSERT INTO usuarios(nome, email, senha, nivel_acess) VALUES 
