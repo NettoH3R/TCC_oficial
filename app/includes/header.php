@@ -1,3 +1,9 @@
+<?php
+$comando = $db->prepare('SELECT * FROM generos');
+$comando->execute();
+$generos = $comando->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -101,8 +107,12 @@
                                     Gêneros
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="genero.php">Rock</a></li>
-                                    <li><a class="dropdown-item" href="genero.php">Sertanejo</a></li>
+                                    <?php
+
+                                    foreach($genero as $g){
+                                    echo '<li><a class="dropdown-item" href="genero.php?genero=' . $g .' ">'. $g .'</a></li>';
+                                    }
+                                    ?>
                                 </ul>
                             </li>
                             <li class="nav-item">
