@@ -1,14 +1,6 @@
 USE application;
 
-CREATE TABLE musicas(
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(50) NOT NULL,
-    genero VARCHAR(30) NOT NULL,
-    caminho VARCHAR(200) NOT NULL,
-    capa VARCHAR(200) NOT NULL,
-    privacidade CHAR(7)NOT NULL,
-    descricao VARCHAR(300)
-);
+
 
 CREATE TABLE usuarios(
     us_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -20,10 +12,25 @@ CREATE TABLE usuarios(
     nivel_acess INT NOT NULL
 );
 
+CREATE TABLE musicas(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(50) NOT NULL,
+    genero VARCHAR(30) NOT NULL,
+    caminho VARCHAR(200) NOT NULL,
+    capa VARCHAR(200) NOT NULL,
+    privacidade CHAR(7)NOT NULL,
+    descricao VARCHAR(300)
+);
+
 CREATE TABLE generos(
     gn_id INT AUTO_INCREMENT PRIMARY KEY,
     gn_nome VARCHAR(30)
 );
+
+ALTER TABLE musicas ADD CONSTRAINT FK_musicas
+    FOREIGN KEY (fk_usuarios_us_id)
+    REFERENCES usuarios (us_id)
+    ON DELETE RESTRICT;
 
 
 INSERT INTO usuarios(nome, email, senha, nivel_acess) VALUES 

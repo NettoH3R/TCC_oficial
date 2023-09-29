@@ -52,10 +52,10 @@
                              <select name="genero" id="mySelect" onchange="changeColor()" class="selectGeneros" required>
                                  <option value="" disabled selected hidden>Gêneros</option>
                                  <?php
-                                foreach($generos as $g){
-                                 echo '<option value="'. $g["gn_nome"] .'">'.$g["gn_nome"] .'</option>';
-                                }
-                                 ?>
+                                    foreach ($generos as $g) {
+                                        echo '<option value="' . $g["gn_nome"] . '">' . $g["gn_nome"] . '</option>';
+                                    }
+                                    ?>
                              </select> <br>
                          </div>
 
@@ -237,12 +237,13 @@
                 if ($deu_certo) {
                     if ($deu_certo) {
                         //Salva no banco de dados
-                        $comando = $db->prepare('INSERT INTO musicas(nome, genero, caminho, capa, privacidade, descricao)
-                    VALUES (:nome, :genero, :caminho, :capa, :privacidade, :descricao)');
+                        $comando = $db->prepare('INSERT INTO musicas(nome, genero, caminho, capa, privacidade, descricao, fk_usuarios_us_id)
+                    VALUES (:nome, :genero, :caminho, :capa, :privacidade, :descricao, :fk_usuarios_us_id)');
 
                         $comando->execute([
                             ':nome' => $nome, ':genero' => $_POST['genero'], ':caminho' => $pathMusica,
-                            ':capa' => $pathCapa, ':privacidade' => $_POST['rdoPrivac'], ':descricao' => $_POST['descricao']
+                            ':capa' => $pathCapa, ':privacidade' => $_POST['rdoPrivac'], ':descricao' => $_POST['descricao'],
+                            ':fk_usuarios_us_id' => $user['us_id']
                         ]);
 
                         header('location:insert.php?funcionou=true');
