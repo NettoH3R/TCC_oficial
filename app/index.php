@@ -17,9 +17,11 @@ if (!isset($_SESSION['user'])) {
 }
 
 
-$comando = $db->prepare('SELECT * FROM musicas');
+$comando = $db->prepare('SELECT * FROM usuarios');
 $comando->execute();
 $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
+
+var_dump($medias);
 
 $num = count($medias);
 

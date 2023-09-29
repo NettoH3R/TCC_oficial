@@ -19,7 +19,8 @@ CREATE TABLE musicas(
     caminho VARCHAR(200) NOT NULL,
     capa VARCHAR(200) NOT NULL,
     privacidade CHAR(7)NOT NULL,
-    descricao VARCHAR(300)
+    descricao VARCHAR(300),
+    fk_usuarios_us_id INT
 );
 
 CREATE TABLE generos(
@@ -29,7 +30,7 @@ CREATE TABLE generos(
 
 ALTER TABLE musicas ADD CONSTRAINT FK_musicas
     FOREIGN KEY (fk_usuarios_us_id)
-    REFERENCES usuarios (us_id)
+    REFERENCES usuarios(us_id)
     ON DELETE RESTRICT;
 
 
