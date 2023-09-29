@@ -17,7 +17,7 @@ if (!isset($_SESSION['user'])) {
 }
 
 
-$comando = $db->prepare('SELECT * FROM usuarios');
+$comando = $db->prepare('SELECT * FROM musicas');
 $comando->execute();
 $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
 
@@ -67,7 +67,10 @@ include("includes/header.php");
                                     <label class="song-info" id="song-info-1">
                                         <div class="title"><?= $musica['nome'] ?></div>
                                         <div class="sub-line">
-                                            <div class="subtitle">Balthazar</div>
+                                            <div class="subtitle"><?php $comando = $db->prepare('SELECT us_nome FROM usuarios where us_id = :id');
+                                                                    $comando->execute([':id' => $musica['fk_usuarios_us_id']]);
+                                                                    $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                                                    var_dump($artista);  ?></div>
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>

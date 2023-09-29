@@ -245,8 +245,6 @@
                             ':capa' => $pathCapa, ':privacidade' => $_POST['rdoPrivac'], ':descricao' => $_POST['descricao'],
                             ':fk_usuarios_us_id' => $user['us_id']
                         ]);
-
-                        header('location:insert.php?funcionou=true');
                     } else {
                         die($falhaDeEnvio);
                     }
