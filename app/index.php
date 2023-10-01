@@ -21,11 +21,13 @@ $comando = $db->prepare('SELECT * FROM musicas');
 $comando->execute();
 $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
 
-var_dump($medias);
+
+
 
 $num = count($medias);
 
 include("includes/header.php");
+
 
 ?>
 
@@ -67,24 +69,33 @@ include("includes/header.php");
                                     <label class="song-info" id="song-info-1">
                                         <div class="title"><?= $musica['nome'] ?></div>
                                         <div class="sub-line">
-                                            <div class="subtitle"><?php $comando = $db->prepare('SELECT us_nome FROM usuarios where us_id = :id');
+                                            <div class="subtitle"><?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
                                                                     $comando->execute([':id' => $musica['fk_usuarios_us_id']]);
                                                                     $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
-                                                                    var_dump($artista);  ?></div>
+                                                                    $nome = $artista[0];
+                                                                    echo $nome['nome'];  ?></div>
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>
                                     <label class="song-info" id="song-info-2">
                                         <div class="title"><?= $musica2['nome'] ?></div>
                                         <div class="sub-line">
-                                            <div class="subtitle">Moderator</div>
+                                            <div class="subtitle"><?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                                                    $comando->execute([':id' => $musica2['fk_usuarios_us_id']]);
+                                                                    $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                                                    $nome = $artista[0];
+                                                                    echo $nome['nome'];  ?></div>
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>
                                     <label class="song-info" id="song-info-3">
                                         <div class="title"><?= $musica3['nome'] ?></div>
                                         <div class="sub-line">
-                                            <div class="subtitle">Otzeki</div>
+                                            <div class="subtitle"><?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                                                    $comando->execute([':id' => $musica3['fk_usuarios_us_id']]);
+                                                                    $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                                                    $nome = $artista[0];
+                                                                    echo $nome['nome'];  ?></div>
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>
