@@ -37,9 +37,12 @@ include("includes/header.php");
             <div class="corpo">
                 <div class="alinhamento-carousel">
                     <div class="carouseu-container">
-                        <input type="radio" name="slider" id="item-1" style="display: none;" checked display>
+                        <input type="radio" name="slider" id="item-1" style="display: none;" checked>
                         <input type="radio" name="slider" id="item-2" style="display: none;">
                         <input type="radio" name="slider" id="item-3" style="display: none;">
+                        <audio id="music-1" src="<?= $musica['caminho'] ?>"></audio>
+                        <audio id="music-2" src="<?= $musica2['caminho'] ?>"></audio>
+                        <audio id="music-3" src="<?= $musica3['caminho'] ?>"></audio>
                         <div class="cards">
                             <label class="card" for="item-1" id="song-1">
                                 <img class="imgCarousel" src="<?php $aleatorio = rand(0, $num - 1);
@@ -76,6 +79,7 @@ include("includes/header.php");
                                                                     echo $nome['nome'];  ?></div>
                                             <div class="time">4.05</div>
                                         </div>
+
                                     </label>
                                     <label class="song-info" id="song-info-2">
                                         <div class="title"><?= $musica2['nome'] ?></div>
@@ -88,6 +92,7 @@ include("includes/header.php");
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>
+
                                     <label class="song-info" id="song-info-3">
                                         <div class="title"><?= $musica3['nome'] ?></div>
                                         <div class="sub-line">
@@ -110,6 +115,7 @@ include("includes/header.php");
             </div>
         </div>
 
+        <?php var_dump($musica['caminho']) ?>
 
         <!-- MÚSICAS -->
 

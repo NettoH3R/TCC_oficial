@@ -93,21 +93,33 @@ $num = count($medias);
                                     <label class="song-info" id="song-info-1">
                                         <div class="title"><?= $musica['nome'] ?></div>
                                         <div class="sub-line">
-                                            <div class="subtitle">Balthazar</div>
+                                            <div class="subtitle"><?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                                                    $comando->execute([':id' => $musica['fk_usuarios_us_id']]);
+                                                                    $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                                                    $nome = $artista[0];
+                                                                    echo $nome['nome'];  ?></div>
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>
                                     <label class="song-info" id="song-info-2">
                                         <div class="title"><?= $musica2['nome'] ?></div>
                                         <div class="sub-line">
-                                            <div class="subtitle"><?= $musica3['nome'] ?></div>
+                                            <div class="subtitle"><?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                                                    $comando->execute([':id' => $musica2['fk_usuarios_us_id']]);
+                                                                    $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                                                    $nome = $artista[0];
+                                                                    echo $nome['nome'];  ?></div>
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>
                                     <label class="song-info" id="song-info-3">
-                                        <div class="title">Falling Out</div>
+                                        <div class="title"><?= $musica3['nome'] ?></div>
                                         <div class="sub-line">
-                                            <div class="subtitle">Otzeki</div>
+                                            <div class="subtitle"><?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                                                    $comando->execute([':id' => $musica3['fk_usuarios_us_id']]);
+                                                                    $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                                                    $nome = $artista[0];
+                                                                    echo $nome['nome'];  ?></div>
                                             <div class="time">4.05</div>
                                         </div>
                                     </label>
@@ -129,23 +141,23 @@ $num = count($medias);
                 <div class="quadradinhos">
                     <div class="quadradinho">
                         <img src="<?php $aleatorio = rand(0, $num - 1);
-                                    $musica3 = $medias[$aleatorio];
-                                    echo $musica3['capa']; ?>" alt="song">" class="album" alt="Possível álbum a ser colocado">
+                                    $musica4 = $medias[$aleatorio];
+                                    echo $musica4['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     </div>
                     <div class="quadradinho">
                         <img src="<?php $aleatorio = rand(0, $num - 1);
-                                    $musica3 = $medias[$aleatorio];
-                                    echo $musica3['capa']; ?>" alt="song">" class="album" alt="Possível álbum a ser colocado">
+                                    $musica5 = $medias[$aleatorio];
+                                    echo $musica5['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     </div>
                     <div class="quadradinho">
                         <img src="<?php $aleatorio = rand(0, $num - 1);
-                                    $musica3 = $medias[$aleatorio];
-                                    echo $musica3['capa']; ?>" alt="song">" class="album" alt="Possível álbum a ser colocado">
+                                    $musica6 = $medias[$aleatorio];
+                                    echo $musica6['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     </div>
                     <div class="quadradinho">
                         <img src="<?php $aleatorio = rand(0, $num - 1);
-                                    $musica3 = $medias[$aleatorio];
-                                    echo $musica3['capa']; ?>" alt="song">" class="album" alt="Possível álbum a ser colocado">
+                                    $musica7 = $medias[$aleatorio];
+                                    echo $musica7['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     </div>
                 </div>
             </div>
