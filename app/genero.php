@@ -20,9 +20,14 @@ include('includes/header.php');
 $comando = $db->prepare('SELECT * FROM musicas WHERE genero = :genero');
 $comando->execute([":genero" => $_GET['genero']]);
 $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
+$select = $medias[0];
 
 $num = count($medias);
 
+$comando = $db->prepare('SELECT * FROM usuarios WHERE us_id = :id');
+$comando->execute([":id" => $select['fk_usuarios_us_id']]);
+$pessoas = $comando->fetchAll(PDO::FETCH_ASSOC);
+$num2 = count($pessoas);
 ?>
 
 <div class="container">
@@ -41,18 +46,44 @@ $num = count($medias);
         </div>
 
         <div class="scrool">
+
+
             <div class="quadradinhos">
+
                 <div class="boladinho">
-                    <img src="./arquivos/imagensAlbuns/teste5.png" class="album" alt="Possível álbum a ser colocado">
+                    <?php $aleatorio = rand(0, $num2 - 1);
+                    $perfil = $pessoas[$aleatorio];
+                    ?>
+                    <?= '<a href="perfil2.php?nome=' . $perfil['us_id'] . '">'; ?>
+                    <img src="<?= $perfil['user_perfil']; ?>" class="album" alt="Possível álbum a ser colocado">
+                    </a>
                 </div>
+
+
                 <div class="boladinho">
-                    <img src="./arquivos/imagensAlbuns/teste6.png" class="album" alt="Possível álbum a ser colocado">
+                    <?php $aleatorio = rand(0, $num2 - 1);
+                    $perfil2 = $pessoas[$aleatorio];
+                    ?>
+                    <?= '<a href="perfil2.php?nome=' . $perfil2['us_id'] . '">'; ?>
+                    <img src="<?= $perfil2['user_perfil']; ?>" class="album" alt="Possível álbum a ser colocado">
                 </div>
+
+
                 <div class="boladinho">
-                    <img src="./arquivos/imagensAlbuns/teste1.png" class="album" alt="Possível álbum a ser colocado">
+                    <?php $aleatorio = rand(0, $num2 - 1);
+                    $perfil3 = $pessoas[$aleatorio];
+                    ?>
+                    <?= '<a href="perfil2.php?nome=' . $perfil3['us_id'] . '">'; ?>
+                    <img src="<?= $perfil3['user_perfil']; ?>" class="album" alt="Possível álbum a ser colocado">
                 </div>
+
+
                 <div class="boladinho">
-                    <img src="./arquivos/imagensAlbuns/teste4.png" class="album" alt="Possível álbum a ser colocado">
+                <?php $aleatorio = rand(0, $num2 - 1);
+                    $perfil4 = $pessoas[$aleatorio];
+                    ?>
+                    <?= '<a href="perfil2.php?nome=' . $perfil4['us_id'] . '">'; ?>
+                    <img src="<?= $perfil4['user_perfil']; ?>" class="album" alt="Possível álbum a ser colocado">
                 </div>
             </div>
         </div>

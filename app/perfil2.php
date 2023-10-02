@@ -18,8 +18,13 @@ if (!isset($_SESSION['user'])) {
     $user = $descompactar[0];
 }
 
+$comando = $db->prepare('SELECT * FROM usuarios WHERE us_id = :id');
+$comando->execute([":id" => $_GET['nome']]);
+$dados = $comando->fetchAll(PDO::FETCH_ASSOC);
+$user = $dados[0];
+
 $comando = $db->prepare('SELECT * FROM musicas WHERE fk_usuarios_us_id = :id');
-$comando->execute([":id" => $user['us_id']]);
+$comando->execute([":id" => $_GET['nome']]);
 $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
 $num = count($medias);
 $num2 = 0;
@@ -46,36 +51,23 @@ include('includes/noHeader.php');
 
                 <div class="col-md-10 col-sm-10">
                     <div class="row" style="margin-top: -60px">
-                        <div class="col-md-5">
+                        <div class="col-md-8">
                             <div class="nomeDoArtista">
                                 <p><?= $user['nome'] ?></p>
                             </div>
                         </div>
 
-
-                        <?php
-
-                        if ($user['nivel_acess'] == 2 || $user['nivel_acess'] == 3) {
-                            echo
-                            '<div class="col-md-2">
+                        <div class="col-md-2">
                             <div class="infosArtista">
-                                <p>' . $num . ' Faixas</p>
+                                <p><?= $num ?> Faixas</p>
                             </div>
                         </div>
 
                         <div class="col-md-2">
                             <div class="infosArtista">
-                                <p>' . $num2 . ' Albúns</p>
+                                <p><?= $num2 ?> Albúns</p>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <a href="editPerf.php" style="text-decoration:none">
-                                <button class="btn-seguir" class="botaoSeguir" style="margin-bottom: 30px;">
-                                    Editar Perfil
-                                </button>
-                            </a>
-                        </div>';
-                        } ?>
                     </div>
                 </div>
 
@@ -86,48 +78,33 @@ include('includes/noHeader.php');
 
         </div>
 
-        <?php
 
-        if ($user['nivel_acess'] == 2 || $user['nivel_acess'] == 3) {
+        <div class="faixas">
 
-            $aleatorio = rand(0, $num - 1);
-            $musica = $medias[$aleatorio];
-
-            $aleatorio = rand(0, $num - 1);
-            $musica2 = $medias[$aleatorio];
-
-            $aleatorio = rand(0, $num - 1);
-            $musica3 = $medias[$aleatorio];
-
-            $aleatorio = rand(0, $num - 1);
-            $musica4 = $medias[$aleatorio];
-            echo
-            '<div class="faixas">
-            <div class="row">
-                <div class="col-md-2">
-                    <a href="list.php?id=' . $user['us_id'] . '" style="text-decoration:none"><p style="font-size: 24pt; font-weight: bold; color: black;">Faixas</p></a>
-                </div>
-                <div class="col-md-10" style="text-align: right;">
-                    <a href="insert.php" style="text-decoration:none">
-                        <button class="btn-seguir" class="botaoSeguir" style="margin-bottom: 30px;">
-                            Adicionar Nova
-                        </button>
-                    </a>
-                </div>
-            </div>
+        <?= '<a href="list.php?id=' . $user['us_id'] . '"style="text-decoration:none">'; ?>
+        <p style="font-size: 24pt; font-weight: bold; color: black;">Faixas</p>
+</a>
             <div class="scrool">
                 <div class="quadradinhos">
                     <div class="quadradinho">
-                        <img src="' . $musica['capa'] . '" class="album" alt="Possível álbum a ser colocado">
+                        <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica = $medias[$aleatorio];
+                                echo $musica['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     </div>
                     <div class="quadradinho">
-                        <img src="' . $musica['capa'] . '" class="album" alt="Possível álbum a ser colocado">
+                        <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica2 = $medias[$aleatorio];
+                                echo $musica2['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     </div>
                     <div class="quadradinho">
-                        <img src="' . $musica['capa'] . '" class="album" alt="Possível álbum a ser colocado">
+                        <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica3 = $medias[$aleatorio];
+                                echo $musica3['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     </div>
                     <div class="quadradinho">
-                        <img src="' . $musica['capa'] . '" class="album" alt="Possível álbum a ser colocado">
+                        <img src="<?php $aleatorio = rand(0, $num - 1);
+                                $musica4 = $medias[$aleatorio];
+                                echo $musica4['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     </div>
                 </div>
             </div>
@@ -154,19 +131,8 @@ include('includes/noHeader.php');
                     </div>
                 </div>
             </div>
-        </div>';
-        } ?>
-
-
-        <div class="row">
-            <div class="col-md-12" style="text-align: center;">
-                <form action="perfil.php" method="post">
-                    <button class="btn-seguir" type="submit" class="botaoSeguir">
-                        Sair da conta
-                    </button>
-                </form>
-            </div>
         </div>
+
 </div>
 </div>
 

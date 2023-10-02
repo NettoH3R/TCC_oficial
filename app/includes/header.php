@@ -119,8 +119,8 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
                                 <a class="nav-link" href="sobre.php">Sobre</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Procure a música" aria-label="Search">
+                        <form action="list.php" method="post"  class="d-flex" role="search">
+                            <input class="form-control me-2" name="search" type="search" placeholder="Procure a música" aria-label="Search">
                             <button class="btn btn-outline-light" type="submit">Pesquisar</button>
                         </form>
                     </div>

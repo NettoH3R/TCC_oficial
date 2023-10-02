@@ -17,7 +17,7 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
         session_start();
         $descompactar = $_SESSION['user'];
         $user = $descompactar[0];
-        var_dump($user);
+        
     }
 
     include('includes/header.php');
@@ -159,7 +159,6 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
 
 
 <?php
-    var_dump($user['id']);
     include('includes/footer.php'); 
 
 
