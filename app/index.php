@@ -14,6 +14,7 @@ if (!isset($_SESSION['user'])) {
 
     $descompactar = $_SESSION['user'];
     $user = $descompactar[0];
+
 }
 
 
@@ -115,7 +116,6 @@ include("includes/header.php");
             </div>
         </div>
 
-        <?php var_dump($musica['caminho']) ?>
 
         <!-- MÚSICAS -->
 

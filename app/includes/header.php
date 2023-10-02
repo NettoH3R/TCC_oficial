@@ -74,7 +74,7 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
                         } else {
                             echo '<a href="perfil.php"><div class="mini-perf">
                             <div class="mini-perf-ft">
-                                <img class="album" src="' . $user['user_capa'] . '" alt="">
+                                <img class="album" src="' . $user['user_perfil'] . '" alt="">
                             </div>
                             <div class="mini-perf-nome">
                                 <p>

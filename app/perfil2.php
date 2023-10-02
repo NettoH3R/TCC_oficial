@@ -43,7 +43,7 @@ include('includes/noHeader.php');
 
                 <div class="col-md-2 col-sm-2" style="overflow: hidden;">
                     <div class="foto-artista">
-                        <img class="ft-artista" src="<?= $user['user_capa'] ?>" alt="">
+                        <img class="ft-artista" src="<?= $user['user_perfil'] ?>" alt="">
                     </div>
                 </div>
 

@@ -19,21 +19,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $filePath = $capa['tmp_name'];
 
-    var_dump($_FILES);
     $nome = $_POST['nome'] . 'user';
 
     //caminho música
-    
+
     $pasta = 'artistas/imagensArtistas/';
 
-    $extencao = $filePath;
+    $extencao = $capa['name'];
     $extencao = strtolower(pathinfo($extencao, PATHINFO_EXTENSION));
     $pathPerf = $pasta . $nome . "." . $extencao;
-    var_dump($extencao);
+
+    move_uploaded_file($capa['tmp_name'], $pathPerf);
 
     $comando = $db->prepare('UPDATE usuarios SET user_perfil = :foto , nome = :newnome WHERE us_id = :id');
     $comando->execute([":foto" => $pathPerf, ":newnome" => $_POST['nome'], ":id" => $user['us_id']]);
-    header('location:perfil.php');
 }
 
 
@@ -49,7 +48,7 @@ include('includes/noHeader.php');
         <div style="text-align: center;">
 
             <h1 style="margin-bottom: 30px;">EDITAR PERFIL</h1>
-            <form action="editPerf.php" method="POST">
+            <form action="editPerf.php" method="post" enctype="multipart/form-data">
                 <div class="imagem-container">
                     <div class="inserirFoto">
                         <label for="upfile1" class="custom-file-input">
@@ -65,9 +64,12 @@ include('includes/noHeader.php');
                     <input style="border: 2px solid black;" name="nome" type="text" placeholder="Nome de Usuário" value="<?= $user['nome'] ?>" class="nomeDaFaixa" required><br> <br>
                 </div>
 
+
                 <button id="submitButton" class="configButton " type="submit">Salvar</button>
             </form>
         </div>
+
+
 
     </main>
 </div>
