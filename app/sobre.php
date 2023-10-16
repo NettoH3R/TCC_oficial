@@ -45,7 +45,7 @@ include('includes/header.php');
             <div class="col-md-4">
                 <div class="sobre-quadradinho">
                     <div class="foto-sobre">
-                        <img src="arquivos/imagensSobre/felipeSobre.jpeg" class="fotoNossaSobre" alt="Foto do Felipe Siqueira Camargo">
+                        <img src="arquivos/imagensSobre/ft3.png" class="fotoNossaSobre" alt="Foto do Felipe Siqueira Camargo">
                     </div>
 
                     <div class="textoSobre">
@@ -68,7 +68,7 @@ include('includes/header.php');
             <div class="col-md-4">
                 <div class="sobre-quadradinho">
                     <div class="foto-sobre">
-                        <img src="arquivos/imagensSobre/luanSobre.jpeg" class="fotoNossaSobre" alt="Foto do Luan Martins Toniolo">
+                        <img src="arquivos/imagensSobre/ft1.png" class="fotoNossaSobre" alt="Foto do Luan Martins Toniolo">
                     </div>
 
                     <div class="textoSobre">
@@ -88,7 +88,7 @@ include('includes/header.php');
             <div class="col-md-4">
                 <div class="sobre-quadradinho">
                     <div class="foto-sobre">
-                        <img src="arquivos/imagensSobre/nettoSobre.jpeg" class="fotoNossaSobre" alt="Foto do João Victor Netto Araújo">
+                        <img src="arquivos/imagensSobre/ft5.png" class="fotoNossaSobre" alt="Foto do João Victor Netto Araújo">
                     </div>
                     <div class="textoSobre">
                         <p><span class="textoSobreBold">Nome:</span> João Victor Netto Araújo</p>
@@ -112,7 +112,7 @@ include('includes/header.php');
             <div class="col-md-4">
                 <div class="sobre-quadradinho">
                     <div class="foto-sobre">
-                        <img src="arquivos/imagensSobre/renanSobre.jpeg" class="fotoNossaSobre" alt="Foto do Renan Costa Leão">
+                        <img src="arquivos/imagensSobre/ft2.png" class="fotoNossaSobre" alt="Foto do Renan Costa Leão">
                     </div>
                     <div class="textoSobre">
                         <p><span class="textoSobreBold"> Nome:</span> Renan Costa Leão</p>
@@ -131,7 +131,7 @@ include('includes/header.php');
             <div class="col-md-4">
                 <div class="sobre-quadradinho">
                     <div class="foto-sobre">
-                        <img src="arquivos/imagensSobre/miguelzaoSobre.jpeg" class="fotoNossaSobre" alt="Foto do Miguel Renato Silva Campos">
+                        <img src="arquivos/imagensSobre/ft4.png" class="fotoNossaSobre" alt="Foto do Miguel Renato Silva Campos">
                     </div>
                     <div class="textoSobre">
                         <p><span class="textoSobreBold">Nome:</span> Miguel Renato Silva Campos</p>

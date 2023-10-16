@@ -14,7 +14,6 @@ if (!isset($_SESSION['user'])) {
 
     $descompactar = $_SESSION['user'];
     $user = $descompactar[0];
-
 }
 
 
@@ -29,9 +28,16 @@ $num = count($medias);
 
 include("includes/header.php");
 
+$aleatorio = rand(0, $num - 1);
+$musica = $medias[$aleatorio];
+
+$aleatorio = rand(0, $num - 1);
+$musica2 = $medias[$aleatorio];
+
+$aleatorio = rand(0, $num - 1);
+$musica3 = $medias[$aleatorio];
 
 ?>
-
 <div class="container">
     <main class="main">
         <div class="tamanhoCarrosel">
@@ -46,24 +52,18 @@ include("includes/header.php");
                         <audio id="music-3" src="<?= $musica3['caminho'] ?>"></audio>
                         <div class="cards">
                             <label class="card" for="item-1" id="song-1">
-                                <img class="imgCarousel" src="<?php $aleatorio = rand(0, $num - 1);
-                                                                $musica = $medias[$aleatorio];
-                                                                echo $musica['capa']; ?>" alt="song">
+                                <img class="imgCarousel" src="<?= $musica['capa']; ?>" alt="song">
                             </label>
                             <label class="card" for="item-2" id="song-2">
-                                <img class="imgCarousel" src="<?php $aleatorio = rand(0, $num - 1);
-                                                                $musica2 = $medias[$aleatorio];
-                                                                echo $musica2['capa']; ?>" alt="song">
+                                <img class="imgCarousel" src="<?= $musica2['capa']; ?>" alt="song">
                             </label>
                             <label class="card" for="item-3" id="song-3">
-                                <img class="imgCarousel" src="<?php $aleatorio = rand(0, $num - 1);
-                                                                $musica3 = $medias[$aleatorio];
-                                                                echo $musica3['capa']; ?>" alt="song">
+                                <img class="imgCarousel" src="<?= $musica3['capa']; ?>" alt="song">
                             </label>
                         </div>
                         <div class="player">
                             <div class="upper-part">
-                                <div class="play-icon">
+                                <div class="play-icon" onclick="togglePlay()">
                                     <svg width="20" height="20" fill="#2992dc" stroke="#2992dc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-play" viewBox="0 0 24 24">
                                         <defs />
                                         <path d="M5 3l14 9-14 9V3z" />
@@ -113,6 +113,7 @@ include("includes/header.php");
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
