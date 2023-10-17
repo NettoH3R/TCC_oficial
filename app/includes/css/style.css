@@ -913,3 +913,22 @@ select option[disabled] {
     background-color: white;
     transition: ease-in 0.7s;
 }
+/* CARROSSEL */
+
+.play-car{
+display: none;
+}
+
+.card:hover 
+.play-car{
+    display: block;
+    position: fixed;
+    cursor: pointer;
+    width: 250px;
+    height: 250px;
+    margin-left: 25%;
+    margin-top: 20%;
+    transition: ease-in 5s;
+    overflow: hidden;
+    color: #777777;
+}

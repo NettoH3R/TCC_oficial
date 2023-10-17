@@ -79,3 +79,6 @@ function changeColor() {
 
 // carrosel
 
+var imgUp = $('#upMusic');
+var btn_play = $('#btn-play');
+var btn_pause = $('#btn-pause');

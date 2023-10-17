@@ -53,6 +53,18 @@ $musica3 = $medias[$aleatorio];
                         <div class="cards">
                             <label class="card" for="item-1" id="song-1">
                                 <img class="imgCarousel" src="<?= $musica['capa']; ?>" alt="song">
+                                <div id="play-car" class="play-car">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                                    </svg>
+                                </div>
+
+                                <div id="pause-car">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                        <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                                    </svg>
+                                </div>
+
                             </label>
                             <label class="card" for="item-2" id="song-2">
                                 <img class="imgCarousel" src="<?= $musica2['capa']; ?>" alt="song">
@@ -63,12 +75,6 @@ $musica3 = $medias[$aleatorio];
                         </div>
                         <div class="player">
                             <div class="upper-part">
-                                <div class="play-icon" onclick="togglePlay()">
-                                    <svg width="20" height="20" fill="#2992dc" stroke="#2992dc" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-play" viewBox="0 0 24 24">
-                                        <defs />
-                                        <path d="M5 3l14 9-14 9V3z" />
-                                    </svg>
-                                </div>
                                 <div class="info-area" id="test">
                                     <label class="song-info" id="song-info-1">
                                         <div class="title"><?= $musica['nome'] ?></div>
@@ -78,7 +84,6 @@ $musica3 = $medias[$aleatorio];
                                                                     $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
                                                                     $nome = $artista[0];
                                                                     echo $nome['nome'];  ?></div>
-                                            <div class="time">4.05</div>
                                         </div>
 
                                     </label>
@@ -90,7 +95,7 @@ $musica3 = $medias[$aleatorio];
                                                                     $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
                                                                     $nome = $artista[0];
                                                                     echo $nome['nome'];  ?></div>
-                                            <div class="time">4.05</div>
+
                                         </div>
                                     </label>
 
@@ -102,13 +107,9 @@ $musica3 = $medias[$aleatorio];
                                                                     $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
                                                                     $nome = $artista[0];
                                                                     echo $nome['nome'];  ?></div>
-                                            <div class="time">4.05</div>
                                         </div>
                                     </label>
                                 </div>
-                            </div>
-                            <div class="progress-bar">
-                                <span class="progress"></span>
                             </div>
                         </div>
                     </div>
