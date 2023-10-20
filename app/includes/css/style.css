@@ -932,3 +932,7 @@ display: none;
     overflow: hidden;
     color: #777777;
 }
+
+.pause-car{
+    display: none;
+}
