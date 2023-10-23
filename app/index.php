@@ -221,8 +221,10 @@ $musica3 = $medias[$aleatorio];
                     <img src="<?php $aleatorio = rand(0, $num - 1);
                                 $musica4 = $medias[$aleatorio];
                                 echo $musica4['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
-
-                                
+                </div>
+                <div class="infoQuad">
+                    <p class="">Qeuqhehqehqe</p>
+                    <p>asdjhlashd</p>
                 </div>
                 <div class="quadradinho">
                     <img src="<?php $aleatorio = rand(0, $num - 1);

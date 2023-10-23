@@ -131,29 +131,6 @@ include('includes/noHeader.php');
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- ALBUNS -->
-
-        <div class="faixas">
-
-            <p style="font-size: 24pt; font-weight: bold; color: black;">Albúns</p>
-            <div class="scrool">
-                <div class="quadradinhos">
-                    <div class="quadradinho">
-                        <img src="./arquivos/imagensAlbuns/teste1.png" class="album" alt="Possível álbum a ser colocado">
-                    </div>
-                    <div class="quadradinho">
-                        <img src="./arquivos/imagensAlbuns/teste2.png" class="album" alt="Possível álbum a ser colocado">
-                    </div>
-                    <div class="quadradinho">
-                        <img src="./arquivos/imagensAlbuns/teste3.png" class="album" alt="Possível álbum a ser colocado">
-                    </div>
-                    <div class="quadradinho">
-                        <img src="./arquivos/imagensAlbuns/teste4.png" class="album" alt="Possível álbum a ser colocado">
-                    </div>
-                </div>
-            </div>
         </div>';
         } ?>
 

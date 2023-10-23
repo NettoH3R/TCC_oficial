@@ -123,6 +123,17 @@ header {
     margin-right: 66px;
 }
 
+.infoQuad{
+    display: none;
+}
+
+.quadradinho:hover .infoQuad{
+    display: block;
+    width: 198;
+    height: 50px;
+    justify-content: left;
+}
+
 .album {
     max-width: 100%;
     max-height: 100%;
