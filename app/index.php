@@ -70,12 +70,12 @@ $musica3 = $medias[$aleatorio];
 
                             <label class="card" for="item-2" id="song-2">
                                 <!-- BOTÕES -->
-                                <div id="play-car" class="play-car">
+                                <div id="play-car2" class="play-car">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                                         <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                                     </svg>
                                 </div>
-                                <div id="pause-car" class="pause-car">
+                                <div id="pause-car2" class="pause-car">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                                         <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z" />
                                     </svg>
@@ -86,12 +86,12 @@ $musica3 = $medias[$aleatorio];
 
                             <label class="card" for="item-3" id="song-3">
                                 <!-- BOTÕES -->
-                                <div id="play-car" class="play-car">
+                                <div id="play-car3" class="play-car">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                                         <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                                     </svg>
                                 </div>
-                                <div id="pause-car" class="pause-car">
+                                <div id="pause-car3" class="pause-car">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                                         <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z" />
                                     </svg>
@@ -146,7 +146,13 @@ $musica3 = $medias[$aleatorio];
 
         <script>
             var play_car = $('#play-car');
-            var pause_car = $('#pause-car')
+            var pause_car = $('#pause-car');
+
+            var play_car2 = $('#play-car2');
+            var pause_car2 = $('#pause-car2');
+
+            var play_car3 = $('#play-car3');
+            var pause_car3 = $('#pause-car3');
 
             $(document).ready(function() {
                 // Obtenha uma referência ao elemento de áudio usando o ID
@@ -156,17 +162,17 @@ $musica3 = $medias[$aleatorio];
                 play_car.on('click', playAudio);
                 pause_car.on('click', pauseAudio);
 
-                var audioElement = $('#music-2')[0];
+                var audioElement2 = $('#music-2')[0];
 
                 // Para reproduzir o áudio
-                play_car.on('click', playAudio);
-                pause_car.on('click', pauseAudio);
+                play_car2.on('click', playAudio2);
+                pause_car2.on('click', pauseAudio2);
 
-                var audioElement = $('#music-3')[0];
+                var audioElement3 = $('#music-3')[0];
 
                 // Para reproduzir o áudio
-                play_car.on('click', playAudio);
-                pause_car.on('click', pauseAudio);
+                play_car3.on('click', playAudio3);
+                pause_car3.on('click', pauseAudio3);
 
                 function playAudio() {
                     audioElement.play();
@@ -174,10 +180,34 @@ $musica3 = $medias[$aleatorio];
                     pause_car.attr('class', 'play-car')
                 }
 
+                function playAudio2() {
+                    audioElement2.play();
+                    play_car2.attr('class', 'pause-car')
+                    pause_car2.attr('class', 'play-car')
+                }
+
+                function playAudio3() {
+                    audioElement3.play();
+                    play_car3.attr('class', 'pause-car')
+                    pause_car3.attr('class', 'play-car')
+                }
+
                 function pauseAudio() {
                     audioElement.pause();
                     play_car.attr('class', 'play-car')
                     pause_car.attr('class', 'pause-car')
+                }
+
+                function pauseAudio2() {
+                    audioElement2.pause();
+                    play_car2.attr('class', 'play-car')
+                    pause_car2.attr('class', 'pause-car')
+                }
+
+                function pauseAudio3() {
+                    audioElement3.pause();
+                    play_car3.attr('class', 'play-car')
+                    pause_car3.attr('class', 'pause-car')
                 }
             });
         </script>
@@ -191,6 +221,8 @@ $musica3 = $medias[$aleatorio];
                     <img src="<?php $aleatorio = rand(0, $num - 1);
                                 $musica4 = $medias[$aleatorio];
                                 echo $musica4['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
+
+                                
                 </div>
                 <div class="quadradinho">
                     <img src="<?php $aleatorio = rand(0, $num - 1);
