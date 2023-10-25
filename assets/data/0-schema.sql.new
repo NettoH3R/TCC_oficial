@@ -2,7 +2,7 @@ USE application;
 
 
 
-CREATE TABLE usuarios(
+CREATE TABLE IF NOT EXISTS usuarios(
     us_id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(200) NOT NULL,
     email VARCHAR(200) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE usuarios(
     nivel_acess INT NOT NULL
 );
 
-CREATE TABLE musicas(
+CREATE TABLE IF NOT EXISTS musicas(
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
     genero VARCHAR(30) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE musicas(
     fk_usuarios_us_id INT
 );
 
-CREATE TABLE generos(
+CREATE TABLE IF NOT EXISTS generos(
     gn_id INT AUTO_INCREMENT PRIMARY KEY,
     gn_nome VARCHAR(30)
 );
