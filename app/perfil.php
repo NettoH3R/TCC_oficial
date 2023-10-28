@@ -38,7 +38,10 @@ include('includes/noHeader.php');
 
                 <div class="col-md-2 col-sm-2" style="overflow: hidden;">
                     <div class="foto-artista">
-                        <img class="ft-artista" src="<?= $user['user_perfil'] ?>" alt="">
+                        <img class="ft-artista" style="max-height: 100%;
+                                                        min-height: 100%;
+                                                        max-width: 100%;
+                                                        min-height: 100%;" src="<?= $user['user_perfil'] ?>" alt="">
                     </div>
                 </div>
 
