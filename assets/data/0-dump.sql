@@ -337,7 +337,7 @@ CREATE TABLE `innodb_index_stats` (
 
 LOCK TABLES `innodb_index_stats` WRITE;
 /*!40000 ALTER TABLE `innodb_index_stats` DISABLE KEYS */;
-INSERT INTO `innodb_index_stats` VALUES ('application','generos','PRIMARY','2023-10-28 13:05:13','n_diff_pfx01',3,1,'gn_id'),('application','generos','PRIMARY','2023-10-28 13:05:13','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('application','generos','PRIMARY','2023-10-28 13:05:13','size',1,NULL,'Number of pages in the index'),('application','musicas','FK_musicas','2023-10-28 13:05:13','n_diff_pfx01',0,1,'fk_usuarios_us_id'),('application','musicas','FK_musicas','2023-10-28 13:05:13','n_diff_pfx02',0,1,'fk_usuarios_us_id,id'),('application','musicas','FK_musicas','2023-10-28 13:05:13','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('application','musicas','FK_musicas','2023-10-28 13:05:13','size',1,NULL,'Number of pages in the index'),('application','musicas','PRIMARY','2023-10-28 13:05:13','n_diff_pfx01',0,1,'id'),('application','musicas','PRIMARY','2023-10-28 13:05:13','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('application','musicas','PRIMARY','2023-10-28 13:05:13','size',1,NULL,'Number of pages in the index'),('application','usuarios','PRIMARY','2023-10-28 13:05:13','n_diff_pfx01',3,1,'us_id'),('application','usuarios','PRIMARY','2023-10-28 13:05:13','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('application','usuarios','PRIMARY','2023-10-28 13:05:13','size',1,NULL,'Number of pages in the index'),('mysql','gtid_executed','PRIMARY','2023-10-25 19:45:14','n_diff_pfx01',0,1,'source_uuid'),('mysql','gtid_executed','PRIMARY','2023-10-25 19:45:14','n_diff_pfx02',0,1,'source_uuid,interval_start'),('mysql','gtid_executed','PRIMARY','2023-10-25 19:45:14','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_executed','PRIMARY','2023-10-25 19:45:14','size',1,NULL,'Number of pages in the index'),('sys','sys_config','PRIMARY','2023-10-25 19:45:14','n_diff_pfx01',6,1,'variable'),('sys','sys_config','PRIMARY','2023-10-25 19:45:14','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('sys','sys_config','PRIMARY','2023-10-25 19:45:14','size',1,NULL,'Number of pages in the index');
+INSERT INTO `innodb_index_stats` VALUES ('application','generos','PRIMARY','2023-10-28 18:45:47','n_diff_pfx01',3,1,'gn_id'),('application','generos','PRIMARY','2023-10-28 18:45:47','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('application','generos','PRIMARY','2023-10-28 18:45:47','size',1,NULL,'Number of pages in the index'),('application','musicas','FK_musicas','2023-10-28 19:33:33','n_diff_pfx01',1,1,'fk_usuarios_us_id'),('application','musicas','FK_musicas','2023-10-28 19:33:33','n_diff_pfx02',11,1,'fk_usuarios_us_id,id'),('application','musicas','FK_musicas','2023-10-28 19:33:33','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('application','musicas','FK_musicas','2023-10-28 19:33:33','size',1,NULL,'Number of pages in the index'),('application','musicas','PRIMARY','2023-10-28 19:33:33','n_diff_pfx01',11,1,'id'),('application','musicas','PRIMARY','2023-10-28 19:33:33','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('application','musicas','PRIMARY','2023-10-28 19:33:33','size',1,NULL,'Number of pages in the index'),('application','usuarios','PRIMARY','2023-10-28 18:45:47','n_diff_pfx01',4,1,'us_id'),('application','usuarios','PRIMARY','2023-10-28 18:45:47','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('application','usuarios','PRIMARY','2023-10-28 18:45:47','size',1,NULL,'Number of pages in the index'),('mysql','gtid_executed','PRIMARY','2023-10-25 19:45:14','n_diff_pfx01',0,1,'source_uuid'),('mysql','gtid_executed','PRIMARY','2023-10-25 19:45:14','n_diff_pfx02',0,1,'source_uuid,interval_start'),('mysql','gtid_executed','PRIMARY','2023-10-25 19:45:14','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('mysql','gtid_executed','PRIMARY','2023-10-25 19:45:14','size',1,NULL,'Number of pages in the index'),('sys','sys_config','PRIMARY','2023-10-25 19:45:14','n_diff_pfx01',6,1,'variable'),('sys','sys_config','PRIMARY','2023-10-25 19:45:14','n_leaf_pages',1,NULL,'Number of leaf pages in the index'),('sys','sys_config','PRIMARY','2023-10-25 19:45:14','size',1,NULL,'Number of pages in the index');
 /*!40000 ALTER TABLE `innodb_index_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -365,7 +365,7 @@ CREATE TABLE `innodb_table_stats` (
 
 LOCK TABLES `innodb_table_stats` WRITE;
 /*!40000 ALTER TABLE `innodb_table_stats` DISABLE KEYS */;
-INSERT INTO `innodb_table_stats` VALUES ('application','generos','2023-10-28 13:05:13',3,1,0),('application','musicas','2023-10-28 13:05:13',0,1,1),('application','usuarios','2023-10-28 13:05:13',3,1,0),('mysql','gtid_executed','2023-10-25 19:45:14',0,1,0),('sys','sys_config','2023-10-25 19:45:14',6,1,0);
+INSERT INTO `innodb_table_stats` VALUES ('application','generos','2023-10-28 18:45:47',3,1,0),('application','musicas','2023-10-28 19:33:33',11,1,1),('application','usuarios','2023-10-28 18:45:47',4,1,0),('mysql','gtid_executed','2023-10-25 19:45:14',0,1,0),('sys','sys_config','2023-10-25 19:45:14',6,1,0);
 /*!40000 ALTER TABLE `innodb_table_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -984,7 +984,7 @@ CREATE TABLE `musicas` (
   PRIMARY KEY (`id`),
   KEY `FK_musicas` (`fk_usuarios_us_id`),
   CONSTRAINT `FK_musicas` FOREIGN KEY (`fk_usuarios_us_id`) REFERENCES `usuarios` (`us_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -993,6 +993,7 @@ CREATE TABLE `musicas` (
 
 LOCK TABLES `musicas` WRITE;
 /*!40000 ALTER TABLE `musicas` DISABLE KEYS */;
+INSERT INTO `musicas` VALUES (1,'HERDEIRO DA CHAMA','Rap','artistas/mscArtistas/HERDEIRO DA CHAMA.mp3','artistas/imagensArtistas/HERDEIRO DA CHAMA.jpg','publico','',5),(2,'FINAL FELIZ','Rap','artistas/mscArtistas/FINAL FELIZ.mp3','artistas/imagensArtistas/FINAL FELIZ.jpg','publico','',5),(3,'Ela Ã© Muito Louca','Rock','artistas/mscArtistas/Ela Ã© Muito Louca.mp3','artistas/imagensArtistas/Ela Ã© Muito Louca.jpg','privado','',5),(4,' Eu Me Sinto Livre','Rap','artistas/mscArtistas/ Eu Me Sinto Livre.mp3','artistas/imagensArtistas/ Eu Me Sinto Livre.jpg','publico','',5),(5,'MODO DE ATAQUE ðŸ‘ŠðŸ»ðŸ”¥','Rap','artistas/mscArtistas/MODO DE ATAQUE ðŸ‘ŠðŸ»ðŸ”¥.mp3','artistas/imagensArtistas/MODO DE ATAQUE ðŸ‘ŠðŸ»ðŸ”¥.jpg','publico','',5),(6,'OLHOS AZUIS ðŸ˜ŽðŸ”µ','Rap','artistas/mscArtistas/OLHOS AZUIS ðŸ˜ŽðŸ”µ.mp3','artistas/imagensArtistas/OLHOS AZUIS ðŸ˜ŽðŸ”µ.jpg','publico','',5),(7,'REI DAS MALDIÃ‡Ã•ES ðŸ”ªðŸ˜ˆ','Rap','artistas/mscArtistas/REI DAS MALDIÃ‡Ã•ES ðŸ”ªðŸ˜ˆ.mp3','artistas/imagensArtistas/REI DAS MALDIÃ‡Ã•ES ðŸ”ªðŸ˜ˆ.jpg','publico','',5),(8,'TIPO MONARCA  ðŸ”ªâš«','Rap','artistas/mscArtistas/TIPO MONARCA  ðŸ”ªâš«.mp3','artistas/imagensArtistas/TIPO MONARCA  ðŸ”ªâš«.jpg','publico','',5),(9,'DUO RANK S ðŸ–¤ðŸ’›','Rap','artistas/mscArtistas/DUO RANK S ðŸ–¤ðŸ’›.mp3','artistas/imagensArtistas/DUO RANK S ðŸ–¤ðŸ’›.jpg','publico','',5),(10,'SOL E LUA ðŸŒ™â˜€','Rap','artistas/mscArtistas/SOL E LUA ðŸŒ™â˜€.mp3','artistas/imagensArtistas/SOL E LUA ðŸŒ™â˜€.jpg','publico','',5),(11,'Poucas Palavras e Muita Atitude IIðŸŒŠðŸ¦‹','Rap','artistas/mscArtistas/Poucas Palavras e Muita Atitude IIðŸŒŠðŸ¦‹.mp3','artistas/imagensArtistas/Poucas Palavras e Muita Atitude IIðŸŒŠðŸ¦‹.jpg','publico','',5),(12,'Deus do TrovÃ£o e a Rainha Oni IIâš¡ðŸ˜ˆ','Rap','artistas/mscArtistas/Deus do TrovÃ£o e a Rainha Oni IIâš¡ðŸ˜ˆ.mp3','artistas/imagensArtistas/Deus do TrovÃ£o e a Rainha Oni IIâš¡ðŸ˜ˆ.jpg','publico','',5);
 /*!40000 ALTER TABLE `musicas` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1012,7 +1013,7 @@ CREATE TABLE `usuarios` (
   `user_perfil` varchar(200) DEFAULT NULL,
   `nivel_acess` int(11) NOT NULL,
   PRIMARY KEY (`us_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1021,7 +1022,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'UnderSounds ADM','undersounds5@gmail.com','Undersounds2023',NULL,NULL,3),(2,'UserArt','UserArt@gmail.com','Art12345',NULL,NULL,2),(3,'UserNorm','UserNorm@gmail.com','Norm12345',NULL,NULL,1),(4,'H3RMES','jovinettonetto@gmail.com','5434',NULL,'artistas/imagensArtistas/H3RMESuser.jpg',2);
+INSERT INTO `usuarios` VALUES (1,'UnderSounds ADM','undersounds5@gmail.com','Undersounds2023',NULL,NULL,3),(2,'UserArt','UserArt@gmail.com','Art12345',NULL,NULL,2),(3,'UserNorm','UserNorm@gmail.com','Norm12345',NULL,NULL,1),(4,'H3RMES','jovinettonetto@gmail.com','5434',NULL,'artistas/imagensArtistas/H3RMESuser.jpg',2),(5,'LexClash','Lex@gmail.com','Lex123',NULL,'artistas/imagensArtistas/LexClashuser.jpg',2);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1034,4 +1035,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-28 13:08:45
+-- Dump completed on 2023-10-28 19:58:44

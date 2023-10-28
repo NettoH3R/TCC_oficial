@@ -77,6 +77,3 @@ function changeColor() {
 }
 
 
-// carrosel
-
-
