@@ -208,7 +208,7 @@ $musica11 = $medias[10];
 
 <!-- PLAYER GERAL -->
 
-<div id="player-geral" class="">
+<div id="player-geral" class="invisible">
     <div class="container">
         <div class="row">
             <div class="col-md-5" style="padding-top: 1vh; padding-bottom: 1vh;">
@@ -237,8 +237,6 @@ $musica11 = $medias[10];
                 </div>
             </div>
 
-
-            <div class="col-md-2"></div>
             <div class="col-md-2" style="text-align: center; padding-top: 1vh; padding-bottom: 1vh;">
                 <p style="margin: 0; margin-bottom: 2px;"> Gênero:</p>
                 <p id="nm-genero" style="margin: 0; color: #ff8f2d;"> </p>
