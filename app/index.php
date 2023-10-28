@@ -78,6 +78,7 @@ $musica11 = $medias[10];
                                         <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                                     </svg>
                                 </div>
+
                                 <div id="pause-car2" class="pause-car">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                                         <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z" />
@@ -158,109 +159,7 @@ $musica11 = $medias[10];
         </div>
 
         <script>
-            var play_car = $('#play-car');
-            var pause_car = $('#pause-car');
 
-            var play_car2 = $('#play-car2');
-            var pause_car2 = $('#pause-car2');
-
-            var play_car3 = $('#play-car3');
-            var pause_car3 = $('#pause-car3');
-
-
-            //PLAYER GERAL
-
-            var nomeMusica;
-            var nomeAutor;
-            var genero;
-
-
-            $(document).ready(function() {
-                // Obtenha uma referência ao elemento de áudio usando o ID
-                var audioElement = $('#music-1')[0];
-
-                // Para reproduzir o áudio msc1
-                play_car.on('click', playAudio);
-                pause_car.on('click', pauseAudio);
-
-                var audioElement2 = $('#music-2')[0];
-
-                // Para reproduzir o áudio msc2
-                play_car2.on('click', playAudio2);
-                pause_car2.on('click', pauseAudio2);
-
-                var audioElement3 = $('#music-3')[0];
-
-                // Para reproduzir o áudio msc3
-                play_car3.on('click', playAudio3);
-                pause_car3.on('click', pauseAudio3);
-
-                // PRIMERA MUSICA CAR
-                function playAudio() {
-                    nomeMusica = $('#nome-s1').text();
-                    nomeAutor = $('#nomea-s1').text();
-                    genero = $('#gen-s1').text();
-
-                    audioElement.play();
-                    play_car.attr('class', 'pause-car');
-                    pause_car.attr('class', 'play-car');
-
-                    $('#nm-musica').text(nomeMusica);
-                    $('#nm-autor').text(nomeAutor);
-                    $('#nm-genero').text(genero);
-
-
-                }
-
-                // SEGUNDA MUSICA CAR
-                function playAudio2() {
-                    nomeMusica = $('#nome-s2').text();
-                    nomeAutor = $('#nomea-s2').text();
-                    genero = $('#gen-s2').text();
-
-                    audioElement2.play();
-                    play_car2.attr('class', 'pause-car')
-                    pause_car2.attr('class', 'play-car')
-
-                    $('#nm-musica').text(nomeMusica);
-                    $('#nm-autor').text(nomeAutor);
-                    $('#nm-genero').text(genero);
-                }
-
-                // TERCEIRA MUSICA CAR
-                function playAudio3() {
-
-                    nomeMusica = $('#nome-s3').text();
-                    nomeAutor = $('#nomea-s3').text();
-                    genero = $('#gen-s3').text();
-
-                    audioElement3.play();
-                    play_car3.attr('class', 'pause-car')
-                    pause_car3.attr('class', 'play-car')
-
-                    $('#nm-musica').text(nomeMusica);
-                    $('#nm-autor').text(nomeAutor);
-                    $('#nm-genero').text(genero);
-                }
-
-                function pauseAudio() {
-                    audioElement.pause();
-                    play_car.attr('class', 'play-car')
-                    pause_car.attr('class', 'pause-car')
-                }
-
-                function pauseAudio2() {
-                    audioElement2.pause();
-                    play_car2.attr('class', 'play-car')
-                    pause_car2.attr('class', 'pause-car')
-                }
-
-                function pauseAudio3() {
-                    audioElement3.pause();
-                    play_car3.attr('class', 'play-car')
-                    pause_car3.attr('class', 'pause-car')
-                }
-            });
         </script>
 
         <!-- MÚSICAS -->
@@ -307,22 +206,38 @@ $musica11 = $medias[10];
     </main>
 </div>
 
-<div id="player-geral">
+<!-- PLAYER GERAL -->
+
+<div id="player-geral" class="">
     <div class="container">
         <div class="row">
             <div class="col-md-5" style="padding-top: 1vh; padding-bottom: 1vh;">
                 <p id="nm-musica" style="margin: 0; margin-bottom: 2px;"> </p>
                 <p id="nm-autor" style="margin: 0; color: #ff8f2d;"> </p>
             </div>
+
+
             <div class="col-md-2">
-                <div class="visible center"> <!-- PLAY BUTTON -->
+                <div id="play-gr" class="center"> <!-- PLAY BUTTON -->
                     <div class="bolinha-play-btn">
-                        <svg style="color: black; margin-left: 3px; margin-top: 1px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                        <svg class="play-play-gr" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
                             <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
                         </svg>
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-2">
+                <div id="pause-gr" class="invisible center"> <!-- PAUSE BUTTON -->
+                    <div class="bolinha-pause-btn">
+                        <svg class="pause-pause-gr" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                            <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5zm5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="col-md-2"></div>
             <div class="col-md-2" style="text-align: center; padding-top: 1vh; padding-bottom: 1vh;">
                 <p style="margin: 0; margin-bottom: 2px;"> Gênero:</p>
@@ -332,7 +247,198 @@ $musica11 = $medias[10];
     </div>
 </div>
 <script>
+    var player_geral = $('#player-geral');
 
+    var play_car = $('#play-car');
+    var pause_car = $('#pause-car');
+
+    var play_car2 = $('#play-car2');
+    var pause_car2 = $('#pause-car2');
+
+    var play_car3 = $('#play-car3');
+    var pause_car3 = $('#pause-car3');
+
+    var play_gr = $('#play-gr')
+    var pause_gr = $('#pause-gr')
+
+    //PLAYER GERAL
+
+    var nomeMusica;
+    var nomeAutor;
+    var genero;
+
+
+    $(document).ready(function() {
+        // Obtenha uma referência ao elemento de áudio usando o ID
+        var audioElement = $('#music-1')[0];
+        var audioElement2 = $('#music-2')[0];
+        var audioElement3 = $('#music-3')[0];
+
+
+        // Para reproduzir o áudio msc1
+        play_car.on('click', playAudio);
+        pause_car.on('click', pauseAudio);
+
+
+
+        // Para reproduzir o áudio msc2
+        play_car2.on('click', playAudio2);
+        pause_car2.on('click', pauseAudio2);
+
+
+
+        // Para reproduzir o áudio msc3
+        play_car3.on('click', playAudio3);
+        pause_car3.on('click', pauseAudio3);
+
+        // Para reproduzir no player geral
+
+
+        // PRIMERA MUSICA CAR
+        function playAudio() {
+            player_geral.removeAttr('class', 'invisible');
+
+            audioElement.play();
+            audioElement2.pause();
+            audioElement3.pause();
+
+            nomeMusica = $('#nome-s1').text();
+            nomeAutor = $('#nomea-s1').text();
+            genero = $('#gen-s1').text();
+
+            play_car.attr('class', 'pause-car');
+            pause_car.attr('class', 'play-car');
+            play_gr.attr('class', 'invisible');
+            pause_gr.removeAttr('class', 'invisible');
+
+            $('#nm-musica').text(nomeMusica);
+            $('#nm-autor').text(nomeAutor);
+            $('#nm-genero').text(genero);
+
+            // pause geral
+            pause_gr.on('click', pauseAudio);
+        }
+
+
+        // SEGUNDA MUSICA CAR
+        function playAudio2() {
+            player_geral.removeAttr('class', 'invisible');
+
+            audioElement.pause();
+            audioElement2.play();
+            audioElement3.pause();
+
+
+
+            nomeMusica = $('#nome-s2').text();
+            nomeAutor = $('#nomea-s2').text();
+            genero = $('#gen-s2').text();
+
+            play_car2.attr('class', 'pause-car');
+            pause_car2.attr('class', 'play-car');
+            play_gr.attr('class', 'invisible');
+            pause_gr.removeAttr('class', 'invisible');
+
+            $('#nm-musica').text(nomeMusica);
+            $('#nm-autor').text(nomeAutor);
+            $('#nm-genero').text(genero);
+
+            // pause geral
+
+            pause_gr.on('click', pauseAudio2);
+
+        }
+
+        // TERCEIRA MUSICA CAR
+        function playAudio3() {
+            player_geral.removeAttr('class', 'invisible');
+
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.play();
+
+            nomeMusica = $('#nome-s3').text();
+            nomeAutor = $('#nomea-s3').text();
+            genero = $('#gen-s3').text();
+
+            play_car3.attr('class', 'pause-car');
+            pause_car3.attr('class', 'play-car');
+            play_gr.attr('class', 'invisible');
+            pause_gr.removeAttr('class', 'invisible');
+
+            $('#nm-musica').text(nomeMusica);
+            $('#nm-autor').text(nomeAutor);
+            $('#nm-genero').text(genero);
+
+            pause_gr.on('click', pauseAudio3);
+
+
+            // pause geral
+
+            pause_gr.on('click', function() {
+                audioElement.pause();
+                play_car3.attr('class', 'play-car');
+                pause_car3.attr('class', 'pause-car');
+                play_gr.removeAttr('class', 'invisible');
+                pause_gr.attr('class', 'invisible');
+            });
+        }
+
+
+
+
+
+        // PAUSES
+
+        function pauseAudio() {
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+
+            play_car.attr('class', 'play-car');
+            pause_car.attr('class', 'pause-car');
+            play_gr.removeAttr('class', 'invisible');
+            pause_gr.attr('class', 'invisible');
+
+            if ($('#nome-s1').text() === $('#nm-musica').text()) {
+                play_gr.on('click', playAudio);
+            }
+        }
+
+
+        function pauseAudio2() {
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+
+            play_car2.attr('class', 'play-car');
+            pause_car2.attr('class', 'pause-car');
+            play_gr.removeAttr('class', 'invisible');
+            pause_gr.attr('class', 'invisible');
+
+            if ($('#nome-s2').text() === $('#nm-musica').text()) {
+                play_gr.on('click', playAudio2);
+            }
+
+
+        }
+
+
+        function pauseAudio3() {
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+
+            play_car3.attr('class', 'play-car');
+            pause_car3.attr('class', 'pause-car');
+            play_gr.removeAttr('class', 'invisible');
+            pause_gr.attr('class', 'invisible');
+
+            if ($('#nome-s3').text() === $('#nm-musica').text()) {
+                play_gr.on('click', playAudio3);
+            }
+        }
+    });
 </script>
 <?php
 
