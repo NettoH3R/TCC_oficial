@@ -123,11 +123,11 @@ header {
     margin-right: 66px;
 }
 
-.infoQuad{
+.infoQuad {
     display: none;
 }
 
-.quadradinho:hover .infoQuad{
+.quadradinho:hover .infoQuad {
     display: block;
     width: 198;
     height: 50px;
@@ -760,7 +760,7 @@ select option[disabled] {
     font-weight: bold;
 }
 
-.bnt-entrar-entrar:hover{
+.bnt-entrar-entrar:hover {
     background-color: #ffb26f;
 }
 
@@ -776,14 +776,14 @@ select option[disabled] {
 
 /* PG ARTISTA */
 
-.banner-artista{
+.banner-artista {
     width: 100%;
     height: 250px;
     background-color: #646b68;
     z-index: 1;
 }
 
-.img-banner{
+.img-banner {
     max-width: 100%;
     min-width: 100%;
     max-height: 100%;
@@ -791,33 +791,33 @@ select option[disabled] {
     z-index: 1;
 }
 
-.foto-artista{
+.foto-artista {
     text-align: center;
     width: 200px;
     height: 200px;
-    border:3px solid #000000 ;
+    border: 3px solid #000000;
     margin-top: -100px !important;
-    background-color: #244bbf ;
+    background-color: #244bbf;
     z-index: 3;
-    position: absolute; 
+    position: absolute;
     margin-left: 1%
 }
 
-.ft-artista{
+.ft-artista {
     max-height: 100%;
     min-height: 100%;
     max-width: 100%;
     min-height: 100%;
 }
 
-.nomeDoArtista{
+.nomeDoArtista {
     font-size: 32pt;
     color: white;
     text-align: left;
     margin-left: 7px;
 }
 
-.btn-seguir{
+.btn-seguir {
     width: 12rem;
     height: 2rem;
     font-size: 14pt;
@@ -827,30 +827,30 @@ select option[disabled] {
     margin-top: 20px;
 }
 
-.btn-seguir:hover{
+.btn-seguir:hover {
     background-color: #ffb26f;
 }
 
-.infosArtista{
+.infosArtista {
     font-size: 14pt;
     color: white;
     margin-top: 20px;
 }
 
-.faixas{
+.faixas {
     margin: 20px;
 }
 
 
 /* Genero */
-.banner-genero{
+.banner-genero {
     width: 100%;
     height: 300px;
     background-color: #646b68;
     z-index: 1;
 }
 
-.text-genero{
+.text-genero {
     z-index: 2;
     font-size: 60pt;
     color: white;
@@ -858,7 +858,7 @@ select option[disabled] {
     margin-left: 20px;
 }
 
-.boladinho{
+.boladinho {
     width: 198px;
     height: 198px;
     background-color: #60A1F5;
@@ -868,14 +868,14 @@ select option[disabled] {
     overflow: hidden;
 }
 
-.text-genero2{
+.text-genero2 {
     font-size: 28pt;
     color: #000000;
     margin-top: 10px;
     margin-left: 30px;
 }
 
-.mini-perf{
+.mini-perf {
     width: 120px;
     height: 150px;
     margin-top: 0px;
@@ -887,7 +887,7 @@ select option[disabled] {
     transition: ease-out 0.7s;
 }
 
-.mini-perf-ft{
+.mini-perf-ft {
     width: 70px;
     height: 70px;
     border: #000000 solid 3px;
@@ -899,7 +899,7 @@ select option[disabled] {
     margin-top: 20px;
 }
 
-.mini-perf-nome{
+.mini-perf-nome {
     width: 250px;
     font-size: 12pt;
     text-align: center;
@@ -907,7 +907,7 @@ select option[disabled] {
     transition: 0.7s;
 }
 
-.mini-perf:hover .mini-perf-nome{
+.mini-perf:hover .mini-perf-nome {
     width: 250px;
     font-size: 12pt;
     text-align: center;
@@ -915,24 +915,24 @@ select option[disabled] {
     transition: 0.7s;
 }
 
-.mini-perf:hover{
+.mini-perf:hover {
     background-color: #244bbf;
     color: white;
     transition: ease-in 0.7s;
 }
 
-.mini-perf:hover .mini-perf-ft{
+.mini-perf:hover .mini-perf-ft {
     background-color: white;
     transition: ease-in 0.7s;
 }
+
 /* CARROSSEL */
 
-.play-car{
-display: none;
+.play-car {
+    display: none;
 }
 
-.card:hover 
-.play-car{
+.card:hover .play-car {
     display: block;
     position: fixed;
     cursor: pointer;
@@ -945,6 +945,35 @@ display: none;
     color: #777777;
 }
 
-.pause-car{
+.pause-car {
+    display: none;
+}
+
+/* Playe Geral */
+
+#player-geral {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 8vh;
+    background-color: #244bbf;
+    color: #fff;
+}
+
+.bolinha-play-btn {
+    width: 50px;
+    height: 50px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    background-color: white;
+    border-radius: 100%;
+    margin-left: 35%;
+}
+
+.visible {
+    display: block;
+}
+
+.invisible {
     display: none;
 }

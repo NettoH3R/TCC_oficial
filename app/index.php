@@ -23,7 +23,6 @@ $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
 
 
 
-
 $num = count($medias);
 
 include("includes/header.php");
@@ -272,6 +271,30 @@ $musica3 = $medias[$aleatorio];
     </main>
 </div>
 
+<div id="player-geral">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5" style="padding-top: 1vh; padding-bottom: 1vh;">
+                <p style="margin: 0; margin-bottom: 2px;"> aKkakakakakakakakaka</p>
+                <p style="margin: 0; color: #ff8f2d;"> kadjfjdshdjhda</p>
+            </div>
+            <div class="col-md-2">
+                <div class="visible center"> <!-- PLAY BUTTON -->
+                    <div class="bolinha-play-btn">
+                        <svg style="color: black; margin-left: 3px; margin-top: 1px;" xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+            <div class="col-md-2" style="text-align: center; padding-top: 1vh; padding-bottom: 1vh;">
+                <p style="margin: 0; margin-bottom: 2px;"> Gênero:</p>
+                <p style="margin: 0; color: #ff8f2d;"> kadjfjdshdjhda</p>
+            </div>
+        </div>
+    </div>
+</div>
 <?php
 
 include('includes/footer.php');
