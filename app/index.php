@@ -965,7 +965,7 @@ $musica11 = $medias[10];
             pause_gr.on('click', pauseAudio9);
         }
 
-        function pauseAudio10() {
+        function pauseAudio9() {
             audioElement.pause();
             audioElement2.pause();
             audioElement3.pause();
@@ -1003,7 +1003,6 @@ $musica11 = $medias[10];
             audioElement9.pause();
             audioElement10.play();
             audioElement11.pause();
-
 
             nomeMusica = $('#nome-s10').text();
             nomeAutor = $('#nomea-s10').text();
@@ -1045,7 +1044,7 @@ $musica11 = $medias[10];
 
                 // AUDIO 11
 
-                function playAudio10() {
+                function playAudio11() {
             player_geral.removeAttr('class', 'invisible');
 
             audioElement.pause();
