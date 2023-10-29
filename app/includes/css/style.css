@@ -121,17 +121,45 @@ header {
     background-color: #60A1F5;
     margin-left: 66px;
     margin-right: 66px;
-}
-
-.infoQuad {
-    display: none;
-}
-
-.quadradinho:hover .infoQuad {
+    overflow-y: hidden;
     display: block;
-    width: 198;
-    height: 50px;
-    justify-content: left;
+}
+
+
+.quad-info{
+    margin-top: -198px;
+    color: transparent;
+}
+
+.quad-text{
+    font-size: 12pt;
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+
+.quadradinho:hover .quad-text2{
+    font-size: 12pt;
+    margin-left: 5px;
+    color: #00e1ff;
+}
+
+.quadradinho:hover .quad-info {
+    display: inline-block;
+    background-color: #000000;
+    width: 198px;
+    height: 198px;
+    opacity: 70%;
+    position: absolute;
+    margin-top: 0;
+    margin-top: -198px;
+    transition-duration: 0.7s; 
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+.quadradinho:hover .quad-text{
+    opacity: 100%;
 }
 
 .album {
@@ -139,6 +167,7 @@ header {
     max-height: 100%;
     min-width: 100%;
     min-height: 100%;
+    display: block;
 }
 
 

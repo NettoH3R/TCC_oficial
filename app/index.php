@@ -167,38 +167,164 @@ $musica11 = $medias[10];
 
         <div class="scrool">
             <div class="quadradinhos">
-                <div class="quadradinho">
+                <div id="q1" class="quadradinho">
+                    <audio id="music-4" src="<?= $musica4['caminho'] ?>"></audio>
+                    <span class="invisible" id="gen-s4"><?= $musica2['genero'] ?></span>
                     <img src="<?php echo $musica4['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
+                    <div class="quad-info" style="vertical-align: bottom;">
+                        <div style="margin-top: 63%;">
+                            <p id="nome-s4" class="quad-text"><?= $musica4['nome'] ?></p>
+                            <p id="nomea-s4" class="quad-text2 align-bottom">
+                                <?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                $comando->execute([':id' => $musica4['fk_usuarios_us_id']]);
+                                $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                $nome = $artista[0];
+                                echo $nome['nome'];  ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="infoQuad">
-                    <p class="">Qeuqhehqehqe</p>
-                    <p>asdjhlashd</p>
-                </div>
-                <div class="quadradinho">
+
+
+                <div id="q2" class="quadradinho">
+                    <audio id="music-5" src="<?= $musica5['caminho'] ?>"></audio>
+                    <span class="invisible" id="gen-s5"><?= $musica2['genero'] ?></span>
                     <img src="<?php echo $musica5['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
+                    <div class="quad-info" style="vertical-align: bottom;">
+                        <div style="margin-top: 63%;">
+                            <p id="nome-s5" class="quad-text"><?= $musica5['nome'] ?></p>
+                            <p id="nomea-s5" class="quad-text2 align-bottom">
+                                <?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                $comando->execute([':id' => $musica5['fk_usuarios_us_id']]);
+                                $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                $nome = $artista[0];
+                                echo $nome['nome'];  ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="quadradinho">
+
+
+                <div id="q3" class="quadradinho">
+                    <audio id="music-6" src="<?= $musica6['caminho'] ?>"></audio>
+                    <span class="invisible" id="gen-s6"><?= $musica2['genero'] ?></span>
                     <img src="<?php echo $musica6['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
+                    <div class="quad-info" style="vertical-align: bottom;">
+                        <div style="margin-top: 63%;">
+                            <p id="nome-s6" class="quad-text"><?= $musica6['nome'] ?></p>
+                            <p id="nomea-s6" class="quad-text2 align-bottom">
+                                <?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                $comando->execute([':id' => $musica6['fk_usuarios_us_id']]);
+                                $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                $nome = $artista[0];
+                                echo $nome['nome'];  ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="quadradinho">
+
+
+                <div id="q4" class="quadradinho">
+                    <audio id="music-7" src="<?= $musica7['caminho'] ?>"></audio>
+                    <span class="invisible" id="gen-s7"><?= $musica2['genero'] ?></span>
                     <img src="<?php echo $musica7['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
+                    <div class="quad-info" style="vertical-align: bottom;">
+                        <div style="margin-top: 63%;">
+                            <p id="nome-s7" class="quad-text"><?= $musica7['nome'] ?></p>
+                            <p id="nomea-s7" class="quad-text2 align-bottom">
+                                <?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                $comando->execute([':id' => $musica7['fk_usuarios_us_id']]);
+                                $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                $nome = $artista[0];
+                                echo $nome['nome'];  ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
+
+
+
+
+
         <div class="scrool">
             <div class="quadradinhos">
-                <div class="quadradinho">
+                <div id="q5" class="quadradinho">
+                <audio id="music-8" src="<?= $musica8['caminho'] ?>"></audio>
+                <span class="invisible" id="gen-s8"><?= $musica2['genero'] ?></span>
                     <img src="<?php echo $musica8['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
+                    <div class="quad-info" style="vertical-align: bottom;">
+                        <div style="margin-top: 63%;">
+                            <p id="nome-s8" class="quad-text"><?= $musica8['nome'] ?></p>
+                            <p id="nomea-s8" class="quad-text2 align-bottom">
+                                <?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                $comando->execute([':id' => $musica8['fk_usuarios_us_id']]);
+                                $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                $nome = $artista[0];
+                                echo $nome['nome'];  ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="quadradinho">
+
+
+
+                <div id="q6" class="quadradinho">
+                <audio id="music-9" src="<?= $musica9['caminho'] ?>"></audio>
+                <span class="invisible" id="gen-s9"><?= $musica2['genero'] ?></span>
                     <img src="<?php echo $musica9['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
+                    <div class="quad-info" style="vertical-align: bottom;">
+                        <div style="margin-top: 63%;">
+                            <p id="nome-s9" class="quad-text"><?= $musica9['nome'] ?></p>
+                            <p id="nomea-s9" class="quad-text2 align-bottom">
+                                <?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                $comando->execute([':id' => $musica9['fk_usuarios_us_id']]);
+                                $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                $nome = $artista[0];
+                                echo $nome['nome'];  ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="quadradinho">
+
+
+                <div id="q7" class="quadradinho">
+                <audio id="music-10" src="<?= $musica10['caminho'] ?>"></audio>
+                <span class="invisible" id="gen-s"><?= $musica2['genero'] ?></span>
                     <img src="<?php echo $musica10['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
+                    <div class="quad-info" style="vertical-align: bottom;">
+                        <div style="margin-top: 63%;">
+                            <p id="nome-s10" class="quad-text"><?= $musica10['nome'] ?></p>
+                            <p id="nomea-s10" class="quad-text2 align-bottom">
+                                <?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                $comando->execute([':id' => $musica10['fk_usuarios_us_id']]);
+                                $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                $nome = $artista[0];
+                                echo $nome['nome'];  ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="quadradinho">
+
+
+                <div id="q8" class="quadradinho">
+                <audio id="music-11" src="<?= $musica11['caminho'] ?>"></audio>
+                <span class="invisible" id="gen-s2"><?= $musica2['genero'] ?></span>
                     <img src="<?php echo $musica11['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
+                    <div class="quad-info" style="vertical-align: bottom;">
+                        <div style="margin-top: 63%;">
+                            <p id="nome-s11" class="quad-text"><?= $musica11['nome'] ?></p>
+                            <p id="nomea-s11" class="quad-text2 align-bottom">
+                                <?php $comando = $db->prepare('SELECT nome FROM usuarios where us_id = :id');
+                                $comando->execute([':id' => $musica11['fk_usuarios_us_id']]);
+                                $artista = $comando->fetchAll(PDO::FETCH_ASSOC);
+                                $nome = $artista[0];
+                                echo $nome['nome'];  ?>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -244,8 +370,27 @@ $musica11 = $medias[10];
         </div>
     </div>
 </div>
+
+
+
+
+
+
+
 <script>
     var player_geral = $('#player-geral');
+
+    var q1 = $('#q1');
+    var q2 = $('#q2');
+    var q3 = $('#q3');
+    var q4 = $('#q4');
+    var q5 = $('#q5');
+    var q6 = $('#q6');
+    var q7 = $('#q7');
+    var q8 = $('#q8');
+
+
+
 
     var play_car = $('#play-car');
     var pause_car = $('#pause-car');
@@ -271,6 +416,8 @@ $musica11 = $medias[10];
         var audioElement = $('#music-1')[0];
         var audioElement2 = $('#music-2')[0];
         var audioElement3 = $('#music-3')[0];
+
+
 
 
         // Para reproduzir o áudio msc1
@@ -299,6 +446,7 @@ $musica11 = $medias[10];
             audioElement.play();
             audioElement2.pause();
             audioElement3.pause();
+
 
             nomeMusica = $('#nome-s1').text();
             nomeAutor = $('#nomea-s1').text();
@@ -355,6 +503,7 @@ $musica11 = $medias[10];
             audioElement2.pause();
             audioElement3.play();
 
+
             nomeMusica = $('#nome-s3').text();
             nomeAutor = $('#nomea-s3').text();
             genero = $('#gen-s3').text();
@@ -409,6 +558,7 @@ $musica11 = $medias[10];
             audioElement2.pause();
             audioElement3.pause();
 
+
             play_car2.attr('class', 'play-car');
             pause_car2.attr('class', 'pause-car');
             play_gr.removeAttr('class', 'invisible');
@@ -438,7 +588,9 @@ $musica11 = $medias[10];
         }
     });
 </script>
-<?php
 
+
+
+<?php
 include('includes/footer.php');
 ?>
