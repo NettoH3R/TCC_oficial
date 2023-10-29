@@ -226,7 +226,7 @@ $musica11 = $medias[10];
 
                 <div id="q4" class="quadradinho">
                     <audio id="music-7" src="<?= $musica7['caminho'] ?>"></audio>
-                    <span class="invisible" id="gen-s7"><?= $musica2['genero'] ?></span>
+                    <span class="invisible" id="gen-s7"><?= $musica7['genero'] ?></span>
                     <img src="<?php echo $musica7['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     <div class="quad-info" style="vertical-align: bottom;">
                         <div style="margin-top: 63%;">
@@ -252,8 +252,8 @@ $musica11 = $medias[10];
         <div class="scrool">
             <div class="quadradinhos">
                 <div id="q5" class="quadradinho">
-                <audio id="music-8" src="<?= $musica8['caminho'] ?>"></audio>
-                <span class="invisible" id="gen-s8"><?= $musica2['genero'] ?></span>
+                    <audio id="music-8" src="<?= $musica8['caminho'] ?>"></audio>
+                    <span class="invisible" id="gen-s8"><?= $musica8['genero'] ?></span>
                     <img src="<?php echo $musica8['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     <div class="quad-info" style="vertical-align: bottom;">
                         <div style="margin-top: 63%;">
@@ -272,8 +272,8 @@ $musica11 = $medias[10];
 
 
                 <div id="q6" class="quadradinho">
-                <audio id="music-9" src="<?= $musica9['caminho'] ?>"></audio>
-                <span class="invisible" id="gen-s9"><?= $musica2['genero'] ?></span>
+                    <audio id="music-9" src="<?= $musica9['caminho'] ?>"></audio>
+                    <span class="invisible" id="gen-s9"><?= $musica9['genero'] ?></span>
                     <img src="<?php echo $musica9['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     <div class="quad-info" style="vertical-align: bottom;">
                         <div style="margin-top: 63%;">
@@ -291,8 +291,8 @@ $musica11 = $medias[10];
 
 
                 <div id="q7" class="quadradinho">
-                <audio id="music-10" src="<?= $musica10['caminho'] ?>"></audio>
-                <span class="invisible" id="gen-s"><?= $musica2['genero'] ?></span>
+                    <audio id="music-10" src="<?= $musica10['caminho'] ?>"></audio>
+                    <span class="invisible" id="gen-s10"><?= $musica10['genero'] ?></span>
                     <img src="<?php echo $musica10['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     <div class="quad-info" style="vertical-align: bottom;">
                         <div style="margin-top: 63%;">
@@ -310,8 +310,8 @@ $musica11 = $medias[10];
 
 
                 <div id="q8" class="quadradinho">
-                <audio id="music-11" src="<?= $musica11['caminho'] ?>"></audio>
-                <span class="invisible" id="gen-s2"><?= $musica2['genero'] ?></span>
+                    <audio id="music-11" src="<?= $musica11['caminho'] ?>"></audio>
+                    <span class="invisible" id="gen-s11"><?= $musica11['genero'] ?></span>
                     <img src="<?php echo $musica11['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     <div class="quad-info" style="vertical-align: bottom;">
                         <div style="margin-top: 63%;">
@@ -416,6 +416,14 @@ $musica11 = $medias[10];
         var audioElement = $('#music-1')[0];
         var audioElement2 = $('#music-2')[0];
         var audioElement3 = $('#music-3')[0];
+        var audioElement4 = $('#music-4')[0];
+        var audioElement5 = $('#music-5')[0];
+        var audioElement6 = $('#music-6')[0];
+        var audioElement7 = $('#music-7')[0];
+        var audioElement8 = $('#music-8')[0];
+        var audioElement9 = $('#music-9')[0];
+        var audioElement10 = $('#music-10')[0];
+        var audioElement11 = $('#music-11')[0];
 
 
 
@@ -436,6 +444,14 @@ $musica11 = $medias[10];
         play_car3.on('click', playAudio3);
         pause_car3.on('click', pauseAudio3);
 
+        q1.on('click', playAudio4);
+        q2.on('click', playAudio5);
+        q3.on('click', playAudio6);
+        q4.on('click', playAudio7);
+        q5.on('click', playAudio8);
+        q6.on('click', playAudio9);
+        q7.on('click', playAudio10);
+        q8.on('click', playAudio11);
         // Para reproduzir no player geral
 
 
@@ -446,6 +462,14 @@ $musica11 = $medias[10];
             audioElement.play();
             audioElement2.pause();
             audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
 
 
             nomeMusica = $('#nome-s1').text();
@@ -473,6 +497,14 @@ $musica11 = $medias[10];
             audioElement.pause();
             audioElement2.play();
             audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
 
 
 
@@ -502,6 +534,14 @@ $musica11 = $medias[10];
             audioElement.pause();
             audioElement2.pause();
             audioElement3.play();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
 
 
             nomeMusica = $('#nome-s3').text();
@@ -541,6 +581,15 @@ $musica11 = $medias[10];
             audioElement.pause();
             audioElement2.pause();
             audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
 
             play_car.attr('class', 'play-car');
             pause_car.attr('class', 'pause-car');
@@ -557,7 +606,14 @@ $musica11 = $medias[10];
             audioElement.pause();
             audioElement2.pause();
             audioElement3.pause();
-
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
 
             play_car2.attr('class', 'play-car');
             pause_car2.attr('class', 'pause-car');
@@ -576,6 +632,14 @@ $musica11 = $medias[10];
             audioElement.pause();
             audioElement2.pause();
             audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
 
             play_car3.attr('class', 'play-car');
             pause_car3.attr('class', 'pause-car');
@@ -584,6 +648,454 @@ $musica11 = $medias[10];
 
             if ($('#nome-s3').text() === $('#nm-musica').text()) {
                 play_gr.on('click', playAudio3);
+            }
+        }
+
+        // AUDIO 4
+
+        function playAudio4() {
+            player_geral.removeAttr('class', 'invisible');
+
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.play();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+
+            nomeMusica = $('#nome-s4').text();
+            nomeAutor = $('#nomea-s4').text();
+            genero = $('#gen-s4').text();
+
+            play_gr.attr('class', 'invisible');
+            pause_gr.removeAttr('class', 'invisible');
+
+            $('#nm-musica').text(nomeMusica);
+            $('#nm-autor').text(nomeAutor);
+            $('#nm-genero').text(genero);
+
+            // pause geral
+
+            pause_gr.on('click', pauseAudio4);
+        }
+
+        function pauseAudio4() {
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+            play_gr.removeAttr('class', 'invisible');
+            pause_gr.attr('class', 'invisible');
+
+            if ($('#nome-s4').text() === $('#nm-musica').text()) {
+                play_gr.on('click', playAudio4);
+            }
+        }
+
+        // AUDIO 5
+
+        function playAudio5() {
+            player_geral.removeAttr('class', 'invisible');
+
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.play();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+
+            nomeMusica = $('#nome-s5').text();
+            nomeAutor = $('#nomea-s5').text();
+            genero = $('#gen-s5').text();
+
+            play_gr.attr('class', 'invisible');
+            pause_gr.removeAttr('class', 'invisible');
+
+            $('#nm-musica').text(nomeMusica);
+            $('#nm-autor').text(nomeAutor);
+            $('#nm-genero').text(genero);
+
+            // pause geral
+
+            pause_gr.on('click', pauseAudio5);
+        }
+
+        function pauseAudio5() {
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+            play_gr.removeAttr('class', 'invisible');
+            pause_gr.attr('class', 'invisible');
+
+
+            if ($('#nome-s5').text() === $('#nm-musica').text()) {
+                play_gr.on('click', playAudio5);
+            }
+        }
+
+        // AUDIO 6
+
+        function playAudio6() {
+            player_geral.removeAttr('class', 'invisible');
+
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.play();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+
+            nomeMusica = $('#nome-s6').text();
+            nomeAutor = $('#nomea-s6').text();
+            genero = $('#gen-s6').text();
+
+            play_gr.attr('class', 'invisible');
+            pause_gr.removeAttr('class', 'invisible');
+
+            $('#nm-musica').text(nomeMusica);
+            $('#nm-autor').text(nomeAutor);
+            $('#nm-genero').text(genero);
+
+            // pause geral
+
+            pause_gr.on('click', pauseAudio6);
+        }
+
+        function pauseAudio6() {
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+            play_gr.removeAttr('class', 'invisible');
+            pause_gr.attr('class', 'invisible');
+
+
+            if ($('#nome-s6').text() === $('#nm-musica').text()) {
+                play_gr.on('click', playAudio6);
+            }
+        }
+
+
+        // AUDIO 7
+
+        function playAudio7() {
+            player_geral.removeAttr('class', 'invisible');
+
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.play();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+
+            nomeMusica = $('#nome-s7').text();
+            nomeAutor = $('#nomea-s7').text();
+            genero = $('#gen-s7').text();
+
+            play_gr.attr('class', 'invisible');
+            pause_gr.removeAttr('class', 'invisible');
+
+            $('#nm-musica').text(nomeMusica);
+            $('#nm-autor').text(nomeAutor);
+            $('#nm-genero').text(genero);
+
+            // pause geral
+
+            pause_gr.on('click', pauseAudio7);
+        }
+
+        function pauseAudio7() {
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+            play_gr.removeAttr('class', 'invisible');
+            pause_gr.attr('class', 'invisible');
+
+
+            if ($('#nome-s7').text() === $('#nm-musica').text()) {
+                play_gr.on('click', playAudio7);
+            }
+        }
+
+        // AUDIO 7
+
+        function playAudio8() {
+            player_geral.removeAttr('class', 'invisible');
+
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.play();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+
+            nomeMusica = $('#nome-s8').text();
+            nomeAutor = $('#nomea-s8').text();
+            genero = $('#gen-s8').text();
+
+            play_gr.attr('class', 'invisible');
+            pause_gr.removeAttr('class', 'invisible');
+
+            $('#nm-musica').text(nomeMusica);
+            $('#nm-autor').text(nomeAutor);
+            $('#nm-genero').text(genero);
+
+            // pause geral
+
+            pause_gr.on('click', pauseAudio8);
+        }
+
+        function pauseAudio8() {
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+            play_gr.removeAttr('class', 'invisible');
+            pause_gr.attr('class', 'invisible');
+
+
+            if ($('#nome-s8').text() === $('#nm-musica').text()) {
+                play_gr.on('click', playAudio8);
+            }
+        }
+
+        // AUDIO 9
+
+        function playAudio9() {
+            player_geral.removeAttr('class', 'invisible');
+
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.play();
+            audioElement10.pause();
+            audioElement11.pause();
+
+
+            nomeMusica = $('#nome-s9').text();
+            nomeAutor = $('#nomea-s9').text();
+            genero = $('#gen-s9').text();
+
+            play_gr.attr('class', 'invisible');
+            pause_gr.removeAttr('class', 'invisible');
+
+            $('#nm-musica').text(nomeMusica);
+            $('#nm-autor').text(nomeAutor);
+            $('#nm-genero').text(genero);
+
+            // pause geral
+
+            pause_gr.on('click', pauseAudio9);
+        }
+
+        function pauseAudio10() {
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+            play_gr.removeAttr('class', 'invisible');
+            pause_gr.attr('class', 'invisible');
+
+
+            if ($('#nome-s9').text() === $('#nm-musica').text()) {
+                play_gr.on('click', playAudio9);
+            }
+        }
+
+        // AUDIO 10
+
+        function playAudio10() {
+            player_geral.removeAttr('class', 'invisible');
+
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.play();
+            audioElement11.pause();
+
+
+            nomeMusica = $('#nome-s10').text();
+            nomeAutor = $('#nomea-s10').text();
+            genero = $('#gen-s10').text();
+
+            play_gr.attr('class', 'invisible');
+            pause_gr.removeAttr('class', 'invisible');
+
+            $('#nm-musica').text(nomeMusica);
+            $('#nm-autor').text(nomeAutor);
+            $('#nm-genero').text(genero);
+
+            // pause geral
+
+            pause_gr.on('click', pauseAudio10);
+        }
+
+        function pauseAudio10() {
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+            play_gr.removeAttr('class', 'invisible');
+            pause_gr.attr('class', 'invisible');
+
+
+            if ($('#nome-s10').text() === $('#nm-musica').text()) {
+                play_gr.on('click', playAudio10);
+            }
+        }
+
+                // AUDIO 11
+
+                function playAudio10() {
+            player_geral.removeAttr('class', 'invisible');
+
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.play();
+
+
+            nomeMusica = $('#nome-s11').text();
+            nomeAutor = $('#nomea-s11').text();
+            genero = $('#gen-s11').text();
+
+            play_gr.attr('class', 'invisible');
+            pause_gr.removeAttr('class', 'invisible');
+
+            $('#nm-musica').text(nomeMusica);
+            $('#nm-autor').text(nomeAutor);
+            $('#nm-genero').text(genero);
+
+            // pause geral
+
+            pause_gr.on('click', pauseAudio11);
+        }
+
+        function pauseAudio11() {
+            audioElement.pause();
+            audioElement2.pause();
+            audioElement3.pause();
+            audioElement4.pause();
+            audioElement5.pause();
+            audioElement6.pause();
+            audioElement7.pause();
+            audioElement8.pause();
+            audioElement9.pause();
+            audioElement10.pause();
+            audioElement11.pause();
+
+            play_gr.removeAttr('class', 'invisible');
+            pause_gr.attr('class', 'invisible');
+
+
+            if ($('#nome-s11').text() === $('#nm-musica').text()) {
+                play_gr.on('click', playAudio11);
             }
         }
     });
