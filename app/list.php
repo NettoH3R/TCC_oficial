@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         $comando->execute([":id" => $m['fk_usuarios_us_id']]);
                         $user = $comando->fetchAll(PDO::FETCH_ASSOC);
                         $autor = $user[0];
-                        echo '<a style="text-decoration:none" href="perfil2.php?nome=' . $autor['us_id'] . '">'.$autor['nome']. "</a>";
+                        echo '<a style="text-decoration:none" href="perfil2.php?nome=' . $autor['us_id'] . ',esMusic='.$m['id'].'">'.$autor['nome']. "</a>";
                     }
 
                     ?>

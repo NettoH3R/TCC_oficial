@@ -169,7 +169,7 @@ $musica11 = $medias[10];
             <div class="quadradinhos">
                 <div id="q1" class="quadradinho">
                     <audio id="music-4" src="<?= $musica4['caminho'] ?>"></audio>
-                    <span class="invisible" id="gen-s4"><?= $musica2['genero'] ?></span>
+                    <span class="invisible" id="gen-s4"><?= $musica4['genero'] ?></span>
                     <img src="<?php echo $musica4['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     <div class="quad-info" style="vertical-align: bottom;">
                         <div style="margin-top: 63%;">
@@ -188,7 +188,7 @@ $musica11 = $medias[10];
 
                 <div id="q2" class="quadradinho">
                     <audio id="music-5" src="<?= $musica5['caminho'] ?>"></audio>
-                    <span class="invisible" id="gen-s5"><?= $musica2['genero'] ?></span>
+                    <span class="invisible" id="gen-s5"><?= $musica5['genero'] ?></span>
                     <img src="<?php echo $musica5['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     <div class="quad-info" style="vertical-align: bottom;">
                         <div style="margin-top: 63%;">
@@ -207,7 +207,7 @@ $musica11 = $medias[10];
 
                 <div id="q3" class="quadradinho">
                     <audio id="music-6" src="<?= $musica6['caminho'] ?>"></audio>
-                    <span class="invisible" id="gen-s6"><?= $musica2['genero'] ?></span>
+                    <span class="invisible" id="gen-s6"><?= $musica6['genero'] ?></span>
                     <img src="<?php echo $musica6['capa']; ?>" class="album" alt="Possível álbum a ser colocado">
                     <div class="quad-info" style="vertical-align: bottom;">
                         <div style="margin-top: 63%;">
