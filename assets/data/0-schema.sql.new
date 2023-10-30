@@ -41,5 +41,5 @@ INSERT INTO usuarios(nome, email, senha, nivel_acess) VALUES
 
 INSERT INTO generos(gn_nome) VALUES
 ('Rock'),
-('Sertanejo'),
+('Trap'),
 ('Rap');
