@@ -38,6 +38,17 @@ $musica5 = $medias[1];
 $musica6 = $medias[2];
 $musica7 = $medias[3];
 
+if (isset($_GET['esMusic'])) {
+
+
+    $condicao = $_GET['esMusic'];
+
+    $comando = $db->prepare('SELECT * FROM musicas WHERE id = :id');
+    $comando->execute([":id" => $condicao[0]]);
+    $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
+    $musica4 = $medias[0];
+}
+
 include('includes/noHeader.php');
 ?>
 

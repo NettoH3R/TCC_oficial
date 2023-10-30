@@ -81,15 +81,15 @@ include('includes/noHeader.php');
                             <div class="infosArtista">
                                 <p>' . $num . ' Faixas</p>
                             </div>
-                        </div>
+                        </div>';
+                        } ?>
                         <div class="col-md-3">
                             <a href="editPerf.php" style="text-decoration:none">
                                 <button class="btn-seguir" class="botaoSeguir" style="margin-bottom: 30px;">
                                     Editar Perfil
                                 </button>
                             </a>
-                        </div>';
-                        } ?>
+                        </div>'
                     </div>
                 </div>
 
