@@ -105,9 +105,21 @@ include('includes/noHeader.php');
         if ($user['nivel_acess'] == 2 || $user['nivel_acess'] == 3) {
 
             echo
-            '<a href="list.php?id=' . $user['us_id'] . '"style="text-decoration:none">
+            '<div class="row">
+            <div class="col-md-2">
+            <a href="list.php?id=' . $user['us_id'] . '"style="text-decoration:none">
             <p style="margin-left:25px; font-size: 24pt; font-weight: bold; color: black;">Faixas</p>
             </a>
+            </div>
+            <div class="col-md-7">
+            </div>
+            <div class="col-md-3">
+            <a href="insert.php?" style="text-decoration:none">
+            <button class="btn-seguir" class="botaoSeguir" Style="margin-left:30%">
+                Adicionar Música
+            </button>
+            </a>
+            </div>
             <div class="scrool">
             <div class="quadradinhos">
                 <div id="q1" class="quadradinho">

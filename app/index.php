@@ -21,6 +21,7 @@ $comando = $db->prepare('SELECT * FROM musicas WHERE privacidade = "publico"');
 $comando->execute();
 $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
 
+
 shuffle($medias);
 
 
