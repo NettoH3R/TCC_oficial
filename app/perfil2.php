@@ -43,8 +43,8 @@ if (isset($_GET['esMusic'])) {
 
     $condicao = $_GET['esMusic'];
 
-    $comando = $db->prepare('SELECT * FROM musicas WHERE id = :id');
-    $comando->execute([":id" => $condicao[0]]);
+    $comando = $db->prepare('SELECT * FROM musicas WHERE id = :id AND fk_usuarios_us_id = :fk_id');
+    $comando->execute([":id" => $condicao, ":fk_id" => $_GET['nome']]);
     $medias = $comando->fetchAll(PDO::FETCH_ASSOC);
     $musica4 = $medias[0];
 }
