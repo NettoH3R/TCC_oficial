@@ -38,6 +38,12 @@ include('includes/header.php');
             </div>
         </div>
 
+        <div style="text-align: center; margin-top:30px">
+            <a href="https://undersoundsofc.blogspot.com/">
+                <button class="btn-seguir">Veja Nosso Blog</button>
+            </a>
+        </div>
+
         <h2 class="text-center" style="padding-top: 50px;font-size: 30pt;margin-bottom: -20px;font-family: 'Rubik', sans-serif;font-weight: bold; color: #ff8f2d; text-shadow: -1.5px -1.5px 1.5px black, 1.5px -1.5px 1.5px black, -1.5px 1.5px 1.5px black, 1.5px 1.5px 1.5px black; justify-content: center; align-items: center;">Membros do UnderSounds</h2>
 
         <div class="row" style="padding: 0; margin: 0;">

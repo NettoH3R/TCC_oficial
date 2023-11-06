@@ -118,6 +118,9 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
                             <li class="nav-item">
                                 <a class="nav-link" href="sobre.php">Sobre</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://undersoundsofc.blogspot.com/">Blog</a>
+                            </li>
                         </ul>
                         <form action="list.php" method="post"  class="d-flex" role="search">
                             <input class="form-control me-2" name="search" type="search" placeholder="Procure a música" aria-label="Search">
