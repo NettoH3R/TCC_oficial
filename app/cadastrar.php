@@ -76,7 +76,7 @@ include('includes/noHeader.php');
 
                         <form action="cadastrar.php" method="post">
                             <input name="user_name" type="text" placeholder="Nome de Usuário" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required>
-                            <input name="email" type="" placeholder="E-mail" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required>
+                            <input name="email" type="emailset" placeholder="E-mail" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required>
                             <input name="pass" type="password" placeholder="Senha" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required>
                             <input name="confirm-pass" type="password" placeholder="Confirme a Senha" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required>
                             <div style="text-align: center; margin-top: 10px;">
