@@ -256,6 +256,4 @@ if (isset($_FILES['music']) && isset($_FILES['img'])) {
     }
 }
 
-
-
 ?>
