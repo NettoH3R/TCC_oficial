@@ -5,7 +5,7 @@ use Application\DBConnection\MySQLConnection;
 
 $db = new MySQLConnection();
 
-$title = "Inserção de Música";
+$title = "alterar musica de Música";
 
 $comando = $db->prepare('SELECT * FROM generos');
 $comando->execute();

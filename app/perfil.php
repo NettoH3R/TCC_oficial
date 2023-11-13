@@ -85,7 +85,7 @@ include('includes/noHeader.php');
                         } ?>
                         <div class="col-md-3">
                             <a href="editPerf.php" style="text-decoration:none">
-                                <button class="btn-seguir" class="botaoSeguir" style="margin-bottom: 30px;">
+                                <button class="btn-seguir" style="margin-bottom: 30px;">
                                     Editar Perfil
                                 </button>
                             </a>
@@ -111,11 +111,18 @@ include('includes/noHeader.php');
             <p style="margin-left:25px; font-size: 24pt; font-weight: bold; color: black;">Faixas</p>
             </a>
             </div>
-            <div class="col-md-7">
+            <div class="col-md-5">
+            </div>
+            <div class="col-md-2">
+                <a href="listAlter.php?id=' . $user['us_id'] . '">
+                    <button class="btn-seguir" Style="margin-left:30%">
+                        Editar Faixas
+                    </button>
+                </a>
             </div>
             <div class="col-md-3">
             <a href="insert.php?" style="text-decoration:none">
-            <button class="btn-seguir" class="botaoSeguir" Style="margin-left:30%">
+            <button class="btn-seguir" Style="margin-left:30%">
                 Adicionar Música
             </button>
             </a>
