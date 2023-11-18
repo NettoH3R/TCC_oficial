@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
                 </div>
                 <div class="col-md-2">
-                    <a href="alter.php?id=<?=$m['id']?>"><button class="btn-seguir" style="margin-right: 20px;">Editar</button></a>
+                    <a href="alter.php?id=<?=$m['id']?>"><button class="btn-seguir" style="margin-right: 20px;">Excluir</button></a>
                 </div>
             </div>
         <?php endforeach ?>

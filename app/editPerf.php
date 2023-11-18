@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $extencao = $capa['name'];
     $extencao = strtolower(pathinfo($extencao, PATHINFO_EXTENSION));
-    $pathPerf = $pasta . $nome . "." . $extencao;
+    $pathPerf = $pasta . $nome . $user['us_id'] . "." . $extencao;
 
     move_uploaded_file($capa['tmp_name'], $pathPerf);
 
