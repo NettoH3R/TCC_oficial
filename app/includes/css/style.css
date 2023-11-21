@@ -102,7 +102,7 @@ header {
 }
 
 .scrool:hover {
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 
