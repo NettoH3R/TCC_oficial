@@ -7,12 +7,14 @@ use Application\DBConnection\MySQLConnection;
 
 $db = new MySQLConnection();
 
+// depois que o form for enviado
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $comando = $db->prepare('SELECT * FROM usuarios WHERE email = :email AND senha = :pass');
     $comando->execute([':email' => $_POST['email'], ':pass' => $_POST['pass']]);
     $user = $comando->fetchAll(PDO::FETCH_ASSOC);
 
+    // Verifica se as infos estão certas e inicia uma sessão levando o usuario para o inicio
     if ($user == null) {
         header('location:entrar.php?erro=true');
     } else {

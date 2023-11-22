@@ -13,6 +13,7 @@ if (!isset($_SESSION['user'])) {
     $user = $descompactar[0];
 }
 
+// Após enviar o FORM
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $capa = $_FILES['img'];
@@ -29,10 +30,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $extencao = strtolower(pathinfo($extencao, PATHINFO_EXTENSION));
     $pathPerf = $pasta . $nome . $user['us_id'] . "." . $extencao;
 
+    // Manda o arquivo para a pasta
     move_uploaded_file($capa['tmp_name'], $pathPerf);
 
+    // Atualiza os dados no Banco
     $comando = $db->prepare('UPDATE usuarios SET user_perfil = :foto , nome = :newnome WHERE us_id = :id');
     $comando->execute([":foto" => $pathPerf, ":newnome" => $_POST['nome'], ":id" => $user['us_id']]);
+
 }
 
 
@@ -48,7 +52,9 @@ include('includes/noHeader.php');
         <div style="text-align: center;">
 
             <h1 style="margin-bottom: 30px;">EDITAR PERFIL</h1>
+            <!-- FORM -->
             <form action="editPerf.php" method="post" enctype="multipart/form-data">
+                <!-- ADD Nova foto -->
                 <div class="imagem-container">
                     <div class="inserirFoto">
                         <label for="upfile1" class="custom-file-input">
@@ -60,6 +66,7 @@ include('includes/noHeader.php');
                         </label>
                     </div>
                 </div>
+                <!-- Add novo nick -->
                 <div style="width: 25%; margin-left: 37%; margin-right: 37%;">
                     <input style="border: 2px solid black;" name="nome" type="text" placeholder="Nome de Usuário" value="<?= $user['nome'] ?>" class="nomeDaFaixa" required><br> <br>
                 </div>

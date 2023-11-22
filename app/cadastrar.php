@@ -7,8 +7,10 @@ use Application\DBConnection\MySQLConnection;
 
 $db = new MySQLConnection();
 
+// Essa parte será executado ao enviar o formulario
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+    // Verifica se as senhas digitadas estão corretas
     if ($_POST['pass'] != $_POST['confirm-pass']) {
         die(header('location:cadastrar.php?erro=true'));
     }
@@ -18,23 +20,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $comando->execute();
     $user_existent = $comando->fetchAll(PDO::FETCH_ASSOC);
 
+
+    // Verifica se já existe uma conta com esse email
     foreach ($user_existent as $us) {
         if ($us['email'] == $_POST['email']) {
             die('Já existe uma conta com esse E-mail <br> <a href="cadastrar.php"><button class="btn-seguir">Voltar<button>');
         }
     }
     
+    // Verifica o nivel de autoridade do usuario
     if($_POST['type'] == "1"){
         $acess = 1;
     }else{
         $acess = 2;
     }
 
+    // Salva os dados no Banco de Dados
     $comando = $db->prepare('INSERT INTO usuarios(nome, email, senha, nivel_acess) VALUES (:nome, :email, :senha, :nivel_acess)');
     $comando->execute([
         ':nome' => $_POST['user_name'], ':email' => $_POST['email'], ':senha' => $_POST['pass'], ':nivel_acess' => $acess
     ]);
 
+    // mando o usuario para pagina inicial
     header('location:entrar.php');
 }
 
@@ -43,7 +50,7 @@ if (isset($_GET['erro'])) {
 }
 
 
-
+// Adiciona o cabeçario
 include('includes/noHeader.php');
 
 ?>
@@ -73,7 +80,7 @@ include('includes/noHeader.php');
                                                                                                                             } else {
                                                                                                                                 echo 'Bem Vindo!';
                                                                                                                             } ?></h2>
-
+                        <!-- FORM DE CADASTRO -->
                         <form action="cadastrar.php" method="post">
                             <input name="user_name" type="text" placeholder="Nome de Usuário" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required>
                             <input name="email" type="emailset" placeholder="E-mail" class="nomeDaFaixa" style=" width:80% ;  margin-top: 5%; margin-left: 10%; margin-right: 10%;" required>
