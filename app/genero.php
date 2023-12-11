@@ -6,6 +6,7 @@ use Application\DBConnection\MySQLConnection;
 
 $db = new MySQLConnection();
 
+$title = $_GET['genero'];
 
 
 if (!isset($_SESSION['user'])) {

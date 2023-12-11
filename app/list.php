@@ -5,6 +5,8 @@ use Application\DBConnection\MySQLConnection;
 
 $db = new MySQLConnection();
 
+$title = 'faixas';
+
 include('includes/noHeader.php');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
