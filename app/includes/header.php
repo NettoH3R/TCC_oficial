@@ -16,34 +16,36 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="includes/js/functions.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="includes/css/style.css">
+</head>
+<link rel="icon" type="image/jpg" href="arquivos/imagensDoSite/logo_1finalizada.png" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel="stylesheet" href="includes/css/style.css">
 
-    <style>
-        .tamanhologo {
-            max-width: 100%;
-            height: 100%;
-        }
+<style>
+    .tamanhologo {
+        max-width: 100%;
+        height: 100%;
+    }
 
-        .nav-link {
-            color: white;
-            font-weight: bolder;
-        }
+    .nav-link {
+        color: white;
+        font-weight: bolder;
+    }
 
-        .carousel-caption {
-            color: black;
-        }
+    .carousel-caption {
+        color: black;
+    }
 
-        .nav-link:hover {
-            color: #888888;
-        }
+    .nav-link:hover {
+        color: #888888;
+    }
 
-        .insert {
-            background-image: url('arquivos/imagensDoSite/textPura.jpg');
-            background-repeat: repeat;
-            background-blend-mode: multiply;
-        }
-    </style>
+    .insert {
+        background-image: url('arquivos/imagensDoSite/textPura.jpg');
+        background-repeat: repeat;
+        background-blend-mode: multiply;
+    }
+</style>
 
 </head>
 
@@ -122,7 +124,7 @@ $generos = $comando->fetchAll(PDO::FETCH_ASSOC);
                                 <a class="nav-link" href="https://undersoundsofc.blogspot.com/">Blog</a>
                             </li>
                         </ul>
-                        <form action="list.php" method="post"  class="d-flex" role="search">
+                        <form action="list.php" method="post" class="d-flex" role="search">
                             <input class="form-control me-2" name="search" type="search" placeholder="Procure a música" aria-label="Search">
                             <button class="btn btn-outline-light" type="submit">Pesquisar</button>
                         </form>
